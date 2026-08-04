@@ -1,0 +1,78 @@
+name: Refresh regulatory data and deploy Pages
+
+on:
+  push:
+    branches: [main, master]
+  schedule:
+    # 09:30 China Standard Time every day
+    - cron: "30 1 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: nitrosamine-pages
+  cancel-in-progress: false
+
+jobs:
+  refresh-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install updater dependencies
+        run: pip install -r requirements.txt
+
+      - name: Refresh official regulator data
+        env:
+          DINGTALK_RELAY_URL: ${{ secrets.DINGTALK_RELAY_URL }}
+          DINGTALK_RELAY_TOKEN: ${{ secrets.DINGTALK_RELAY_TOKEN }}
+        run: python scripts/update_data.py --allow-partial
+
+      - name: Validate generated data
+        run: python scripts/validate_data.py
+
+      - name: Commit refreshed data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/nitrosamine_limits.json data/changes.json
+          if git diff --cached --quiet; then
+            echo "No data file change."
+          else
+            git commit -m "chore: refresh regulatory nitrosamine limits [skip ci]"
+            git push
+          fi
+
+      - name: Prepare static site
+        run: |
+          rm -rf _site
+          mkdir -p _site/data
+          cp index.html styles.css app.js .nojekyll _site/
+          cp data/nitrosamine_limits.json data/changes.json _site/data/
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
