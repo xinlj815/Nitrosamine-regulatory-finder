@@ -1,4 +1,2381 @@
 {
-  "generated_at": "2026-08-04T13:20:00+08:00",
-  "changes": []
+  "generated_at": "2026-08-04T10:44:03+00:00",
+  "changes": [
+    {
+      "type": "added",
+      "compound": "1-cyclopentyl-4-nitrosopiperazine (CPNP)",
+      "cas": "61379-66-6",
+      "agency": "FDA",
+      "old": null,
+      "new": "400 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "1-cyclopropylmethyl-4-nitrosopiperazine",
+      "cas": "57184-25-5",
+      "agency": "FDA",
+      "old": null,
+      "new": "400 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "1-methyl-4-nitrosopiperazine",
+      "cas": "16339-07-4",
+      "agency": "FDA",
+      "old": null,
+      "new": "400 ng/day **"
+    },
+    {
+      "type": "added",
+      "compound": "7-Nitroso-3-(trifluoromethyl)-5,6,7,8-tetrahydro[1,2,4]triazolo-[4,3-a]pyrazine (NTTP)",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "100 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-2,4-thiazole amine",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "26.5 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-abacavir",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-acarbose",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-acebutolol",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-adrenaline",
+      "cas": "3006789-99-4",
+      "agency": "FDA",
+      "old": null,
+      "new": "100 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-albuterol",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-amlodipine",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-amoxapine",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "400 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-arformoterol",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-argatroban",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-articaine",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-aryl piperazine",
+      "cas": "",
+      "agency": "Health Canada",
+      "old": null,
+      "new": "400"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-aryl piperazine",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "400 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-atenolol",
+      "cas": "134720-04-0",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-atomoxetine",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "100.0"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-avacopan",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-avanafil",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "400 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-belumosudil",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-benazepril",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-bendroflumethiazide",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-benzathine",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "26.5 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-benzonatate",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "400 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-berotralstat",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "100 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-betaxolol",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-bicisate",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-bisoprolol",
+      "cas": "2820170-76-9",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-brilliant blue g",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-brinzolamide",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "100 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-bumetanide",
+      "cas": "2490432-02-3",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-bupropion",
+      "cas": "2763780-10-3",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-calcium folinate",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-cangrelor",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "400 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-carteolol",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-carvedilol",
+      "cas": "2248746-67-8",
+      "agency": "FDA",
+      "old": null,
+      "new": "400 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-caspofungin",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-chloroquine",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-cinacalcet",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "400 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-ciprofloxacin",
+      "cas": "864443-44-7",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day **"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-clevidipine",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-clozapine",
+      "cas": "156632-03-0",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-colistin a hydrogen methanesulfonate-1",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "100 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-colistin a hydrogen methanesulfonate-2",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "100 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-colistin a hydrogen methanesulfonate-3",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "100 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-colistin a hydrogen methanesulfonate-4",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "100 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-colistin a hydrogen methanesulfonate-5",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "100 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-colistin b hydrogen methanesulfonate-1",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "100 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-colistin b hydrogen methanesulfonate-2",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "100 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-colistin b hydrogen methanesulfonate-3",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "100 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-colistin b hydrogen methanesulfonate-4",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "100 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-colistin b hydrogen methanesulfonate-5",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "100 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-dabigatran etexilate",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "400 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-dalbavancin a0",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-dalbavancin a1",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-dalbavancin b0",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-dalbavancin b1",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desipramine",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "26.5 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desloratadine",
+      "cas": "1246819-22-6",
+      "agency": "FDA",
+      "old": null,
+      "new": "400 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-almotriptan",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "26.5 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-amitriptyline",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "26.5 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-azithromycin",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-bedaquiline",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "26.5 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-brompheniramine",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "26.5 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-cabergoline",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "26.5 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-carbinoxamine",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "26.5 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-chlophedianol",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "26.5 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-chlorpheniramine",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "26.5 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-chlorpromazine",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "26.5 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-cidoxepin",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "26.5 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-citalopram",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "26.5 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-clarithromycin",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-clomipramine",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "26.5 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-cyclobenzaprine",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "26.5 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-dalbavancin a0",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-dalbavancin a1",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-dalbavancin b0",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-dalbavancin b1",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-dalbavancin b2",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-demeclocycline",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "400 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-desvenlafaxine",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "26.5 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-dexbrompheniramine",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "26.5 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-dexchlorpheniramine",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "26.5 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-diltiazem",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "100.0"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-diphenhydramine",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "26.5 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-doxepin, (e)-",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "26.5 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-doxycycline",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "400 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-doxylamine",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "26.5 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-eravacycline",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "400 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-erythromycin",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-erythromycin ethylsuccinate",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "400 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-escitalopram",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "26.5 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-imipramine",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "26.5 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-maralixibat",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "100 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-methadone",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "400 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-methylene blue",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "100 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-mifepristone",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "100 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-minocycline-1",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "100 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-minocycline-2",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "400 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-neratinib",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "100 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-nizatidine",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "26.5 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-olopatadine",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-omadacycline-1",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "100 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-omadacycline-2",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "400 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-orphenadrine",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "26.5 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-padimate o",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "100 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-pheniramine",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "26.5 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-phenyltoloxamine",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "26.5 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-promethazine",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "400 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-propoxyphene",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "26.5 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-pyrilamine",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "26.5 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-quinupristin",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "100 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-ranitidine",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "26.5 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-rivastigmine",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "100 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-rizatriptan",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "26.5 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-sarecycline",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "400 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-spinosad factor a",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "100 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-spinosad factor d",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "100 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-sumatriptan",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "26.5 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-tamoxifen",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "26.5 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-tapentadol",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "26.5 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-telithromycin",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-tetracaine",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "26.5 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-tetracycline",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "400 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-thonzylamine",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "26.5 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-tigecycline-1",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "400 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-tigecycline-2",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "100 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-tramadol",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "26.5 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-trimethobenzamide",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "26.5 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-trimipramine",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "26.5 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-ulipristal acetate",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "100 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-venlafaxine",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "26.5 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-zolmitriptan",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "26.5 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-deucravacitinib",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "changed",
+      "compound": "N-nitroso-di-n-butylamine",
+      "cas": "924-16-3",
+      "agency": "FDA",
+      "old": "26.5",
+      "new": "26.5"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-diclofenac",
+      "cas": "66505-80-4",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "changed",
+      "compound": "N-nitroso-diethylamine",
+      "cas": "55-18-5",
+      "agency": "FDA",
+      "old": "26.5",
+      "new": "26.5"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-diisopropylamine",
+      "cas": "601-77-4",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "changed",
+      "compound": "N-nitroso-dimethylamine",
+      "cas": "62-75-9",
+      "agency": "FDA",
+      "old": "96",
+      "new": "96.0"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-dipivefrin",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "100 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-dobutamine",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-dorzolamide",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "100 ng/day **"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-duloxetine",
+      "cas": "",
+      "agency": "Health Canada",
+      "old": null,
+      "new": "100"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-duloxetine",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "100.0"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-duvelisib",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-elagolix",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-enalapril",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-enalaprilat",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-ertapenem",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-esketamine",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-esmolol",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-ethambutol",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-etravirine",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-exametazime",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-felodipine",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-fenfluramine",
+      "cas": "19023-40-6",
+      "agency": "FDA",
+      "old": null,
+      "new": "400 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-fenoldopam",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "100 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-finerenone",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-flecainide",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-florbetaben f-18",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "100 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-florbetapir f-18",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "100 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-fluoxetine",
+      "cas": "150494-06-7",
+      "agency": "FDA",
+      "old": null,
+      "new": "100.0"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-flutemetamol f-18",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "100 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-folic acid",
+      "cas": "26360-21-4",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-formoterol",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-fosdenopterin-1",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-fosdenopterin-2",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-fostamatinib-1",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-fostamatinib-2",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-frovatriptan",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "400 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-furosemide",
+      "cas": "2708280-93-5",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-gatifloxacin",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-hydrochlorothiazide",
+      "cas": "63779-86-2",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-hydroxychloroquine",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-imatinib",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-isavuconazonium",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "100 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-isopropylethylamine (NIPEA) or N-nitroso-ethylisopropylamine (NEIPA)",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "400 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-isoproterenol",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-isradipine",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-ivacaftor",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-ketamine",
+      "cas": "86144-35-6",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-labetalol",
+      "cas": "2820170-74-7",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-leniolisib",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-leucovorin-1",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-levalbuterol",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-levamlodipine",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-levmetamfetamine",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "400 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-levobunolol",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-levoleucovorin-1",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-levoleucovorin-2",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-levomefolic acid-1",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-levomefolic acid-2",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-lisinopril",
+      "cas": "519175-80-5",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-maribavir",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-mecamylamine",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-meclofenamic acid",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-mefloquine",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-meglumine",
+      "cas": "62137-31-9",
+      "agency": "FDA",
+      "old": null,
+      "new": "100 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-meropenem",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-methamphetamine",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "400 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-methylphenidate",
+      "cas": "55557-03-4",
+      "agency": "FDA",
+      "old": null,
+      "new": "1300.0"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-methylphenylamine or N-nitroso-N-methylaniline (NMPA)",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "100 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-metolazone",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-metoprolol",
+      "cas": "134720-05-1",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-migalastat",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-mirabegron",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "400 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-mitoxantrone-1",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-mitoxantrone-2",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "100 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-moexipril",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-moxifloxacin",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-N-methyl-4-aminobutyric acid",
+      "cas": "61445-55-4",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-nadolol",
+      "cas": "134720-06-2",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-nebivolol",
+      "cas": "1391051-68-5",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-neratinib",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-nicardipine",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-nifedipine",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-nimodipine",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-nintedanib",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-nisoldipine",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-nizatidine-1",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "100 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-nizatidine-2",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "400 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-nortriptyline",
+      "cas": "55855-42-0",
+      "agency": "FDA",
+      "old": null,
+      "new": "26.5 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-olanzapine",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-oliceridine",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "26.5 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-olodaterol",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-omadacycline",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "26.5 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-omidenepag isopropyl",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-oritavancin-1",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-oritavancin-2",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-ozanimod",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "400 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-ozenoxacin",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-pafolacianine",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-perindopril",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-phenylephrine",
+      "cas": "78658-64-7",
+      "agency": "FDA",
+      "old": null,
+      "new": "100 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-pindolol",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-piperazine",
+      "cas": "5632-47-3",
+      "agency": "FDA",
+      "old": null,
+      "new": "1300.0"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-plazomicin-1",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-plazomicin-2",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "100 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-plerixafor-1",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "100 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-plerixafor-2",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "100 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-plerixafor-3",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "100 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-polythiazide",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-pramipexole",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "400 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-prilocaine",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-primaquine",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-proline",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-propafenone",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "100 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-propranolol",
+      "cas": "84418-35-9",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-propylhexedrine",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "400 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-protriptyline",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "26.5 ng/day **"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-pseudoephedrine",
+      "cas": "1850-88-0",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-quinapril",
+      "cas": "158522-79-3",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-racepinephrine",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "100 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-ramipril",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-ranitidine-1",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "400 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-ranitidine-2",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "100 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-rasagiline",
+      "cas": "2470278-90-9",
+      "agency": "FDA",
+      "old": null,
+      "new": "100 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-relebactam",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "400 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-ribociclib-1",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "400 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-ribociclib-2",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-rifabutin",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-rilpivirine-1",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-rilpivirine-2",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-risdiplam",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-rolapitant",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-safinamide",
+      "cas": "2657645-00-4",
+      "agency": "FDA",
+      "old": null,
+      "new": "400 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-salmeterol",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "400 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-sapropterin-1",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-sapropterin-2",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-sertraline",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "100 ng/day **"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-silodosin",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-sotalol",
+      "cas": "134720-07-3",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-streptomycin",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-tafenoquine",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-tamsulosin",
+      "cas": "2892260-31-8",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-telavancin-1",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "400 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-telavancin-2",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-telavancin-3",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-telavancin-4",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-terbutaline",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-tetracaine",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "400 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-ticagrelor",
+      "cas": "2476859-55-7",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-tigecycline",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-timolol",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-tirofiban",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-torsemide",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-trandolapril",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-trientine",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "26.5 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-vancomycin",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-varenicline",
+      "cas": "2755871-02-2",
+      "agency": "FDA",
+      "old": null,
+      "new": "400 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-vibegron",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-vilanterol",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "400 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-viloxazine",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "100 ng/day"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-vonoprazan",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "96.0"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-vortioxetine",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "400 ng/day"
+    }
+  ]
 }
