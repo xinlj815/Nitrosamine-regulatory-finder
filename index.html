@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="按CAS号、名称或缩写查询FDA、EMA、Health Canada、TGA的亚硝胺可接受摄入量，并按最大日剂量换算ppm。">
+  <title>亚硝胺监管限度查询</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <div class="eyebrow">Nitrosamine Regulatory Limit Finder</div>
+      <h1>亚硝胺监管限度查询</h1>
+      <p class="hero-copy">输入 CAS 号、英文名、缩写、中文名或相关药物名称，对比 FDA、EMA、Health Canada 与 TGA 的每日可接受摄入量，并按最大日剂量换算浓度限度。</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="search-panel" aria-labelledby="search-title">
+      <h2 id="search-title" class="sr-only">查询条件</h2>
+      <div class="search-grid">
+        <label class="field field-wide">
+          <span>CAS / 名称 / 缩写 / 相关药物</span>
+          <input id="query" type="search" autocomplete="off" placeholder="例如：62-75-9、NDMA、N-亚硝基二甲胺、sertraline">
+        </label>
+        <label class="field">
+          <span>最大日剂量 MDD</span>
+          <div class="input-unit">
+            <input id="mdd" type="number" min="0.000001" step="any" value="1000">
+            <span>mg/day</span>
+          </div>
+        </label>
+        <button id="searchButton" class="primary" type="button">查询</button>
+      </div>
+      <div class="quick-row">
+        <span>快速查询：</span>
+        <button class="chip query-chip" data-query="NDMA">NDMA</button>
+        <button class="chip query-chip" data-query="NDEA">NDEA</button>
+        <button class="chip query-chip" data-query="NDBA">NDBA</button>
+        <button class="chip query-chip" data-query="N-nitroso-sertraline">N-亚硝基舍曲林</button>
+      </div>
+      <p class="formula">换算关系：限度（ppm） = AI（ng/day） ÷ 最大日剂量（mg/day）</p>
+    </section>
+
+    <section class="status-panel" aria-label="数据源状态">
+      <div>
+        <strong id="recordCount">正在加载数据…</strong>
+        <span id="generatedAt"></span>
+      </div>
+      <button id="showSources" class="text-button" type="button">查看数据源状态</button>
+    </section>
+
+    <section id="sourceDetails" class="source-details hidden" aria-live="polite"></section>
+
+    <section id="emptyState" class="empty-state">
+      <h2>开始查询</h2>
+      <p>可输入精确 CAS、缩写或名称。名称查询支持部分匹配；输入原料药名称时，也会检索与其相关的 NDSRI。</p>
+    </section>
+
+    <section id="results" class="results hidden" aria-live="polite">
+      <div class="results-head">
+        <div>
+          <h2 id="resultsTitle">查询结果</h2>
+          <p id="resultsSummary"></p>
+        </div>
+        <div class="actions">
+          <button id="copyButton" class="secondary" type="button">复制结果</button>
+          <button id="csvButton" class="secondary" type="button">导出 CSV</button>
+        </div>
+      </div>
+      <div id="resultCards"></div>
+    </section>
+
+    <section class="notice">
+      <h2>使用边界</h2>
+      <p>网页显示的是监管机构发布的每日可接受摄入量（AI）及其换算值，不是对所有产品通用的固定 ppm。多种亚硝胺同时存在、短疗程调整、临时 AI、非致突变结论及药品供应短缺情形需要按各机构现行指导文件单独判断。</p>
+      <p>申报、注册标准或放行判定前，应点击原始来源核验。数据更新脚本会记录变化，但页面不替代监管机构原始文件。</p>
+    </section>
+  </main>
+
+  <footer class="wrap footer">
+    <span>静态网页，不上传查询内容。</span>
+    <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub Pages 可部署</a>
+  </footer>
+
+  <template id="cardTemplate">
+    <article class="result-card">
+      <div class="compound-head">
+        <div>
+          <div class="compound-kicker"></div>
+          <h3 class="compound-name"></h3>
+          <p class="compound-meta"></p>
+        </div>
+        <div class="record-badge"></div>
+      </div>
+      <div class="alias-block hidden"></div>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>监管机构</th>
+              <th>AI</th>
+              <th>按当前 MDD 换算</th>
+              <th>CPCA</th>
+              <th>依据 / 状态</th>
+              <th>发布日期</th>
+              <th>原始来源</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </article>
+  </template>
+
+  <script src="./app.js" defer></script>
+</body>
+</html>
