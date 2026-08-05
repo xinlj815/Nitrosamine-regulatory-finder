@@ -31,8 +31,8 @@ function scoreRecord(record, q) {
   const nq = normalize(q);
   const cas = normalize(record.cas);
   const name = normalize(record.name);
-  const aliases = record.aliases.map(normalize);
-  const related = record.related_substances.map(normalize);
+  const aliases = (record.aliases || []).map(normalize);
+  const related = (record.related_substances || []).map(normalize);
   const iupac = normalize(record.iupac);
   const smiles = normalize(record.smiles);
 
@@ -64,7 +64,7 @@ function search() {
 
   const url = new URL(window.location.href);
   if (query) url.searchParams.set("q", query); else url.searchParams.delete("q");
-  if (Number.isFinite(mdd) && mdd > 0) url.searchParams.set("mdd", String(mdd));
+  url.searchParams.set("mdd", String(mdd));
   history.replaceState({}, "", url);
 
   if (!query) {
@@ -94,6 +94,7 @@ function sourceLabel(status) {
   if (status === "reference") return "参考值";
   if (status === "nmi") return "非致突变控制";
   if (status === "other") return "非数值结论";
+  if (status === "interim") return "临时AI";
   return "已建立AI";
 }
 
@@ -102,6 +103,60 @@ function makeCell(text, className = "") {
   td.textContent = text;
   if (className) td.className = className;
   return td;
+}
+
+function recordRows(record) {
+  const rows = [];
+  Object.entries(record.regulators || {}).forEach(([agency, item]) => {
+    rows.push({
+      agency,
+      agencyLabel: agency,
+      limitType: "regular",
+      item
+    });
+  });
+  (record.special_limits || []).forEach(item => {
+    rows.push({
+      agency: item.agency || "",
+      agencyLabel: item.limit_type === "interim" ? `${item.agency}（临时AI）` : `${item.agency}（特殊限度）`,
+      limitType: item.limit_type || "special",
+      item
+    });
+  });
+
+  const preferred = ["FDA", "EMA", "Health Canada", "TGA"];
+  return rows.sort((a, b) => {
+    const ai = preferred.includes(a.agency) ? preferred.indexOf(a.agency) : 99;
+    const bi = preferred.includes(b.agency) ? preferred.indexOf(b.agency) : 99;
+    if (ai !== bi) return ai - bi;
+    if (a.limitType !== b.limitType) return a.limitType === "regular" ? -1 : 1;
+    return String(a.item.applicable_product || "").localeCompare(String(b.item.applicable_product || ""));
+  });
+}
+
+function rowBasis(row) {
+  const item = row.item;
+  if (row.limitType === "interim") {
+    const bits = [];
+    if (item.basis) bits.push(item.basis);
+    if (item.applicable_product) bits.push(`适用产品：${item.applicable_product}`);
+    if (item.official_control_display) bits.push(`FDA公布控制限度：${item.official_control_display}`);
+    if (item.estimated_duration) bits.push(`预计复核日期：${item.estimated_duration}`);
+    return bits.join("；") || "FDA Table 3临时AI";
+  }
+  const bits = [item.basis || sourceLabel(item.status)];
+  if (item.source_table && !bits[0].includes(item.source_table)) bits.push(item.source_table);
+  return bits.filter(Boolean).join("；");
+}
+
+function appendSourceLink(cell, item) {
+  const link = document.createElement("a");
+  link.href = item.source_url;
+  link.target = "_blank";
+  link.rel = "noreferrer";
+  link.className = "source-link";
+  link.textContent = item.source_version || "打开原文";
+  cell.appendChild(link);
 }
 
 function renderResults() {
@@ -125,52 +180,51 @@ function renderResults() {
 
     const metaBits = [];
     if (record.iupac && normalize(record.iupac) !== normalize(record.name)) metaBits.push(`IUPAC：${record.iupac}`);
-    if (record.related_substances.length) metaBits.push(`相关药物：${record.related_substances.slice(0, 8).join("、")}${record.related_substances.length > 8 ? "…" : ""}`);
+    if ((record.related_substances || []).length) {
+      metaBits.push(`相关药物：${record.related_substances.slice(0, 8).join("、")}${record.related_substances.length > 8 ? "…" : ""}`);
+    }
     fragment.querySelector(".compound-meta").textContent = metaBits.join("；") || "监管限度记录";
 
-    const regulators = Object.entries(record.regulators);
-    fragment.querySelector(".record-badge").textContent = `${regulators.length} 个监管来源`;
+    const rows = recordRows(record);
+    const regularCount = Object.keys(record.regulators || {}).length;
+    const specialCount = (record.special_limits || []).length;
+    fragment.querySelector(".record-badge").textContent = specialCount
+      ? `${regularCount} 个常规来源 + ${specialCount} 条临时/特殊限度`
+      : `${regularCount} 个监管来源`;
 
-    if (record.aliases.length) {
+    if ((record.aliases || []).length) {
       const aliasBlock = fragment.querySelector(".alias-block");
       aliasBlock.classList.remove("hidden");
       aliasBlock.textContent = `别名 / 缩写：${record.aliases.join("、")}`;
     }
 
     const tbody = fragment.querySelector("tbody");
-    const preferred = ["FDA", "EMA", "Health Canada", "TGA"];
-    regulators
-      .sort((a, b) => preferred.indexOf(a[0]) - preferred.indexOf(b[0]))
-      .forEach(([agency, item]) => {
-        const tr = document.createElement("tr");
-        tr.appendChild(makeCell(agency));
-        tr.appendChild(makeCell(item.ai_ng_day !== null ? `${formatNumber(item.ai_ng_day)} ng/day` : item.ai_display, "ai"));
-        tr.appendChild(makeCell(formatPpm(item.ai_ng_day, state.mdd), "ppm"));
-        tr.appendChild(makeCell(item.cpca_category || "—"));
+    rows.forEach(row => {
+      const item = row.item;
+      const tr = document.createElement("tr");
+      if (row.limitType === "interim") tr.classList.add("interim-row");
+      tr.appendChild(makeCell(row.agencyLabel));
+      tr.appendChild(makeCell(item.ai_ng_day !== null ? `${formatNumber(item.ai_ng_day)} ng/day` : item.ai_display, "ai"));
+      tr.appendChild(makeCell(formatPpm(item.ai_ng_day, state.mdd), "ppm"));
+      tr.appendChild(makeCell(item.cpca_category || "—"));
 
-        const basis = item.basis || sourceLabel(item.status);
-        const basisCell = makeCell(basis);
-        if (item.status === "reference" || item.status === "nmi" || item.status === "other") {
-          const span = document.createElement("span");
-          span.className = "note-ref";
-          span.textContent = basis;
-          basisCell.textContent = "";
-          basisCell.appendChild(span);
-        }
-        tr.appendChild(basisCell);
-        tr.appendChild(makeCell(item.publication_date || "—"));
+      const basis = rowBasis(row);
+      const basisCell = makeCell(basis);
+      if (["reference", "nmi", "other", "interim"].includes(item.status) || row.limitType === "interim") {
+        const span = document.createElement("span");
+        span.className = row.limitType === "interim" ? "note-interim" : "note-ref";
+        span.textContent = basis;
+        basisCell.textContent = "";
+        basisCell.appendChild(span);
+      }
+      tr.appendChild(basisCell);
+      tr.appendChild(makeCell(item.publication_date || "—"));
 
-        const linkCell = document.createElement("td");
-        const link = document.createElement("a");
-        link.href = item.source_url;
-        link.target = "_blank";
-        link.rel = "noreferrer";
-        link.className = "source-link";
-        link.textContent = item.source_version || "打开原文";
-        linkCell.appendChild(link);
-        tr.appendChild(linkCell);
-        tbody.appendChild(tr);
-      });
+      const linkCell = document.createElement("td");
+      appendSourceLink(linkCell, item);
+      tr.appendChild(linkCell);
+      tbody.appendChild(tr);
+    });
 
     card.dataset.index = String(index);
     container.appendChild(fragment);
@@ -185,13 +239,14 @@ function buildText() {
   ];
   state.matches.forEach(record => {
     lines.push(`${record.name}${record.cas ? `（CAS ${record.cas}）` : ""}`);
-    Object.entries(record.regulators).forEach(([agency, item]) => {
+    recordRows(record).forEach(row => {
+      const item = row.item;
       const ppm = formatPpm(item.ai_ng_day, state.mdd);
-      lines.push(`- ${agency}: ${item.ai_ng_day !== null ? `${formatNumber(item.ai_ng_day)} ng/day` : item.ai_display}; ${ppm}; ${item.basis || sourceLabel(item.status)}`);
+      lines.push(`- ${row.agencyLabel}: ${item.ai_ng_day !== null ? `${formatNumber(item.ai_ng_day)} ng/day` : item.ai_display}; 按当前MDD换算 ${ppm}; ${rowBasis(row)}`);
     });
     lines.push("");
   });
-  lines.push("注：ppm = AI(ng/day) ÷ MDD(mg/day)。申报或放行前请核验监管机构原始文件。");
+  lines.push("注：普通AI的ppm按 AI(ng/day) ÷ MDD(mg/day)换算。FDA Table 3官方control limit为产品特异性临时值，应以表中产品和期限为准。");
   return lines.join("\n");
 }
 
@@ -204,19 +259,27 @@ async function copyResults() {
 }
 
 function exportCsv() {
-  const rows = [["CAS", "名称", "监管机构", "AI (ng/day)", "换算限度 (ppm)", "MDD (mg/day)", "CPCA", "依据/状态", "发布日期", "来源"]];
+  const rows = [[
+    "CAS", "名称", "监管机构", "限度类型", "AI (ng/day)", "按当前MDD换算 (ppm)", "MDD (mg/day)",
+    "官方产品控制限度 (ppm)", "适用产品", "预计复核日期", "CPCA", "依据/状态", "发布日期", "来源"
+  ]];
   state.matches.forEach(record => {
-    Object.entries(record.regulators).forEach(([agency, item]) => {
+    recordRows(record).forEach(row => {
+      const item = row.item;
       rows.push([
         record.cas,
         record.name,
-        agency,
+        row.agency,
+        row.limitType,
         item.ai_ng_day ?? item.ai_display,
         item.ai_ng_day !== null ? item.ai_ng_day / state.mdd : "",
         state.mdd,
-        item.cpca_category,
-        item.basis || sourceLabel(item.status),
-        item.publication_date,
+        item.official_control_ppm ?? "",
+        item.applicable_product || "",
+        item.estimated_duration || "",
+        item.cpca_category || "",
+        rowBasis(row),
+        item.publication_date || "",
         item.source_url
       ]);
     });

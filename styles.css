@@ -112,3 +112,13 @@ td { font-size: .9rem; }
   .actions button { flex: 1; }
   .footer { flex-direction: column; }
 }
+
+.interim-row td { background: #fffaf0; }
+.note-interim {
+  color: #7a4300;
+  background: #fff0ce;
+  border: 1px solid #efd39b;
+  border-radius: 5px;
+  padding: 3px 7px;
+  display: inline-block;
+}
