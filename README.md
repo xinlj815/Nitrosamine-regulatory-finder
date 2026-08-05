@@ -50,4 +50,7 @@
 ├─ requirements.txt
 └─ README.md
 ```
+V3:
+1. 支持常见NDSRI相关药物的中/英文通用名查询
+2. 修改表格格式
 
