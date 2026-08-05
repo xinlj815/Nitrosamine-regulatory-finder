@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-08-05T04:42:25+00:00",
+  "generated_at": "2026-08-05T04:47:00+00:00",
   "disclaimer": "本数据库用于研发和法规检索辅助。AI为每日可接受摄入量，ppm必须按最大日剂量换算；申报和放行前应打开监管机构原始文件核验。",
   "source_status": {
     "EMA": {
       "version": "EMA/42261/2025/Rev. 13; N-nitrosamines: 244 rows; Other N-nitroso-structures: 17 rows",
       "updated": "2026-06-01",
       "url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-      "mode": "both Appendix 1 worksheets"
+      "mode": "previous data retained; refresh failed: HTTPError: 403 Client Error: Forbidden for url: https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx"
     },
     "Health Canada": {
       "version": "Health Canada Appendix 1; version 2026-03-11; 183 rows",
@@ -29,6 +29,7 @@
     }
   },
   "refresh_errors": {
+    "EMA": "HTTPError: 403 Client Error: Forbidden for url: https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
     "TGA": "ReadTimeout: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=90)"
   },
   "records": [
@@ -2219,8 +2220,8 @@
         "NDAQ"
       ],
       "related_substances": [
-        "Quetiapine",
-        "quetiapine"
+        "quetiapine",
+        "Quetiapine"
       ],
       "smiles": "C1CN(CCN1N=O)C/3=N\\C2=CC=CC=C2SC4=CC=CC=C/34",
       "iupac": "11-(4-Nitrosopiperazin-1-yl)dibenzo[b,f][1,4]thiazepine",
@@ -6777,8 +6778,8 @@
         "NDUPA"
       ],
       "related_substances": [
-        "Ulipristal acetate",
-        "Ulipristal Acetate"
+        "Ulipristal Acetate",
+        "Ulipristal acetate"
       ],
       "smiles": "CC(=O)[C@]1(CC[C@@H]2[C@@]1(C[C@@H](C3=C4CCC(=O)C=C4CC[C@@H]23)C5=CC=C(C=C5)N(C)N=O)C)OC(=O)C",
       "iupac": "[(8S,11R,13S,14S,17R)-17-acetyl-13-methyl-11-[4-[methyl(nitroso)amino]phenyl]-3-oxo-1,2,6,7,8,11,12,14,15,16-decahydrocyclopenta[a]phenanthren-17-yl] acetate",
