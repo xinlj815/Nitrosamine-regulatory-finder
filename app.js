@@ -914,6 +914,33 @@ function renderResults() {
   });
 }
 
+function buildText() {
+  const lines = [
+    `亚硝胺监管限度查询：${state.query}`,
+    `最大日剂量：${formatNumber(state.mdd)} mg/day`,
+    ""
+  ];
+  state.matches.forEach(record => {
+    lines.push(`${record.name}${record.cas ? `（CAS ${record.cas}）` : ""}`);
+    recordRows(record).forEach(row => {
+      const item = row.item;
+      const ppm = formatPpm(item.ai_ng_day, state.mdd);
+      lines.push(`- ${row.agencyLabel}: ${item.ai_ng_day !== null ? `${formatNumber(item.ai_ng_day)} ng/day` : item.ai_display}; 按当前MDD换算 ${ppm}; ${rowBasis(row)}`);
+    });
+    lines.push("");
+  });
+  lines.push("注：普通AI的ppm按 AI(ng/day) ÷ MDD(mg/day)换算。FDA Table 3官方control limit为产品特异性临时值，应以表中产品和期限为准。");
+  return lines.join("\n");
+}
+
+async function copyResults() {
+  await navigator.clipboard.writeText(buildText());
+  const button = el("copyButton");
+  const old = button.textContent;
+  button.textContent = "已复制";
+  setTimeout(() => button.textContent = old, 1400);
+}
+
 function exportCsv() {
   const rows = [[
     "CAS", "名称", "监管机构", "限度类型", "AI (ng/day)", "按当前MDD换算 (ppm)", "MDD (mg/day)",
@@ -1004,6 +1031,8 @@ async function init() {
 
 el("searchButton").addEventListener("click", search);
 el("query").addEventListener("keydown", event => { if (event.key === "Enter") search(); });
+const copyButton = el("copyButton");
+if (copyButton) copyButton.addEventListener("click", copyResults);
 el("csvButton").addEventListener("click", exportCsv);
 el("showSources").addEventListener("click", () => {
   el("sourceDetails").classList.toggle("hidden");
