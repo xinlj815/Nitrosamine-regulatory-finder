@@ -4,14 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="按CAS号、名称或缩写查询FDA、EMA、Health Canada、TGA的亚硝胺可接受摄入量，并按最大日剂量换算ppm。">
-  <title>亚硝胺监管限度查询</title>
+  <title>亚硝胺杂质限度查询</title>
   <link rel="stylesheet" href="./styles.css?v=20260805-cn">
 </head>
 <body>
   <header class="hero">
     <div class="wrap">
       <div class="eyebrow">Nitrosamine Regulatory Limit Finder</div>
-      <h1>亚硝胺监管限度查询</h1>
+      <h1>亚硝胺杂质限度查询</h1>
       <p class="hero-copy">输入 CAS 号、英文名、缩写、中文名或相关药物名称，对比 FDA、EMA、Health Canada 与 TGA 的每日可接受摄入量，并按最大日剂量换算浓度限度。</p>
     </div>
   </header>
@@ -62,24 +62,23 @@
           <p id="resultsSummary"></p>
         </div>
         <div class="actions">
-          <button id="copyButton" class="secondary" type="button">复制结果</button>
-          <button id="csvButton" class="secondary" type="button">导出 CSV</button>
+            <button id="csvButton" class="secondary" type="button">导出 CSV</button>
         </div>
       </div>
       <div id="resultCards"></div>
     </section>
 
     <section class="notice">
-      <h2>使用边界</h2>
-      <p>网页显示的是监管机构发布的每日可接受摄入量（AI）及其换算值，不是对所有产品通用的固定 ppm。多种亚硝胺同时存在、短疗程调整、临时 AI、非致突变结论及药品供应短缺情形需要按各机构现行指导文件单独判断。</p>
-      <p>FDA Table 3 同时给出产品特异性的临时 AI 与官方 control limit（ppm）。网页按输入 MDD 计算的 ppm 仅用于核算，不能替代 Table 3 中限定产品和期限的官方临时控制值。</p>
-      <p>申报、注册标准或放行判定前，应点击原始来源核验。数据更新脚本会记录变化，但页面不替代监管机构原始文件。</p>
+      <h2>注意事项</h2>
+      <p>1. 查询值显示的是监管机构发布的每日可接受摄入量（AI）及其换算值，不是对所有产品通用的固定 ppm。多种亚硝胺同时存在、用药周期不同、非致突变结论及药品供应短缺等情形需要按各机构现行指导文件单独判断。</p>
+      <p>2. FDA Table3 同时给出产品特异性的临时 AI 与官方 control limit（ppm）。网页按输入MDD计算得出的限度仅用于核算，若与Table3不符，可能是MDD选择不一致导致的。</p>
+      <p>3. 申报注册或放行判定前，应点击原始来源对限度进行核对。</p>
     </section>
   </main>
 
   <footer class="wrap footer">
     <span>静态网页，不上传查询内容。</span>
-    <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub Pages 可部署</a>
+    <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub Pages 部署</a>
   </footer>
 
   <template id="cardTemplate">
