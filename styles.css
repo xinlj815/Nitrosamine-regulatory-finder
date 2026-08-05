@@ -52,7 +52,7 @@ h1 { margin: 8px 0 12px; font-size: clamp(2rem, 4vw, 3.4rem); line-height: 1.1; 
 .chip:hover { background: var(--accent); }
 .formula { margin: 14px 0 0; color: var(--muted); font-size: .88rem; }
 .status-panel {
-  margin: 20px 0; display: flex; justify-content: space-between; gap: 12px;
+  margin: 14px 0 20px; display: flex; justify-content: flex-end; gap: 12px;
   align-items: center; color: var(--muted); font-size: .92rem;
 }
 .status-panel strong { color: var(--ink); margin-right: 10px; }
@@ -86,8 +86,8 @@ h1 { margin: 8px 0 12px; font-size: clamp(2rem, 4vw, 3.4rem); line-height: 1.1; 
 .record-badge { white-space: nowrap; background: var(--accent); color: var(--brand); border-radius: 999px; padding: 5px 10px; font-size: .8rem; }
 .alias-block { margin-top: 12px; padding: 10px 12px; border-radius: 8px; background: #f6f8f9; color: var(--muted); font-size: .88rem; }
 .table-scroll { overflow-x: auto; margin-top: 16px; }
-table { width: 100%; border-collapse: collapse; min-width: 900px; }
-th, td { padding: 11px 10px; text-align: left; border-top: 1px solid var(--line); vertical-align: top; }
+table { width: 100%; border-collapse: collapse; min-width: 900px; border: 1px solid var(--line); }
+th, td { padding: 11px 10px; text-align: left; border: 1px solid var(--line); vertical-align: top; }
 th { color: var(--muted); font-size: .78rem; text-transform: uppercase; letter-spacing: .04em; background: #fafbfc; }
 td { font-size: .9rem; }
 .ai { font-weight: 750; color: var(--brand); white-space: nowrap; }

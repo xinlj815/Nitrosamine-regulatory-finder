@@ -7,6 +7,635 @@ const state = {
 
 const el = (id) => document.getElementById(id);
 
+// Curated Chinese generic-name aliases for APIs associated with NDSRIs.
+// The regulator source data remain unchanged; these aliases are used only for local search and display.
+const DRUG_GENERIC_NAMES = {
+  "abacavir": [
+    "阿巴卡韦"
+  ],
+  "acarbose": [
+    "阿卡波糖"
+  ],
+  "acebutolol": [
+    "醋丁洛尔"
+  ],
+  "adrenaline": [
+    "肾上腺素"
+  ],
+  "epinephrine": [
+    "肾上腺素"
+  ],
+  "almotriptan": [
+    "阿莫曲普坦"
+  ],
+  "alogliptin": [
+    "阿格列汀"
+  ],
+  "alprazolam": [
+    "阿普唑仑"
+  ],
+  "ambroxol": [
+    "氨溴索"
+  ],
+  "amiodarone": [
+    "胺碘酮"
+  ],
+  "amitriptyline": [
+    "阿米替林"
+  ],
+  "amphotericin b": [
+    "两性霉素B",
+    "两性霉素b"
+  ],
+  "apixaban": [
+    "阿哌沙班"
+  ],
+  "argatroban": [
+    "阿加曲班"
+  ],
+  "aripiprazole": [
+    "阿立哌唑"
+  ],
+  "articaine": [
+    "阿替卡因"
+  ],
+  "atenolol": [
+    "阿替洛尔"
+  ],
+  "atomoxetine": [
+    "托莫西汀"
+  ],
+  "azelastine": [
+    "氮卓斯汀"
+  ],
+  "azithromycin": [
+    "阿奇霉素"
+  ],
+  "benazepril": [
+    "贝那普利"
+  ],
+  "benzathine": [
+    "苄星"
+  ],
+  "benzydamine": [
+    "苄达明"
+  ],
+  "berotralstat": [
+    "贝罗司他"
+  ],
+  "betahistine": [
+    "倍他司汀"
+  ],
+  "betaxolol": [
+    "倍他洛尔"
+  ],
+  "bilastine": [
+    "比拉斯汀"
+  ],
+  "bisoprolol": [
+    "比索洛尔"
+  ],
+  "brinzolamide": [
+    "布林佐胺"
+  ],
+  "bumetanide": [
+    "布美他尼"
+  ],
+  "bupropion": [
+    "安非他酮"
+  ],
+  "buspirone": [
+    "丁螺环酮"
+  ],
+  "cabergoline": [
+    "卡麦角林"
+  ],
+  "calcium folinate": [
+    "亚叶酸钙"
+  ],
+  "calcium levofolinate": [
+    "左亚叶酸钙"
+  ],
+  "carvedilol": [
+    "卡维地洛"
+  ],
+  "caspofungin": [
+    "卡泊芬净"
+  ],
+  "celiprolol": [
+    "塞利洛尔"
+  ],
+  "chlorphenamine": [
+    "氯苯那敏",
+    "扑尔敏"
+  ],
+  "cilazapril": [
+    "西拉普利"
+  ],
+  "cimetidine": [
+    "西咪替丁"
+  ],
+  "cinacalcet": [
+    "西那卡塞"
+  ],
+  "cinnarizine": [
+    "桂利嗪"
+  ],
+  "ciprofloxacin": [
+    "环丙沙星"
+  ],
+  "citalopram": [
+    "西酞普兰"
+  ],
+  "clarithromycin": [
+    "克拉霉素"
+  ],
+  "clonidine": [
+    "可乐定"
+  ],
+  "clozapine": [
+    "氯氮平"
+  ],
+  "cobicistat": [
+    "考比司他"
+  ],
+  "colesevelam": [
+    "考来维仑"
+  ],
+  "cyanocobalamine": [
+    "氰钴胺",
+    "维生素B12",
+    "维生素b12"
+  ],
+  "cyanocobalamin": [
+    "氰钴胺",
+    "维生素B12",
+    "维生素b12"
+  ],
+  "cytisine": [
+    "金雀花碱"
+  ],
+  "d-biotin": [
+    "D-生物素",
+    "生物素"
+  ],
+  "biotin": [
+    "生物素"
+  ],
+  "dabigatran etexilate": [
+    "达比加群酯"
+  ],
+  "dalbavancin": [
+    "达巴万星"
+  ],
+  "daridorexant": [
+    "达利雷生"
+  ],
+  "dasatinib": [
+    "达沙替尼"
+  ],
+  "desloratadine": [
+    "地氯雷他定"
+  ],
+  "desvenlafaxine": [
+    "去甲文拉法辛"
+  ],
+  "dextromethorphan": [
+    "右美沙芬"
+  ],
+  "diazepam": [
+    "地西泮"
+  ],
+  "diclofenac": [
+    "双氯芬酸"
+  ],
+  "diltiazem": [
+    "地尔硫卓"
+  ],
+  "dimenhydrinate": [
+    "茶苯海明"
+  ],
+  "diphenhydramine": [
+    "苯海拉明"
+  ],
+  "dorzolamide": [
+    "多佐胺"
+  ],
+  "timolol": [
+    "噻吗洛尔"
+  ],
+  "doxepin": [
+    "多塞平"
+  ],
+  "doxycycline": [
+    "多西环素"
+  ],
+  "doxylamine": [
+    "多西拉敏"
+  ],
+  "dronedarone": [
+    "决奈达隆"
+  ],
+  "duloxetine": [
+    "度洛西汀"
+  ],
+  "edoxaban": [
+    "依度沙班"
+  ],
+  "elagolix": [
+    "艾拉戈克"
+  ],
+  "eletriptan": [
+    "依来曲普坦"
+  ],
+  "enalapril": [
+    "依那普利"
+  ],
+  "entacapone": [
+    "恩他卡朋"
+  ],
+  "esmolol": [
+    "艾司洛尔"
+  ],
+  "felodipine": [
+    "非洛地平"
+  ],
+  "fenfluramine": [
+    "芬氟拉明"
+  ],
+  "flecainide": [
+    "氟卡尼"
+  ],
+  "fluoxetine": [
+    "氟西汀"
+  ],
+  "folic acid": [
+    "叶酸"
+  ],
+  "frovatriptan": [
+    "夫罗曲普坦"
+  ],
+  "furosemide": [
+    "呋塞米",
+    "速尿"
+  ],
+  "galantamine": [
+    "加兰他敏"
+  ],
+  "gliclazide": [
+    "格列齐特"
+  ],
+  "hydrochlorothiazide": [
+    "氢氯噻嗪"
+  ],
+  "hydroxychloroquine": [
+    "羟氯喹"
+  ],
+  "hydroxyzine": [
+    "羟嗪"
+  ],
+  "imatinib": [
+    "伊马替尼"
+  ],
+  "indapamide": [
+    "吲达帕胺"
+  ],
+  "isosorbide mononitrate": [
+    "单硝酸异山梨酯"
+  ],
+  "ivacaftor": [
+    "伊伐卡托"
+  ],
+  "ketamine": [
+    "氯胺酮"
+  ],
+  "labetalol": [
+    "拉贝洛尔"
+  ],
+  "landiolol": [
+    "兰地洛尔"
+  ],
+  "lercanidipine": [
+    "乐卡地平"
+  ],
+  "leucovorin": [
+    "亚叶酸"
+  ],
+  "levodropropizine": [
+    "左羟丙哌嗪"
+  ],
+  "levofloxacin": [
+    "左氧氟沙星"
+  ],
+  "lidocaine": [
+    "利多卡因"
+  ],
+  "lisinopril": [
+    "赖诺普利"
+  ],
+  "lumefantrine": [
+    "苯芴醇"
+  ],
+  "maprotiline": [
+    "马普替林"
+  ],
+  "mefenamic acid": [
+    "甲芬那酸"
+  ],
+  "meglumine": [
+    "葡甲胺"
+  ],
+  "melatonin": [
+    "褪黑素"
+  ],
+  "meropenem": [
+    "美罗培南"
+  ],
+  "metamizole": [
+    "安乃近"
+  ],
+  "methadone": [
+    "美沙酮"
+  ],
+  "methylphenidate": [
+    "哌甲酯"
+  ],
+  "metoprolol": [
+    "美托洛尔"
+  ],
+  "mianserin": [
+    "米安色林"
+  ],
+  "mifepristone": [
+    "米非司酮"
+  ],
+  "mirabegron": [
+    "米拉贝隆"
+  ],
+  "mirtazapine": [
+    "米氮平"
+  ],
+  "moxifloxacin": [
+    "莫西沙星"
+  ],
+  "moxonidine": [
+    "莫索尼定"
+  ],
+  "nadolol": [
+    "纳多洛尔"
+  ],
+  "nalmefene": [
+    "纳美芬"
+  ],
+  "naratriptan": [
+    "那拉曲普坦"
+  ],
+  "nebivolol": [
+    "奈必洛尔"
+  ],
+  "nefopam": [
+    "奈福泮"
+  ],
+  "nicotine": [
+    "尼古丁"
+  ],
+  "nilotinib": [
+    "尼洛替尼"
+  ],
+  "nintedanib": [
+    "尼达尼布"
+  ],
+  "norfloxacin": [
+    "诺氟沙星",
+    "氟哌酸"
+  ],
+  "nortriptyline": [
+    "去甲替林"
+  ],
+  "olanzapine": [
+    "奥氮平"
+  ],
+  "olaparib": [
+    "奥拉帕利"
+  ],
+  "opipramol": [
+    "奥匹哌醇"
+  ],
+  "orphenadrine": [
+    "奥芬那君"
+  ],
+  "paroxetine": [
+    "帕罗西汀"
+  ],
+  "penicillin g benzathine": [
+    "苄星青霉素"
+  ],
+  "perindopril": [
+    "培哚普利"
+  ],
+  "phenylephrine": [
+    "去氧肾上腺素"
+  ],
+  "posaconazole": [
+    "泊沙康唑"
+  ],
+  "pramipexole": [
+    "普拉克索"
+  ],
+  "propafenon": [
+    "普罗帕酮"
+  ],
+  "propafenone": [
+    "普罗帕酮"
+  ],
+  "propranolol": [
+    "普萘洛尔",
+    "心得安"
+  ],
+  "protriptyline": [
+    "普罗替林"
+  ],
+  "pseudoephedrine": [
+    "伪麻黄碱"
+  ],
+  "quetiapine": [
+    "喹硫平"
+  ],
+  "quinapril": [
+    "喹那普利"
+  ],
+  "ramipril": [
+    "雷米普利"
+  ],
+  "ranolazine": [
+    "雷诺嗪"
+  ],
+  "rasagiline": [
+    "雷沙吉兰"
+  ],
+  "reboxetine": [
+    "瑞波西汀"
+  ],
+  "relebactam": [
+    "雷来巴坦"
+  ],
+  "ribociclib": [
+    "瑞博西利"
+  ],
+  "rifampicin": [
+    "利福平"
+  ],
+  "rifampin": [
+    "利福平"
+  ],
+  "rifapentine": [
+    "利福喷丁"
+  ],
+  "riociguat": [
+    "利奥西呱"
+  ],
+  "ritonavir": [
+    "利托那韦"
+  ],
+  "rivaroxaban": [
+    "利伐沙班"
+  ],
+  "rivastigmine": [
+    "卡巴拉汀"
+  ],
+  "rizatriptan": [
+    "利扎曲普坦"
+  ],
+  "ropinirole": [
+    "罗匹尼罗"
+  ],
+  "ropivacaine": [
+    "罗哌卡因"
+  ],
+  "rotigotine": [
+    "罗替戈汀"
+  ],
+  "safinamide": [
+    "沙芬酰胺"
+  ],
+  "salbutamol": [
+    "沙丁胺醇"
+  ],
+  "selumetinib": [
+    "司美替尼"
+  ],
+  "sertraline": [
+    "舍曲林"
+  ],
+  "sildenafil": [
+    "西地那非"
+  ],
+  "silodosin": [
+    "西洛多辛"
+  ],
+  "sitagliptin": [
+    "西格列汀"
+  ],
+  "sotalol": [
+    "索他洛尔"
+  ],
+  "sumatriptan": [
+    "舒马曲普坦"
+  ],
+  "tadalafil": [
+    "他达拉非"
+  ],
+  "tamoxifen": [
+    "他莫昔芬"
+  ],
+  "tamsulosin": [
+    "坦索罗辛"
+  ],
+  "tapentadol": [
+    "他喷他多"
+  ],
+  "terazosin": [
+    "特拉唑嗪"
+  ],
+  "terbinafine": [
+    "特比萘芬"
+  ],
+  "tetracaine": [
+    "丁卡因"
+  ],
+  "ticagrelor": [
+    "替格瑞洛"
+  ],
+  "tigecycline": [
+    "替加环素"
+  ],
+  "tizanidine": [
+    "替扎尼定"
+  ],
+  "tofacitinib": [
+    "托法替布"
+  ],
+  "tramadol": [
+    "曲马多"
+  ],
+  "trandolapril": [
+    "群多普利"
+  ],
+  "trientine": [
+    "曲恩汀"
+  ],
+  "trimebutine": [
+    "曲美布汀"
+  ],
+  "trimetazidine": [
+    "曲美他嗪"
+  ],
+  "ulipristal acetate": [
+    "醋酸乌利司他"
+  ],
+  "urapidil": [
+    "乌拉地尔"
+  ],
+  "valaciclovir": [
+    "伐昔洛韦"
+  ],
+  "valacyclovir": [
+    "伐昔洛韦"
+  ],
+  "valsartan": [
+    "缬沙坦"
+  ],
+  "vancomycin": [
+    "万古霉素"
+  ],
+  "varenicline": [
+    "伐尼克兰"
+  ],
+  "venlafaxine": [
+    "文拉法辛"
+  ],
+  "vibegron": [
+    "维贝格龙"
+  ],
+  "vildagliptin": [
+    "维格列汀"
+  ],
+  "vortioxetine": [
+    "伏硫西汀"
+  ],
+  "zolmitriptan": [
+    "佐米曲普坦"
+  ]
+};
+
+const NORMALIZED_DRUG_NAMES = Object.entries(DRUG_GENERIC_NAMES).map(([english, chinese]) => ({
+  english,
+  englishKey: normalize(english),
+  chinese,
+  chineseKeys: chinese.map(normalize)
+}));
+
+
 function normalize(value) {
   return String(value ?? "")
     .normalize("NFKD")
@@ -26,29 +655,82 @@ function formatPpm(ai, mdd) {
   return `${formatNumber(ppm, ppm < 0.001 ? 8 : 6)} ppm`;
 }
 
-function scoreRecord(record, q) {
-  if (!q) return 0;
-  const nq = normalize(q);
+function stripChineseDrugForm(value) {
+  return value
+    .replace(/^(盐酸|氢溴酸|硫酸|磷酸|甲磺酸|苯磺酸|马来酸|富马酸|枸橼酸|酒石酸|琥珀酸|醋酸|乳酸)/, "")
+    .replace(/(盐酸盐|氢溴酸盐|硫酸盐|磷酸盐|甲磺酸盐|苯磺酸盐|马来酸盐|富马酸盐|枸橼酸盐|酒石酸盐|琥珀酸盐|醋酸盐|乳酸盐)$/, "");
+}
+
+function queryVariants(value) {
+  const raw = normalize(value);
+  const variants = new Set([raw]);
+  const nitrosoQuery = raw.includes("亚硝基");
+  const withoutNitroso = raw.replace(/^n?亚硝基/, "");
+  variants.add(withoutNitroso);
+  variants.add(stripChineseDrugForm(withoutNitroso));
+
+  const candidates = [...variants].filter(Boolean);
+  NORMALIZED_DRUG_NAMES.forEach(item => {
+    const matched = item.chineseKeys.some(alias =>
+      candidates.some(candidate => candidate === alias || (alias.length >= 3 && candidate.includes(alias)))
+    );
+    if (matched) {
+      variants.add(item.englishKey);
+      if (nitrosoQuery) {
+        variants.add(`nnitroso${item.englishKey}`);
+        variants.add(`nitroso${item.englishKey}`);
+      }
+    }
+  });
+  return [...variants].filter(Boolean);
+}
+
+function scoreToken(record, nq) {
   const cas = normalize(record.cas);
   const name = normalize(record.name);
   const aliases = (record.aliases || []).map(normalize);
   const related = (record.related_substances || []).map(normalize);
+  const relatedAliases = (record.related_substance_aliases || []).map(normalize);
   const iupac = normalize(record.iupac);
   const smiles = normalize(record.smiles);
 
   if (cas && cas === nq) return 1000;
   if (name === nq) return 950;
   if (aliases.includes(nq)) return 920;
-  if (related.includes(nq)) return 870;
+  if (related.includes(nq) || relatedAliases.includes(nq)) return 870;
   if (name.startsWith(nq)) return 800;
   if (aliases.some(x => x.startsWith(nq))) return 770;
   if (cas.includes(nq)) return 730;
   if (name.includes(nq)) return 700;
   if (aliases.some(x => x.includes(nq))) return 670;
-  if (related.some(x => x.includes(nq))) return 620;
+  if (related.some(x => x.includes(nq)) || relatedAliases.some(x => x.includes(nq))) return 620;
   if (iupac.includes(nq)) return 580;
   if (smiles && smiles === nq) return 560;
   return 0;
+}
+
+function scoreRecord(record, q) {
+  if (!q) return 0;
+  return Math.max(0, ...queryVariants(q).map(token => scoreToken(record, token)));
+}
+
+function chineseNamesForRelated(value) {
+  const key = normalize(value);
+  const names = [];
+  NORMALIZED_DRUG_NAMES.forEach(item => {
+    if (key === item.englishKey || key.includes(item.englishKey)) {
+      const primary = item.chinese[0];
+      if (primary && !names.includes(primary)) names.push(primary);
+    }
+  });
+  return names;
+}
+
+function displayRelatedSubstances(record) {
+  return (record.related_substances || []).map(value => {
+    const chinese = chineseNamesForRelated(value);
+    return chinese.length ? `${value}（${chinese.join("/")}）` : value;
+  });
 }
 
 function search() {
@@ -164,7 +846,7 @@ function renderResults() {
   container.innerHTML = "";
 
   if (!state.matches.length) {
-    renderEmpty("没有找到匹配项。建议改用 CAS、英文缩写或相关药物名称；也可检查拼写。");
+    renderEmpty("没有找到匹配项。建议改用 CAS、英文名、中文通用名、英文缩写或相关药物名称；也可检查拼写。");
     return;
   }
 
@@ -181,7 +863,8 @@ function renderResults() {
     const metaBits = [];
     if (record.iupac && normalize(record.iupac) !== normalize(record.name)) metaBits.push(`IUPAC：${record.iupac}`);
     if ((record.related_substances || []).length) {
-      metaBits.push(`相关药物：${record.related_substances.slice(0, 8).join("、")}${record.related_substances.length > 8 ? "…" : ""}`);
+      const relatedDisplay = displayRelatedSubstances(record);
+      metaBits.push(`相关药物：${relatedDisplay.slice(0, 8).join("、")}${relatedDisplay.length > 8 ? "…" : ""}`);
     }
     fragment.querySelector(".compound-meta").textContent = metaBits.join("；") || "监管限度记录";
 
@@ -333,8 +1016,6 @@ async function init() {
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     state.data = await response.json();
 
-    el("recordCount").textContent = `${state.data.records.length} 个归一化化合物记录`;
-    el("generatedAt").textContent = `数据生成：${new Date(state.data.generated_at).toLocaleString("zh-CN")}`;
     renderSources();
 
     const params = new URLSearchParams(location.search);
