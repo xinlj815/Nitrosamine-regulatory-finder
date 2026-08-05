@@ -25,6 +25,7 @@ import sys
 import tempfile
 import unicodedata
 from dataclasses import dataclass
+from io import StringIO
 from pathlib import Path
 from typing import Any, Iterable
 
@@ -144,6 +145,7 @@ def blank_record(name: str, cas: str = "") -> dict[str, Any]:
         "smiles": "",
         "iupac": "",
         "regulators": {},
+        "special_limits": [],
     }
 
 
@@ -213,6 +215,7 @@ class Registry:
         smiles: str = "",
         iupac: str = "",
         status: str | None = None,
+        source_table: str = "",
     ) -> None:
         record = self.get(name, cas, aliases)
         if smiles and not record["smiles"]:
@@ -245,6 +248,7 @@ class Registry:
             "source_url": source_url,
             "source_version": source_version,
             "status": status,
+            "source_table": clean(source_table),
         }
         if current:
             # Same compound may appear several times for different APIs. Preserve related APIs
@@ -256,8 +260,71 @@ class Registry:
                     current["publication_date"] = new_value["publication_date"]
                 if new_value["basis"] and new_value["basis"] not in current.get("basis", ""):
                     current["basis"] = "; ".join(filter(None, [current.get("basis", ""), new_value["basis"]]))
+                if new_value["source_table"] and new_value["source_table"] not in current.get("source_table", ""):
+                    current["source_table"] = "; ".join(filter(None, [current.get("source_table", ""), new_value["source_table"]]))
                 return
         record["regulators"][agency] = new_value
+
+    def add_special_limit(
+        self,
+        *,
+        agency: str,
+        limit_type: str,
+        name: str,
+        cas: str = "",
+        aliases: Iterable[str] = (),
+        related: Iterable[str] = (),
+        ai_raw: Any = "",
+        official_control_raw: Any = "",
+        applicable_product: str = "",
+        estimated_duration: Any = "",
+        basis: str = "",
+        publication_date: Any = "",
+        source_url: str,
+        source_version: str,
+        source_table: str = "",
+    ) -> None:
+        record = self.get(name, cas, aliases)
+        for related_name in related:
+            related_name = clean(related_name)
+            if related_name and related_name not in ("-", "_", "―", "NA", "N/A") and related_name not in record["related_substances"]:
+                record["related_substances"].append(related_name)
+
+        ai_display = clean(ai_raw) or "未建立数值AI"
+        control_display = clean(official_control_raw)
+        if control_display and "ppm" not in control_display.lower() and parse_number(control_display) is not None:
+            control_display = f"{control_display} ppm"
+        item = {
+            "agency": clean(agency),
+            "limit_type": clean(limit_type),
+            "ai_ng_day": parse_number(ai_display),
+            "ai_display": ai_display,
+            "official_control_ppm": parse_number(control_display),
+            "official_control_display": control_display,
+            "applicable_product": clean(applicable_product),
+            "estimated_duration": iso_date(estimated_duration),
+            "basis": clean(basis),
+            "publication_date": iso_date(publication_date),
+            "source_url": source_url,
+            "source_version": source_version,
+            "source_table": clean(source_table),
+            "status": clean(limit_type) or "special",
+        }
+        identity = (
+            normalize(item["agency"]),
+            normalize(item["limit_type"]),
+            normalize(item["applicable_product"]),
+        )
+        for index, current in enumerate(record["special_limits"]):
+            current_identity = (
+                normalize(current.get("agency")),
+                normalize(current.get("limit_type")),
+                normalize(current.get("applicable_product")),
+            )
+            if current_identity == identity:
+                record["special_limits"][index] = item
+                return
+        record["special_limits"].append(item)
 
     def apply_aliases(self) -> None:
         for cas, aliases in self.aliases.items():
@@ -275,6 +342,10 @@ class Registry:
             record["id"] = key.replace(":", "-")
             record["aliases"] = sorted(set(filter(None, map(clean, record["aliases"]))), key=str.lower)
             record["related_substances"] = sorted(set(filter(None, map(clean, record["related_substances"]))), key=str.lower)
+            record["special_limits"] = sorted(
+                record.get("special_limits", []),
+                key=lambda x: (x.get("agency", ""), x.get("limit_type", ""), x.get("applicable_product", "")),
+            )
             output.append(record)
         return sorted(output, key=lambda x: (x["name"].lower(), x["cas"]))
 
@@ -300,53 +371,94 @@ def find_header(sheet, required_terms: Iterable[str]) -> tuple[int, dict[str, in
 
 
 def parse_ema(path: Path, registry: Registry) -> dict[str, str]:
-    wb = load_workbook(path, read_only=True, data_only=True)
-    ws = wb["N-nitrosamines"] if "N-nitrosamines" in wb.sheetnames else wb[wb.sheetnames[0]]
+    """Parse both worksheets in EMA Appendix 1.
 
-    metadata = [clean(cell) for row in ws.iter_rows(min_row=1, max_row=12, values_only=True) for cell in row if clean(cell)]
+    Rev. 13 contains a primary ``N-nitrosamines`` worksheet and a second
+    ``Other N-nitroso-structures`` worksheet.  The previous implementation
+    only opened the first worksheet, which omitted the second regulatory table.
+    """
+    wb = load_workbook(path, read_only=True, data_only=True)
+    sheet_names = [
+        name for name in ("N-nitrosamines", "Other N-nitroso-structures")
+        if name in wb.sheetnames
+    ]
+    if not sheet_names:
+        sheet_names = wb.sheetnames
+
+    first_ws = wb[sheet_names[0]]
+    metadata = [
+        clean(cell)
+        for row in first_ws.iter_rows(min_row=1, max_row=12, values_only=True)
+        for cell in row
+        if clean(cell)
+    ]
     version_text = next((x for x in metadata if x.startswith("EMA/")), "EMA Appendix 1")
-    date_match = next((re.search(r"(\d{4}-\d{2}-\d{2})", x) for x in metadata if re.search(r"\d{4}-\d{2}-\d{2}", x)), None)
+    date_match = next(
+        (re.search(r"(\d{4}-\d{2}-\d{2})", x) for x in metadata if re.search(r"\d{4}-\d{2}-\d{2}", x)),
+        None,
+    )
     document_date = date_match.group(1) if date_match else ""
 
-    header_row, _ = find_header(ws, ("Name", "CAS RN", "AI"))
-    headers = [clean(cell.value) for cell in ws[header_row]]
-    index = {normalize(value): i for i, value in enumerate(headers) if value}
+    counts: dict[str, int] = {}
+    for sheet_name in sheet_names:
+        ws = wb[sheet_name]
+        header_row, _ = find_header(ws, ("Name", "CAS RN", "AI"))
+        headers = [clean(cell.value) for cell in ws[header_row]]
+        index = {normalize(value): i for i, value in enumerate(headers) if value}
 
-    def col(*candidates: str) -> int:
-        for candidate in candidates:
-            nc = normalize(candidate)
-            for key, idx in index.items():
-                if nc == key or nc in key:
-                    return idx
-        raise KeyError(candidates)
+        def col(*candidates: str, required: bool = True) -> int | None:
+            for candidate in candidates:
+                nc = normalize(candidate)
+                for key, idx in index.items():
+                    if nc == key or nc in key:
+                        return idx
+            if required:
+                raise KeyError(candidates)
+            return None
 
-    i_name = col("Name")
-    i_iupac = col("IUPAC name")
-    i_smiles = col("SMILES")
-    i_cas = col("CAS RN")
-    i_alias = col("Synonym Acronym")
-    i_source = col("Source")
-    i_cpca = col("CPCA Category")
-    i_ai = col("AI ng day")
-    i_note = col("Note")
-    i_date = col("Publication date")
+        i_name = col("Name")
+        i_iupac = col("IUPAC name")
+        i_smiles = col("SMILES")
+        i_cas = col("CAS RN")
+        i_alias = col("Synonym Acronym")
+        i_source = col("Source")
+        i_cpca = col("CPCA Category", required=False)
+        i_ai = col("AI ng day")
+        i_note = col("Note")
+        i_date = col("Publication date")
 
-    count = 0
-    for row in ws.iter_rows(min_row=header_row + 1, values_only=True):
-        name = clean(row[i_name])
-        if not name:
-            continue
-        aliases = [x.strip() for x in re.split(r"[,/;]", clean(row[i_alias])) if x.strip()]
-        registry.add_regulator(
-            agency="EMA", name=name, cas=clean(row[i_cas]), aliases=aliases,
-            related=[row[i_source]], ai_raw=row[i_ai], cpca=row[i_cpca],
-            basis=clean(row[i_note]), publication_date=row[i_date],
-            source_url=EMA_URL, source_version=version_text,
-            smiles=clean(row[i_smiles]), iupac=clean(row[i_iupac])
-        )
-        count += 1
-    return source_status(f"{version_text}; {count} rows", document_date or dt.date.today().isoformat(), EMA_URL)
+        count = 0
+        for row in ws.iter_rows(min_row=header_row + 1, values_only=True):
+            name = clean(row[i_name])
+            if not name:
+                continue
+            aliases = [x.strip() for x in re.split(r"[,/;]", clean(row[i_alias])) if x.strip()]
+            registry.add_regulator(
+                agency="EMA",
+                name=name,
+                cas=clean(row[i_cas]),
+                aliases=aliases,
+                related=[row[i_source]],
+                ai_raw=row[i_ai],
+                cpca=row[i_cpca] if i_cpca is not None else "",
+                basis=clean(row[i_note]),
+                publication_date=row[i_date],
+                source_url=EMA_URL,
+                source_version=version_text,
+                source_table=f"EMA Appendix 1 - {sheet_name}",
+                smiles=clean(row[i_smiles]),
+                iupac=clean(row[i_iupac]),
+            )
+            count += 1
+        counts[sheet_name] = count
 
+    count_text = "; ".join(f"{name}: {count} rows" for name, count in counts.items())
+    return source_status(
+        f"{version_text}; {count_text}",
+        document_date or dt.date.today().isoformat(),
+        EMA_URL,
+        mode="both Appendix 1 worksheets",
+    )
 
 def parse_health_canada(path: Path, registry: Registry) -> dict[str, str]:
     wb = load_workbook(path, read_only=True, data_only=True)
@@ -393,7 +505,8 @@ def parse_health_canada(path: Path, registry: Registry) -> dict[str, str]:
             agency="Health Canada", name=name, cas=clean(row[i_cas]), aliases=aliases,
             related=[row[i_related]], ai_raw=raw_ai, cpca=row[i_cpca],
             basis="；".join(notes), publication_date=row[i_date],
-            source_url=HC_URL, source_version=version_text
+            source_url=HC_URL, source_version=version_text,
+            source_table="Health Canada Appendix 1"
         )
         count += 1
     return source_status(f"{version_text}; {count} rows", version_date or dt.date.today().isoformat(), HC_URL)
@@ -418,24 +531,99 @@ def find_column(frame: pd.DataFrame, *parts: str) -> str:
 
 
 def parse_fda(registry: Registry) -> dict[str, str]:
-    html = SESSION.get(FDA_URL, timeout=90)
-    html.raise_for_status()
-    tables = [flatten_columns(x) for x in pd.read_html(html.text)]
-    parsed = 0
+    """Parse FDA Tables 1, 2 and 3.
+
+    Tables 1 and 2 contain the regular recommended AI limits. Table 3 contains
+    temporary, product-specific interim AI/control limits. Interim values are
+    stored separately so they never overwrite the regular lifetime AI.
+    """
+    offline_path = os.getenv("FDA_HTML_PATH", "").strip()
+    if offline_path:
+        html_text = Path(offline_path).read_text(encoding="utf-8")
+    else:
+        response = SESSION.get(FDA_URL, timeout=90)
+        response.raise_for_status()
+        html_text = response.text
+
+    soup = BeautifulSoup(html_text, "lxml")
+
+    def section_updated(table_label: str) -> str:
+        heading = soup.find(
+            lambda tag: getattr(tag, "name", None) in {"h2", "h3", "h4"}
+            and table_label.lower() in clean(tag.get_text(" ", strip=True)).lower()
+        )
+        if heading:
+            for node in heading.find_all_next():
+                if node is not heading and getattr(node, "name", None) in {"h2", "h3", "h4"}:
+                    break
+                text = clean(node.get_text(" ", strip=True)) if getattr(node, "get_text", None) else clean(node)
+                match = re.search(r"Updated:\s*(\d{1,2}/\d{1,2}/\d{4})", text, flags=re.I)
+                if match:
+                    return iso_date(match.group(1))
+        return ""
+
+    table3_updated = section_updated("Table 3")
+    tables = [flatten_columns(frame) for frame in pd.read_html(StringIO(html_text))]
+    regular_parsed = 0
+    interim_parsed = 0
+    interim_table_seen = False
+
     for frame in tables:
-        joined = " ".join(frame.columns)
-        if "Nitrosamine Name" not in joined or "Recommended AI Limit" not in joined:
+        normalized_columns = {column: normalize(column) for column in frame.columns}
+        has_name = any("nitrosaminename" in value for value in normalized_columns.values())
+        if not has_name:
             continue
-        # Skip the interim table; it is a temporary product-specific allowance,
-        # not the primary lifetime AI displayed by the finder.
-        if "Interim" in joined:
+
+        is_interim = any("recommendedinterimailimit" in value for value in normalized_columns.values())
+        is_regular = any(
+            "recommendedailimit" in value and "interim" not in value
+            for value in normalized_columns.values()
+        )
+
+        if is_interim:
+            interim_table_seen = True
+            name_col = find_column(frame, "Nitrosamine Name")
+            source_col = find_column(frame, "Source")
+            ai_col = find_column(frame, "Recommended Interim AI Limit")
+            ppm_col = find_column(frame, "Recommended Interim Control Limit")
+            duration_col = find_column(frame, "Estimated Duration")
+
+            for _, row in frame.iterrows():
+                name = clean(row.get(name_col))
+                if not name or name.lower() == "nan":
+                    continue
+                product = clean(row.get(source_col))
+                registry.add_special_limit(
+                    agency="FDA",
+                    limit_type="interim",
+                    name=name,
+                    related=[product],
+                    ai_raw=row.get(ai_col),
+                    official_control_raw=row.get(ppm_col),
+                    applicable_product=product,
+                    estimated_duration=row.get(duration_col),
+                    basis=(
+                        "FDA Table 3临时AI：仅适用于表中所列已批准/在售产品，"
+                        "用于潜在供应中断情形下的阶段性监管安排；不替代常规终生AI。"
+                    ),
+                    publication_date=table3_updated,
+                    source_url=FDA_URL,
+                    source_version="FDA Table 3 - Recommended Interim AI Limits",
+                    source_table="FDA Table 3",
+                )
+                interim_parsed += 1
             continue
+
+        if not is_regular:
+            continue
+
         name_col = find_column(frame, "Nitrosamine Name")
         ai_col = find_column(frame, "Recommended AI Limit")
         source_col = next((c for c in frame.columns if "source" in normalize(c)), "")
         potency_col = next((c for c in frame.columns if "potencycategory" in normalize(c)), "")
         surrogate_col = next((c for c in frame.columns if "surrogate" in normalize(c)), "")
         date_col = next((c for c in frame.columns if "dateadded" in normalize(c)), "")
+        table_name = "FDA Table 1" if potency_col else "FDA Table 2"
 
         for _, row in frame.iterrows():
             name = clean(row.get(name_col))
@@ -446,21 +634,32 @@ def parse_fda(registry: Registry) -> dict[str, str]:
             if not basis:
                 basis = "FDA CPCA" if potency_col else "FDA compound-specific/read-across table"
             registry.add_regulator(
-                agency="FDA", name=name, related=[row.get(source_col)] if source_col else [],
-                ai_raw=ai_raw, cpca=row.get(potency_col) if potency_col else "",
-                basis=basis, publication_date=row.get(date_col) if date_col else "",
-                source_url=FDA_URL, source_version="FDA online AI tables (current page)"
+                agency="FDA",
+                name=name,
+                related=[row.get(source_col)] if source_col else [],
+                ai_raw=ai_raw,
+                cpca=row.get(potency_col) if potency_col else "",
+                basis=basis,
+                publication_date=row.get(date_col) if date_col else "",
+                source_url=FDA_URL,
+                source_version=f"{table_name} (current page)",
+                source_table=table_name,
             )
-            parsed += 1
+            regular_parsed += 1
 
-    soup = BeautifulSoup(html.text, "lxml")
     text = soup.get_text(" ", strip=True)
     dates = re.findall(r"Updated:\s*(\d{1,2}/\d{1,2}/\d{4})", text)
     latest = max((iso_date(x) for x in dates), default=dt.date.today().isoformat())
-    if parsed == 0:
-        raise ValueError("No FDA AI table rows parsed")
-    return source_status(f"FDA online AI tables; {parsed} rows", latest, FDA_URL)
-
+    if regular_parsed == 0:
+        raise ValueError("No FDA Table 1/2 AI rows parsed")
+    if not interim_table_seen:
+        raise ValueError("FDA Table 3 interim AI table not found")
+    return source_status(
+        f"FDA online AI tables; {regular_parsed} regular rows; {interim_parsed} interim rows",
+        latest,
+        FDA_URL,
+        mode="Tables 1, 2 and 3",
+    )
 
 def split_tga_name(cell: str) -> tuple[str, str, list[str]]:
     text = clean(cell)
@@ -505,7 +704,8 @@ def parse_tga(registry: Registry) -> dict[str, str]:
             related=[row.get(source_col)] if source_col else [],
             ai_raw=row.get(ai_col), cpca=row.get(cpca_col) if cpca_col else "",
             basis="Established AI", publication_date=row.get(date_col) if date_col else "",
-            source_url=TGA_URL, source_version="TGA established AI table (current page)"
+            source_url=TGA_URL, source_version="TGA established AI table (current page)",
+            source_table="TGA established AI table"
         )
         parsed += 1
 
@@ -545,6 +745,7 @@ def add_manual_regulatory_references(registry: Registry) -> None:
             source_url=FDA_URL,
             source_version="Guidance-derived reference",
             status="reference",
+            source_table="FDA guidance-derived reference",
         )
 
 
@@ -563,13 +764,20 @@ def load_previous() -> dict[str, Any]:
 def seed_previous_agency(registry: Registry, previous: dict[str, Any], agency: str) -> None:
     for old in previous.get("records", []):
         item = old.get("regulators", {}).get(agency)
-        if not item:
+        special_items = [
+            copy.deepcopy(value)
+            for value in old.get("special_limits", [])
+            if clean(value.get("agency")) == agency
+        ]
+        if not item and not special_items:
             continue
         record = registry.get(old["name"], old.get("cas", ""), old.get("aliases", []))
         record["related_substances"] = list(dict.fromkeys(record["related_substances"] + old.get("related_substances", [])))
         record["smiles"] = record["smiles"] or old.get("smiles", "")
         record["iupac"] = record["iupac"] or old.get("iupac", "")
-        record["regulators"][agency] = copy.deepcopy(item)
+        if item:
+            record["regulators"][agency] = copy.deepcopy(item)
+        record["special_limits"].extend(special_items)
 
 
 def record_index(payload: dict[str, Any]) -> dict[tuple[str, str], dict[str, Any]]:
@@ -584,15 +792,42 @@ def diff_payload(old: dict[str, Any], new: dict[str, Any]) -> list[dict[str, Any
     changes: list[dict[str, Any]] = []
     old_by_cas = {r.get("cas"): r for r in old.get("records", []) if r.get("cas")}
     old_by_name = {normalize(r.get("name")): r for r in old.get("records", [])}
+    matched_old_ids: set[int] = set()
+
+    def special_identity(item: dict[str, Any]) -> tuple[str, str, str]:
+        return (
+            normalize(item.get("agency")),
+            normalize(item.get("limit_type")),
+            normalize(item.get("applicable_product")),
+        )
+
+    def special_summary(item: dict[str, Any] | None) -> str | None:
+        if not item:
+            return None
+        bits = [clean(item.get("ai_display"))]
+        if clean(item.get("official_control_display")):
+            bits.append(f"control {clean(item.get('official_control_display'))}")
+        if clean(item.get("estimated_duration")):
+            bits.append(f"to {clean(item.get('estimated_duration'))}")
+        return "; ".join(filter(None, bits))
 
     for new_record in new.get("records", []):
         old_record = old_by_cas.get(new_record.get("cas")) if new_record.get("cas") else None
         old_record = old_record or old_by_name.get(normalize(new_record.get("name")))
+        if old_record is not None:
+            matched_old_ids.add(id(old_record))
+
         if old_record is None:
             for agency, value in new_record.get("regulators", {}).items():
                 changes.append({
                     "type": "added", "compound": new_record["name"], "cas": new_record.get("cas", ""),
                     "agency": agency, "old": None, "new": value.get("ai_display")
+                })
+            for value in new_record.get("special_limits", []):
+                changes.append({
+                    "type": "added", "compound": new_record["name"], "cas": new_record.get("cas", ""),
+                    "agency": value.get("agency", ""), "scope": value.get("limit_type", "special"),
+                    "old": None, "new": special_summary(value),
                 })
             continue
 
@@ -607,12 +842,53 @@ def diff_payload(old: dict[str, Any], new: dict[str, Any]) -> list[dict[str, Any
                 changes.append({"type": "removed", "compound": new_record["name"], "cas": new_record.get("cas", ""),
                                 "agency": agency, "old": before.get("ai_display"), "new": None})
             elif before and after:
-                fields = ("ai_display", "cpca_category", "basis")
+                fields = ("ai_display", "cpca_category", "basis", "source_table")
                 if any(clean(before.get(field)) != clean(after.get(field)) for field in fields):
                     changes.append({"type": "changed", "compound": new_record["name"], "cas": new_record.get("cas", ""),
                                     "agency": agency, "old": before.get("ai_display"), "new": after.get("ai_display")})
-    return changes
 
+        old_special = {special_identity(item): item for item in old_record.get("special_limits", [])}
+        new_special = {special_identity(item): item for item in new_record.get("special_limits", [])}
+        for identity in set(old_special) | set(new_special):
+            before = old_special.get(identity)
+            after = new_special.get(identity)
+            agency = clean((after or before or {}).get("agency"))
+            scope = clean((after or before or {}).get("limit_type")) or "special"
+            if before is None:
+                change_type = "added"
+            elif after is None:
+                change_type = "removed"
+            else:
+                fields = ("ai_display", "official_control_display", "estimated_duration", "basis")
+                if not any(clean(before.get(field)) != clean(after.get(field)) for field in fields):
+                    continue
+                change_type = "changed"
+            changes.append({
+                "type": change_type,
+                "compound": new_record["name"],
+                "cas": new_record.get("cas", ""),
+                "agency": agency,
+                "scope": scope,
+                "old": special_summary(before),
+                "new": special_summary(after),
+            })
+
+    # Detect records that disappeared completely from all parsed sources.
+    for old_record in old.get("records", []):
+        if id(old_record) in matched_old_ids:
+            continue
+        for agency, value in old_record.get("regulators", {}).items():
+            changes.append({
+                "type": "removed", "compound": old_record["name"], "cas": old_record.get("cas", ""),
+                "agency": agency, "old": value.get("ai_display"), "new": None,
+            })
+        for value in old_record.get("special_limits", []):
+            changes.append({
+                "type": "removed", "compound": old_record["name"], "cas": old_record.get("cas", ""),
+                "agency": value.get("agency", ""), "scope": value.get("limit_type", "special"),
+                "old": special_summary(value), "new": None,
+            })
+    return changes
 
 def send_dingtalk(changes: list[dict[str, Any]]) -> None:
     url = os.getenv("DINGTALK_RELAY_URL", "").strip()
@@ -624,7 +900,7 @@ def send_dingtalk(changes: list[dict[str, Any]]) -> None:
         lines.append(
             f"- **{change['compound']}**"
             f"{f' ({change['cas']})' if change.get('cas') else ''} | "
-            f"{change['agency']} | {change['type']}: "
+            f"{change['agency']}{f" ({change.get('scope')})" if change.get('scope') else ''} | {change['type']}: "
             f"{change.get('old') or '—'} → {change.get('new') or '—'}"
         )
     if len(changes) > 30:
@@ -675,7 +951,7 @@ def main() -> int:
     registry.apply_aliases()
     generated_at = dt.datetime.now(dt.timezone.utc).astimezone().isoformat(timespec="seconds")
     payload = {
-        "schema_version": 1,
+        "schema_version": 2,
         "generated_at": generated_at,
         "disclaimer": "本数据库用于研发和法规检索辅助。AI为每日可接受摄入量，ppm必须按最大日剂量换算；申报和放行前应打开监管机构原始文件核验。",
         "source_status": statuses,
