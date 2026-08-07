@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-08-06T04:47:29+00:00",
+  "generated_at": "2026-08-07T04:14:18+00:00",
   "disclaimer": "本数据库用于研发和法规检索辅助。AI为每日可接受摄入量，ppm必须按最大日剂量换算；申报和放行前应打开监管机构原始文件核验。",
   "source_status": {
     "EMA": {
@@ -17,7 +17,7 @@
     },
     "FDA": {
       "version": "FDA online AI tables; 295 regular rows; 9 interim rows",
-      "updated": "2026-07-29",
+      "updated": "2026-08-06",
       "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/cder-nitrosamine-impurity-acceptable-intake-limits",
       "mode": "Tables 1, 2 and 3"
     },
@@ -474,8 +474,8 @@
       "cas": "57184-25-5",
       "aliases": [],
       "related_substances": [
-        "Mitapivat",
-        "mitapivat"
+        "mitapivat",
+        "Mitapivat"
       ],
       "smiles": "O=NN1CCN(CC1)CC1CC1",
       "iupac": "1-(cyclopropylmethyl)-4-nitrosopiperazine",
@@ -2219,8 +2219,8 @@
         "NDAQ"
       ],
       "related_substances": [
-        "quetiapine",
-        "Quetiapine"
+        "Quetiapine",
+        "quetiapine"
       ],
       "smiles": "C1CN(CCN1N=O)C/3=N\\C2=CC=CC=C2SC4=CC=CC=C/34",
       "iupac": "11-(4-Nitrosopiperazin-1-yl)dibenzo[b,f][1,4]thiazepine",
@@ -2661,15 +2661,15 @@
           "source_table": "Health Canada Appendix 1"
         },
         "FDA": {
-          "ai_ng_day": 100.0,
-          "ai_display": "100 ng/day",
-          "cpca_category": "2",
-          "basis": "FDA CPCA",
-          "publication_date": "",
+          "ai_ng_day": 1500.0,
+          "ai_display": "1500.0",
+          "cpca_category": "",
+          "basis": "Compound specific",
+          "publication_date": "2026-08-06",
           "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/cder-nitrosamine-impurity-acceptable-intake-limits",
-          "source_version": "FDA Table 1 (current page)",
+          "source_version": "FDA Table 2 (current page)",
           "status": "numeric",
-          "source_table": "FDA Table 1"
+          "source_table": "FDA Table 2"
         }
       },
       "special_limits": []
