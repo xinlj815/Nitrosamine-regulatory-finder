@@ -890,25 +890,97 @@ def diff_payload(old: dict[str, Any], new: dict[str, Any]) -> list[dict[str, Any
             })
     return changes
 
-def send_dingtalk(changes: list[dict[str, Any]]) -> None:
+def send_dingtalk(
+    changes: list[dict[str, Any]],
+    errors: dict[str, str] | None = None,
+) -> None:
     url = os.getenv("DINGTALK_RELAY_URL", "").strip()
     token = os.getenv("DINGTALK_RELAY_TOKEN", "").strip()
-    if not url or not token or not changes:
+    errors = errors or {}
+
+    if not url or not token:
         return
-    lines = ["### 亚硝胺监管限度发生变化", ""]
-    for change in changes[:30]:
+
+    beijing_now = dt.datetime.now(
+        dt.timezone(dt.timedelta(hours=8))
+    )
+    is_monday = beijing_now.weekday() == 0
+
+    # 有变化或读取异常时立即通知；
+    # 没有变化、没有异常时，仅周一发送运行正常周报。
+    if not changes and not errors and not is_monday:
+        return
+
+    run_time = beijing_now.strftime("%Y/%m/%d %H:%M")
+
+    if changes:
+        title = "亚硝胺监管限度更新"
+        lines = [
+            f"### 亚硝胺监管限度更新｜{beijing_now:%Y/%m/%d}",
+            f"运行时间：{run_time}（北京时间）",
+            "监测范围：FDA、EMA、Health Canada、TGA",
+            "",
+            f"本次识别到 **{len(changes)}** 项变化：",
+        ]
+
+        for change in changes[:30]:
+            compound = change.get("compound") or "未命名化合物"
+            cas_text = f" ({change['cas']})" if change.get("cas") else ""
+            scope_text = f" ({change['scope']})" if change.get("scope") else ""
+
+            lines.append(
+                f"- **{compound}**{cas_text}｜"
+                f"{change.get('agency', '未知机构')}{scope_text}｜"
+                f"{change.get('type', '更新')}："
+                f"{change.get('old') or '—'} → {change.get('new') or '—'}"
+            )
+
+        if len(changes) > 30:
+            lines.append(
+                f"- 另有 {len(changes) - 30} 项变化，"
+                "请打开查询网页或 changes.json 查看。"
+            )
+
+    elif errors:
+        title = "亚硝胺监管监测异常"
+        lines = [
+            f"### ⚠ 亚硝胺监管监测异常｜{beijing_now:%Y/%m/%d}",
+            f"运行时间：{run_time}（北京时间）",
+            "监测范围：FDA、EMA、Health Canada、TGA",
+            "",
+            "本次未能完整读取全部监管机构数据。",
+        ]
+
+    else:
+        title = "亚硝胺监管监测周报"
+        lines = [
+            f"### 亚硝胺监管监测周报｜{beijing_now:%Y/%m/%d}",
+            f"运行时间：{run_time}（北京时间）",
+            "监测范围：FDA、EMA、Health Canada、TGA",
+            "",
+            "✅ 本次监测运行正常，未识别到新的亚硝胺限度变化。",
+        ]
+
+    if errors:
+        lines.extend(["", "### ⚠ 数据源读取异常"])
+        for agency, error in errors.items():
+            lines.append(f"- **{agency}**：{error}")
         lines.append(
-            f"- **{change['compound']}**"
-            f"{f' ({change['cas']})' if change.get('cas') else ''} | "
-            f"{change['agency']}{f" ({change.get('scope')})" if change.get('scope') else ''} | {change['type']}: "
-            f"{change.get('old') or '—'} → {change.get('new') or '—'}"
+            "- 系统已保留读取失败机构的上一版数据，"
+            "建议结合官方原始文件进行人工核验。"
         )
-    if len(changes) > 30:
-        lines.append(f"- 另有 {len(changes) - 30} 项变化，请打开网页或 changes.json 查看。")
+
     response = SESSION.post(
-        url, timeout=30,
-        headers={"Authorization": f"Bearer {token}", "Content-Type": "application/json"},
-        json={"title": "亚硝胺监管限度更新", "message": "\n".join(lines)}
+        url,
+        timeout=30,
+        headers={
+            "Authorization": f"Bearer {token}",
+            "Content-Type": "application/json",
+        },
+        json={
+            "title": title,
+            "message": "\n".join(lines),
+        },
     )
     response.raise_for_status()
 
@@ -978,7 +1050,7 @@ def main() -> int:
 
     if not args.no_notify:
         try:
-            send_dingtalk(notification_changes)
+            send_dingtalk(notification_changes, errors)
         except Exception as exc:
             print(f"[WARN] DingTalk notification failed: {exc}", file=sys.stderr)
 
