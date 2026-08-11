@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-08-10T05:53:26+00:00",
+  "generated_at": "2026-08-11T03:22:56+00:00",
   "disclaimer": "本数据库用于研发和法规检索辅助。AI为每日可接受摄入量，ppm必须按最大日剂量换算；申报和放行前应打开监管机构原始文件核验。",
   "source_status": {
     "EMA": {
@@ -3957,8 +3957,8 @@
         "NND"
       ],
       "related_substances": [
-        "Dabigatran Etexilate",
-        "Dabigatran etexilate"
+        "Dabigatran etexilate",
+        "Dabigatran Etexilate"
       ],
       "smiles": "C1=C3C(=CC=C1C(N(C2=NC=CC=C2)CCC(OCC)=O)=O)N(C(=N3)CN(N=O)C=4C=CC(=CC=4)C(=N)NC(=O)OCCCCCC)C",
       "iupac": "Ethyl3-(2-(((4-(N-((hexyloxy)carbonyl)carbamimidoyl)phenyl)(nitroso)amino)methyl)-1-methyl-N-(pyridin-2-yl)-1H-benzo[d]imidazole-5-carboxamido)propanoate",
@@ -6777,8 +6777,8 @@
         "NDUPA"
       ],
       "related_substances": [
-        "Ulipristal Acetate",
-        "Ulipristal acetate"
+        "Ulipristal acetate",
+        "Ulipristal Acetate"
       ],
       "smiles": "CC(=O)[C@]1(CC[C@@H]2[C@@]1(C[C@@H](C3=C4CCC(=O)C=C4CC[C@@H]23)C5=CC=C(C=C5)N(C)N=O)C)OC(=O)C",
       "iupac": "[(8S,11R,13S,14S,17R)-17-acetyl-13-methyl-11-[4-[methyl(nitroso)amino]phenyl]-3-oxo-1,2,6,7,8,11,12,14,15,16-decahydrocyclopenta[a]phenanthren-17-yl] acetate",
@@ -8390,8 +8390,8 @@
         "NFA"
       ],
       "related_substances": [
-        "Folic acid",
-        "Folic Acid"
+        "Folic Acid",
+        "Folic acid"
       ],
       "smiles": "C1=CC(=CC=C1C(=O)N[C@@H](CCC(=O)O)C(=O)O)N(CC2=CN=C3C(=N2)C(=O)NC(=N3)N)N=O",
       "iupac": "(4-(((2-Amino-4-oxo-4,8-dihydropteridin-6-yl)methyl)(nitroso)amino)benzoyl)-L-glutamic acid",
