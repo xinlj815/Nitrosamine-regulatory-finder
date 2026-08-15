@@ -11,7 +11,8 @@ The script is designed for GitHub Actions. It:
 Environment variables:
   DINGTALK_RELAY_URL
   DINGTALK_RELAY_TOKEN
-  EMA_XLSX_PATH / HC_XLSX_PATH  (offline test overrides)
+  EMA_XLSX_PATH / HC_XLSX_PATH / FDA_HTML_PATH
+  TGA_CSV_PATH / TGA_HTML_PATH / TGA_CSV_URL  (offline/URL overrides)
 """
 from __future__ import annotations
 
@@ -23,6 +24,7 @@ import os
 import re
 import sys
 import tempfile
+import time
 import unicodedata
 from dataclasses import dataclass
 from io import StringIO
@@ -43,6 +45,10 @@ EMA_URL = "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-in
 HC_URL = "https://www.canada.ca/content/dam/hc-sc/documents/services/drugs-health-products/compliance-enforcement/information-health-product/drugs/nitrosamine-impurities/established-acceptable-intake-limits/appendix-1.xlsx"
 FDA_URL = "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/cder-nitrosamine-impurity-acceptable-intake-limits"
 TGA_URL = "https://www.tga.gov.au/safety/safety-monitoring-and-information/nitrosamine-impurities-medicines/established-acceptable-intake-nitrosamines-medicines"
+TGA_CSV_FILENAME = "Established_acceptable_intake_for_nitrosamines.csv"
+
+REQUEST_TIMEOUT = (20, 180)
+TRANSIENT_HTTP_STATUS = {429, 500, 502, 503, 504}
 
 AGENCIES = ("EMA", "Health Canada", "FDA", "TGA")
 SESSION = requests.Session()
@@ -50,6 +56,41 @@ SESSION.headers.update({
     "User-Agent": "NitrosamineRegulatoryFinder/1.0 (+GitHub Actions; regulatory data monitor)",
     "Accept-Language": "en",
 })
+
+
+def get_with_retry(
+    url: str,
+    *,
+    attempts: int = 4,
+    timeout: tuple[int, int] = REQUEST_TIMEOUT,
+) -> requests.Response:
+    """GET an official source with bounded retries for transient failures."""
+    last_error: Exception | None = None
+    for attempt in range(1, attempts + 1):
+        try:
+            response = SESSION.get(url, timeout=timeout)
+            if response.status_code in TRANSIENT_HTTP_STATUS:
+                raise requests.HTTPError(
+                    f"transient HTTP {response.status_code}", response=response
+                )
+            response.raise_for_status()
+            return response
+        except (requests.Timeout, requests.ConnectionError, requests.HTTPError) as exc:
+            status = getattr(getattr(exc, "response", None), "status_code", None)
+            if isinstance(exc, requests.HTTPError) and status not in TRANSIENT_HTTP_STATUS:
+                raise
+            last_error = exc
+            if attempt == attempts:
+                break
+            delay = min(2 ** (attempt - 1), 8)
+            print(
+                f"[RETRY] GET {url} failed ({attempt}/{attempts}): "
+                f"{type(exc).__name__}: {exc}; retrying in {delay}s",
+                file=sys.stderr,
+            )
+            time.sleep(delay)
+    assert last_error is not None
+    raise last_error
 
 
 def clean(value: Any) -> str:
@@ -351,8 +392,7 @@ class Registry:
 
 
 def download(url: str, suffix: str) -> Path:
-    response = SESSION.get(url, timeout=90)
-    response.raise_for_status()
+    response = get_with_retry(url)
     handle = tempfile.NamedTemporaryFile(delete=False, suffix=suffix)
     handle.write(response.content)
     handle.close()
@@ -541,8 +581,7 @@ def parse_fda(registry: Registry) -> dict[str, str]:
     if offline_path:
         html_text = Path(offline_path).read_text(encoding="utf-8")
     else:
-        response = SESSION.get(FDA_URL, timeout=90)
-        response.raise_for_status()
+        response = get_with_retry(FDA_URL)
         html_text = response.text
 
     soup = BeautifulSoup(html_text, "lxml")
@@ -672,50 +711,184 @@ def split_tga_name(cell: str) -> tuple[str, str, list[str]]:
             aliases.extend(x.strip(" ,/") for x in re.split(r"[,/]", remainder) if x.strip(" ,/"))
         elif len(group) <= 30:
             aliases.extend(x.strip() for x in re.split(r"[,/]", group) if x.strip())
-    # Use the first line/first slash component as the concise display name.
-    name = re.split(r"\s*/\s*|\n", text, maxsplit=1)[0].strip()
+    # Use the first line/first slash component as the concise display name and
+    # retain any short alternative name as an alias.
+    name_parts = [clean(x) for x in re.split(r"\s*/\s*|\n", text) if clean(x)]
+    name = name_parts[0] if name_parts else text
+    aliases.extend(x for x in name_parts[1:] if len(x) <= 120)
     if cas:
         name = name.replace(cas, "").strip(" ()-,")
     return name, cas, aliases
 
 
+def split_tga_identifiers(value: Any) -> tuple[str, list[str]]:
+    """Split TGA's separate 'CAS No, abbreviations' field."""
+    text = clean(value)
+    cas_values = re.findall(r"\b\d{2,7}-\d{2}-\d\b", text)
+    cas = cas_values[0] if cas_values else ""
+    remainder = text
+    for item in cas_values:
+        remainder = remainder.replace(item, " ")
+    aliases = [
+        token.strip(" ()")
+        for token in re.split(r"[,;/\n]", remainder)
+        if token.strip(" ()")
+    ]
+    return cas, aliases
+
+
+def latest_tga_date(*values: Any) -> str:
+    dates: list[str] = []
+    for value in values:
+        for part in re.split(r"[;,\n]", clean(value)):
+            parsed = iso_date(part.strip())
+            if re.fullmatch(r"\d{4}-\d{2}-\d{2}", parsed):
+                dates.append(parsed)
+    return max(dates, default="")
+
+
+def tga_csv_candidates(months: int = 18) -> list[str]:
+    """Return newest-first TGA CSV URLs, allowing future monthly updates."""
+    override = os.getenv("TGA_CSV_URL", "").strip()
+    if override:
+        return [override]
+    today = dt.date.today()
+    year, month = today.year, today.month
+    urls: list[str] = []
+    for _ in range(months):
+        urls.append(
+            f"https://www.tga.gov.au/sites/default/files/{year:04d}-{month:02d}/"
+            f"{TGA_CSV_FILENAME}"
+        )
+        month -= 1
+        if month == 0:
+            year -= 1
+            month = 12
+    return urls
+
+
 def parse_tga(registry: Registry) -> dict[str, str]:
-    html = SESSION.get(TGA_URL, timeout=90)
-    html.raise_for_status()
-    frames = [flatten_columns(x) for x in pd.read_html(html.text)]
-    frame = next((x for x in frames if any("nitrosamine" in normalize(c) for c in x.columns)
-                  and any("ailimit" in normalize(c) for c in x.columns)), None)
-    if frame is None:
-        raise ValueError("TGA AI table not found")
+    """Parse TGA AI data, preferring its small official CSV download.
+
+    TGA's HTML page is large and intermittently times out from GitHub-hosted
+    runners.  The official CSV contains the same table and is much more stable;
+    the HTML parser remains as a fallback for future URL changes.
+    """
+    offline_csv = os.getenv("TGA_CSV_PATH", "").strip()
+    offline_html = os.getenv("TGA_HTML_PATH", "").strip()
+    frame: pd.DataFrame | None = None
+    mode = "official CSV"
+    page_updated = ""
+    csv_error: Exception | None = None
+
+    try:
+        if offline_csv:
+            csv_text = Path(offline_csv).read_text(encoding="utf-8-sig")
+        else:
+            csv_response: requests.Response | None = None
+            candidate_errors: list[str] = []
+            for candidate in tga_csv_candidates():
+                try:
+                    csv_response = get_with_retry(candidate, attempts=4, timeout=(20, 120))
+                    break
+                except requests.HTTPError as exc:
+                    if getattr(exc.response, "status_code", None) == 404:
+                        candidate_errors.append(f"{candidate}: 404")
+                        continue
+                    raise
+            if csv_response is None:
+                raise FileNotFoundError(
+                    "No recent TGA CSV URL was found; " + "; ".join(candidate_errors)
+                )
+            try:
+                csv_text = csv_response.content.decode("utf-8-sig")
+            except UnicodeDecodeError:
+                csv_text = csv_response.text.lstrip("\ufeff")
+        frame = flatten_columns(
+            pd.read_csv(StringIO(csv_text), dtype=str, keep_default_na=False)
+        )
+        if not any("nitrosamine" in normalize(c) for c in frame.columns) or not any(
+            "ailimit" in normalize(c) for c in frame.columns
+        ):
+            raise ValueError("TGA CSV headers not recognised")
+    except Exception as exc:
+        csv_error = exc
+        print(
+            f"[WARN] TGA CSV unavailable ({type(exc).__name__}: {exc}); "
+            "falling back to the official HTML page",
+            file=sys.stderr,
+        )
+        mode = "HTML fallback"
+        if offline_html:
+            html_text = Path(offline_html).read_text(encoding="utf-8")
+        else:
+            html_text = get_with_retry(TGA_URL, attempts=3, timeout=(20, 240)).text
+        frames = [flatten_columns(x) for x in pd.read_html(StringIO(html_text))]
+        frame = next(
+            (
+                x
+                for x in frames
+                if any("nitrosamine" in normalize(c) for c in x.columns)
+                and any("ailimit" in normalize(c) for c in x.columns)
+            ),
+            None,
+        )
+        if frame is None:
+            raise ValueError(
+                f"TGA AI table not found; CSV error was: {csv_error}"
+            )
+        soup = BeautifulSoup(html_text, "lxml")
+        text = soup.get_text(" ", strip=True)
+        match = re.search(r"Last updated\s+(\d{1,2}\s+\w+\s+\d{4})", text, flags=re.I)
+        page_updated = iso_date(match.group(1)) if match else ""
+
+    assert frame is not None
     name_col = find_column(frame, "Nitrosamine")
     ai_col = find_column(frame, "AI limit")
     source_col = next((c for c in frame.columns if normalize(c).startswith("source")), "")
     cpca_col = next((c for c in frame.columns if "cpca" in normalize(c)), "")
-    date_col = next((c for c in frame.columns if "firstpublished" in normalize(c)), "")
+    cas_col = next((c for c in frame.columns if "casno" in normalize(c)), "")
+    published_col = next(
+        (c for c in frame.columns if any(x in normalize(c) for x in ("datepublished", "firstpublished"))),
+        "",
+    )
+    updated_col = next((c for c in frame.columns if "date" in normalize(c) and "updated" in normalize(c)), "")
 
     parsed = 0
+    row_dates: list[str] = []
     for _, row in frame.iterrows():
         raw_name = clean(row.get(name_col))
         if not raw_name or raw_name.lower() == "nan" or "default class specific" in raw_name.lower():
             continue
-        name, cas, aliases = split_tga_name(raw_name)
+        name, embedded_cas, aliases = split_tga_name(raw_name)
+        separate_cas, separate_aliases = split_tga_identifiers(row.get(cas_col)) if cas_col else ("", [])
+        cas = separate_cas or embedded_cas
+        aliases.extend(separate_aliases)
+        publication_date = latest_tga_date(
+            row.get(published_col) if published_col else "",
+            row.get(updated_col) if updated_col else "",
+        )
+        if publication_date:
+            row_dates.append(publication_date)
         registry.add_regulator(
             agency="TGA", name=name, cas=cas, aliases=aliases,
             related=[row.get(source_col)] if source_col else [],
             ai_raw=row.get(ai_col), cpca=row.get(cpca_col) if cpca_col else "",
-            basis="Established AI", publication_date=row.get(date_col) if date_col else "",
-            source_url=TGA_URL, source_version="TGA established AI table (current page)",
+            basis="Established AI", publication_date=publication_date,
+            source_url=TGA_URL, source_version=f"TGA established AI table ({mode})",
             source_table="TGA established AI table"
         )
         parsed += 1
 
-    soup = BeautifulSoup(html.text, "lxml")
-    text = soup.get_text(" ", strip=True)
-    match = re.search(r"Last updated\s+(\d{1,2}\s+\w+\s+\d{4})", text, flags=re.I)
-    updated = iso_date(match.group(1)) if match else dt.date.today().isoformat()
-    if parsed == 0:
-        raise ValueError("No TGA rows parsed")
-    return source_status(f"TGA established AI table; {parsed} rows", updated, TGA_URL)
+    if parsed < 50:
+        raise ValueError(f"Only {parsed} TGA rows parsed; refusing a likely incomplete refresh")
+    updated = page_updated or max(row_dates, default=dt.date.today().isoformat())
+    return source_status(
+        f"TGA established AI table via {mode}; {parsed} rows",
+        updated,
+        TGA_URL,
+        mode=mode,
+    )
 
 
 def add_manual_regulatory_references(registry: Registry) -> None:
