@@ -1067,25 +1067,69 @@ def send_dingtalk(
     changes: list[dict[str, Any]],
     errors: dict[str, str] | None = None,
 ) -> None:
-    url = os.getenv("DINGTALK_RELAY_URL", "").strip()
-    token = os.getenv("DINGTALK_RELAY_TOKEN", "").strip()
     errors = errors or {}
-
-    if not url or not token:
-        return
-
     beijing_now = dt.datetime.now(
         dt.timezone(dt.timedelta(hours=8))
     )
     is_monday = beijing_now.weekday() == 0
 
-    # 有变化或读取异常时立即通知；
-    # 没有变化、没有异常时，仅周一发送运行正常周报。
+    # No notification is expected on an ordinary non-Monday run with no
+    # regulatory changes and no source errors.
     if not changes and not errors and not is_monday:
         return
 
-    run_time = beijing_now.strftime("%Y/%m/%d %H:%M")
+    url = os.getenv("DINGTALK_RELAY_URL", "").strip()
+    token = os.getenv("DINGTALK_RELAY_TOKEN", "").strip()
+    missing = [
+        name
+        for name, value in (
+            ("DINGTALK_RELAY_URL", url),
+            ("DINGTALK_RELAY_TOKEN", token),
+        )
+        if not value
+    ]
+    if missing:
+        raise RuntimeError(
+            "DingTalk notification configuration missing: " + ", ".join(missing)
+        )
 
+    run_time = beijing_now.strftime("%Y/%m/%d %H:%M")
+    delivery_failures: list[str] = []
+
+    def deliver(title: str, lines: list[str]) -> None:
+        response = SESSION.post(
+            url,
+            timeout=30,
+            headers={
+                "Authorization": f"Bearer {token}",
+                "Content-Type": "application/json",
+            },
+            json={"title": title, "message": "\n".join(lines)},
+        )
+        try:
+            relay_result = response.json()
+        except ValueError:
+            relay_result = None
+        if not response.ok:
+            detail = relay_result if relay_result is not None else clean(response.text)[:1000]
+            raise RuntimeError(
+                f"Cloudflare relay HTTP {response.status_code}: {detail}"
+            )
+        if relay_result is None:
+            raise RuntimeError("Cloudflare relay returned non-JSON response")
+        if relay_result.get("ok") is not True:
+            raise RuntimeError(f"Cloudflare relay rejected notification: {relay_result}")
+        print(f"[OK] DingTalk delivered: {title}")
+
+    def attempt_delivery(title: str, lines: list[str]) -> None:
+        try:
+            deliver(title, lines)
+        except Exception as exc:
+            message = f"{title}: {type(exc).__name__}: {exc}"
+            delivery_failures.append(message)
+            print(f"[WARN] DingTalk delivery failed: {message}", file=sys.stderr)
+
+    # Regulatory changes are always sent as their own message.
     if changes:
         title = "亚硝胺监管限度更新"
         lines = [
@@ -1113,8 +1157,11 @@ def send_dingtalk(
                 f"- 另有 {len(changes) - 30} 项变化，"
                 "请打开查询网页或 changes.json 查看。"
             )
+        attempt_delivery(title, lines)
 
-    elif errors:
+    # Source errors are always sent separately, so a failed regulator cannot
+    # be hidden inside the Monday heartbeat or a regulatory-change message.
+    if errors:
         title = "亚硝胺监管监测异常"
         lines = [
             f"### ⚠ 亚硝胺监管监测异常｜{beijing_now:%Y/%m/%d}",
@@ -1123,18 +1170,6 @@ def send_dingtalk(
             "",
             "本次未能完整读取全部监管机构数据。",
         ]
-
-    else:
-        title = "亚硝胺监管监测周报"
-        lines = [
-            f"### 亚硝胺监管监测周报｜{beijing_now:%Y/%m/%d}",
-            f"运行时间：{run_time}（北京时间）",
-            "监测范围：FDA、EMA、Health Canada、TGA",
-            "",
-            "✅ 本次监测运行正常，未识别到新的亚硝胺限度变化。",
-        ]
-
-    if errors:
         lines.extend(["", "### ⚠ 数据源读取异常"])
         for agency, error in errors.items():
             lines.append(f"- **{agency}**：{error}")
@@ -1142,20 +1177,30 @@ def send_dingtalk(
             "- 系统已保留读取失败机构的上一版数据，"
             "建议结合官方原始文件进行人工核验。"
         )
+        attempt_delivery(title, lines)
 
-    response = SESSION.post(
-        url,
-        timeout=30,
-        headers={
-            "Authorization": f"Bearer {token}",
-            "Content-Type": "application/json",
-        },
-        json={
-            "title": title,
-            "message": "\n".join(lines),
-        },
-    )
-    response.raise_for_status()
+    # Monday heartbeat is independent: it is sent even when the same run also
+    # produced a change notification and/or a source-error notification.
+    if is_monday:
+        title = "亚硝胺监管监测周报"
+        status_text = (
+            f"⚠ 本次运行存在 {len(errors)} 个数据源异常。"
+            if errors
+            else "✅ 本次监测运行正常。"
+        )
+        lines = [
+            f"### 亚硝胺监管监测周报｜{beijing_now:%Y/%m/%d}",
+            f"运行时间：{run_time}（北京时间）",
+            "监测范围：FDA、EMA、Health Canada、TGA",
+            "",
+            status_text,
+            f"本次识别到 {len(changes)} 项监管数据变化。",
+            "如有变化或数据源异常，系统已另行发送独立消息。",
+        ]
+        attempt_delivery(title, lines)
+
+    if delivery_failures:
+        raise RuntimeError("; ".join(delivery_failures))
 
 
 def main() -> int:
