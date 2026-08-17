@@ -50,6 +50,15 @@ TGA_CSV_FILENAME = "Established_acceptable_intake_for_nitrosamines.csv"
 REQUEST_TIMEOUT = (20, 180)
 TRANSIENT_HTTP_STATUS = {429, 500, 502, 503, 504}
 
+# TGA intermittently stalls for GitHub-hosted runners.  Keep these limits
+# deliberately short: two CSV attempts plus one HTML fallback finish in about
+# one minute when the route is unavailable, after which the last good TGA data
+# is retained by --allow-partial.
+TGA_CSV_ATTEMPTS = 2
+TGA_CSV_TIMEOUT = (8, 20)
+TGA_HTML_ATTEMPTS = 1
+TGA_HTML_TIMEOUT = (8, 25)
+
 AGENCIES = ("EMA", "Health Canada", "FDA", "TGA")
 SESSION = requests.Session()
 SESSION.headers.update({
@@ -789,7 +798,11 @@ def parse_tga(registry: Registry) -> dict[str, str]:
             candidate_errors: list[str] = []
             for candidate in tga_csv_candidates():
                 try:
-                    csv_response = get_with_retry(candidate, attempts=4, timeout=(20, 120))
+                    csv_response = get_with_retry(
+                        candidate,
+                        attempts=TGA_CSV_ATTEMPTS,
+                        timeout=TGA_CSV_TIMEOUT,
+                    )
                     break
                 except requests.HTTPError as exc:
                     if getattr(exc.response, "status_code", None) == 404:
@@ -822,7 +835,11 @@ def parse_tga(registry: Registry) -> dict[str, str]:
         if offline_html:
             html_text = Path(offline_html).read_text(encoding="utf-8")
         else:
-            html_text = get_with_retry(TGA_URL, attempts=3, timeout=(20, 240)).text
+            html_text = get_with_retry(
+                TGA_URL,
+                attempts=TGA_HTML_ATTEMPTS,
+                timeout=TGA_HTML_TIMEOUT,
+            ).text
         frames = [flatten_columns(x) for x in pd.read_html(StringIO(html_text))]
         frame = next(
             (
