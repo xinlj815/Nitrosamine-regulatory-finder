@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-08-23T02:48:43+00:00",
+  "generated_at": "2026-08-24T02:49:13+00:00",
   "disclaimer": "本数据库用于研发和法规检索辅助。AI为每日可接受摄入量，ppm必须按最大日剂量换算；申报和放行前应打开监管机构原始文件核验。",
   "source_status": {
     "EMA": {
@@ -6777,8 +6777,8 @@
         "NDUPA"
       ],
       "related_substances": [
-        "Ulipristal acetate",
-        "Ulipristal Acetate"
+        "Ulipristal Acetate",
+        "Ulipristal acetate"
       ],
       "smiles": "CC(=O)[C@]1(CC[C@@H]2[C@@]1(C[C@@H](C3=C4CCC(=O)C=C4CC[C@@H]23)C5=CC=C(C=C5)N(C)N=O)C)OC(=O)C",
       "iupac": "[(8S,11R,13S,14S,17R)-17-acetyl-13-methyl-11-[4-[methyl(nitroso)amino]phenyl]-3-oxo-1,2,6,7,8,11,12,14,15,16-decahydrocyclopenta[a]phenanthren-17-yl] acetate",
