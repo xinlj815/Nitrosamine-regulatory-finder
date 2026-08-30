@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-08-29T08:14:16+00:00",
+  "generated_at": "2026-08-30T07:14:25+00:00",
   "disclaimer": "本数据库用于研发和法规检索辅助。AI为每日可接受摄入量，ppm必须按最大日剂量换算；申报和放行前应打开监管机构原始文件核验。",
   "source_status": {
     "EMA": {
@@ -3957,8 +3957,8 @@
         "NND"
       ],
       "related_substances": [
-        "Dabigatran Etexilate",
-        "Dabigatran etexilate"
+        "Dabigatran etexilate",
+        "Dabigatran Etexilate"
       ],
       "smiles": "C1=C3C(=CC=C1C(N(C2=NC=CC=C2)CCC(OCC)=O)=O)N(C(=N3)CN(N=O)C=4C=CC(=CC=4)C(=N)NC(=O)OCCCCCC)C",
       "iupac": "Ethyl3-(2-(((4-(N-((hexyloxy)carbonyl)carbamimidoyl)phenyl)(nitroso)amino)methyl)-1-methyl-N-(pyridin-2-yl)-1H-benzo[d]imidazole-5-carboxamido)propanoate",
