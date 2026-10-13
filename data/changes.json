@@ -1,4 +1,421 @@
 {
-  "generated_at": "2026-10-13T04:20:47+00:00",
-  "changes": []
+  "generated_at": "2026-10-13T08:19:42+00:00",
+  "changes": [
+    {
+      "type": "removed",
+      "compound": "1-(2,3-dichlorophenyl)-4-nitrosopiperazine",
+      "cas": "2221987-86-4",
+      "agency": "EMA",
+      "old": "400",
+      "new": null
+    },
+    {
+      "type": "added",
+      "compound": "1-Nitroso-moxonidine Impurity 7",
+      "cas": "",
+      "agency": "EMA",
+      "old": null,
+      "new": "553"
+    },
+    {
+      "type": "changed",
+      "compound": "2-nitroso-octahydrocyclopenta(c)pyrrole",
+      "cas": "54786-86-6",
+      "agency": "EMA",
+      "old": "1700",
+      "new": "1700"
+    },
+    {
+      "type": "removed",
+      "compound": "3-((ethyl(nitroso)amino)methyl)benzenesulfonate",
+      "cas": "",
+      "agency": "EMA",
+      "old": "18",
+      "new": null
+    },
+    {
+      "type": "removed",
+      "compound": "3-(dimethylamino)propyl 2-(benzyl(nitroso)amino)benzoate",
+      "cas": "",
+      "agency": "EMA",
+      "old": "1500",
+      "new": null
+    },
+    {
+      "type": "added",
+      "compound": "3-[[ethyl(nitroso)amino]methyl] benzenesulfonic acid",
+      "cas": "",
+      "agency": "EMA",
+      "old": null,
+      "new": "18"
+    },
+    {
+      "type": "changed",
+      "compound": "4-(methylnitrosoamino)-1-(3-pyridyl)-1-butanone",
+      "cas": "64091-91-4",
+      "agency": "EMA",
+      "old": "100",
+      "new": "100"
+    },
+    {
+      "type": "removed",
+      "compound": "5-chloro-4-methyl-2-[(2S)-2-methyl-1-nitrosopyrrolidin-2-yl]-1H-benzimidazole",
+      "cas": "",
+      "agency": "EMA",
+      "old": "1500",
+      "new": null
+    },
+    {
+      "type": "added",
+      "compound": "6,7-dichloro-4-nitroso-1,3,4,5-tetrahydro-2H-benzo[e][1,4] diazepin-2-one",
+      "cas": "",
+      "agency": "EMA",
+      "old": null,
+      "new": "100"
+    },
+    {
+      "type": "removed",
+      "compound": "Aripiprazole Nitroso Impurity",
+      "cas": "2989508-28-1",
+      "agency": "Health Canada",
+      "old": "400",
+      "new": null
+    },
+    {
+      "type": "added",
+      "compound": "Ethyl N-(2,3-dichloro-6-nitrobenzyl)-N-nitrosoglycinate",
+      "cas": "",
+      "agency": "EMA",
+      "old": null,
+      "new": "100"
+    },
+    {
+      "type": "added",
+      "compound": "Ethyl N-(6-amino-2,3-dichlorobenzyl)-N-nitrosoglycinate",
+      "cas": "",
+      "agency": "EMA",
+      "old": null,
+      "new": "100"
+    },
+    {
+      "type": "added",
+      "compound": "Methyl 2-(methylnitrosoamino) benzoate",
+      "cas": "68061-82-5",
+      "agency": "EMA",
+      "old": null,
+      "new": "100"
+    },
+    {
+      "type": "added",
+      "compound": "methyl 4-nitrosopiperazine-1-carboxylate",
+      "cas": "",
+      "agency": "EMA",
+      "old": null,
+      "new": "400"
+    },
+    {
+      "type": "added",
+      "compound": "Mirabegron Nitroso Impurity 12",
+      "cas": "",
+      "agency": "EMA",
+      "old": null,
+      "new": "400"
+    },
+    {
+      "type": "added",
+      "compound": "N,N-dinitroso-desmethyl-sumatriptan",
+      "cas": "",
+      "agency": "EMA",
+      "old": null,
+      "new": "18"
+    },
+    {
+      "type": "added",
+      "compound": "N-Nitroso Benzydamine EP Impurity A",
+      "cas": "",
+      "agency": "EMA",
+      "old": null,
+      "new": "1500"
+    },
+    {
+      "type": "added",
+      "compound": "N-Nitroso Ranolazine USP Related Compound C",
+      "cas": "",
+      "agency": "EMA",
+      "old": null,
+      "new": "400"
+    },
+    {
+      "type": "changed",
+      "compound": "N-nitroso-1,2,3,6-tetrahydropyridine",
+      "cas": "55556-92-8",
+      "agency": "EMA",
+      "old": "37",
+      "new": "37"
+    },
+    {
+      "type": "changed",
+      "compound": "N-nitroso-dabigatran etexilate amide",
+      "cas": "",
+      "agency": "EMA",
+      "old": "1500",
+      "new": "1500"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-daridorexant amine impurity",
+      "cas": "",
+      "agency": "EMA",
+      "old": null,
+      "new": "1500"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-demethyl-roxithromycin",
+      "cas": "",
+      "agency": "EMA",
+      "old": null,
+      "new": "NMI"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desbutyldronedaron+B97:B139e",
+      "cas": "",
+      "agency": "EMA",
+      "old": null,
+      "new": "1500"
+    },
+    {
+      "type": "changed",
+      "compound": "N-nitroso-desmethyl-clarithromycin",
+      "cas": "",
+      "agency": "EMA",
+      "old": "NMI",
+      "new": "NMI"
+    },
+    {
+      "type": "changed",
+      "compound": "N-nitroso-desmethyl-diltiazem",
+      "cas": "",
+      "agency": "EMA",
+      "old": "100",
+      "new": "100"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-erythromycin",
+      "cas": "",
+      "agency": "EMA",
+      "old": null,
+      "new": "NMI"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-desmethyl-maralixibat",
+      "cas": "",
+      "agency": "EMA",
+      "old": null,
+      "new": "1500"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-donepezil impurity A",
+      "cas": "",
+      "agency": "EMA",
+      "old": null,
+      "new": "400"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-ephedrine",
+      "cas": "",
+      "agency": "FDA",
+      "old": null,
+      "new": "1500 ng/day"
+    },
+    {
+      "type": "changed",
+      "compound": "N-nitroso-landiolol",
+      "cas": "",
+      "agency": "EMA",
+      "old": "400",
+      "new": "1500"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-mirabegron EP Impurity B",
+      "cas": "",
+      "agency": "EMA",
+      "old": null,
+      "new": "400"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-N-deshydroxyethyl-dasatinib",
+      "cas": "",
+      "agency": "EMA",
+      "old": null,
+      "new": "400"
+    },
+    {
+      "type": "changed",
+      "compound": "N-nitroso-N-methyl-2-phenylethylamine",
+      "cas": "13256-11-6",
+      "agency": "EMA",
+      "old": "8",
+      "new": "8"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-N-methyl-benzylamine",
+      "cas": "937-40-6",
+      "agency": "EMA",
+      "old": null,
+      "new": "18"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-phenoxybenzamine HCl impurity A",
+      "cas": "",
+      "agency": "EMA",
+      "old": null,
+      "new": "1500"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-phenoxybenzamine HCl impurity B",
+      "cas": "",
+      "agency": "EMA",
+      "old": null,
+      "new": "400"
+    },
+    {
+      "type": "removed",
+      "compound": "N-nitroso-pseudoephedrine",
+      "cas": "1850-88-0",
+      "agency": "EMA",
+      "old": "1500",
+      "new": null
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-pseudoephedrine/ N-nitrosoephedrine",
+      "cas": "",
+      "agency": "EMA",
+      "old": null,
+      "new": "1500"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-torasemide",
+      "cas": "",
+      "agency": "EMA",
+      "old": null,
+      "new": "1500"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-tranexamic-acid dimer",
+      "cas": "",
+      "agency": "EMA",
+      "old": null,
+      "new": "1500"
+    },
+    {
+      "type": "added",
+      "compound": "N-nitroso-xylometazoline",
+      "cas": "",
+      "agency": "EMA",
+      "old": null,
+      "new": "18"
+    },
+    {
+      "type": "removed",
+      "compound": "1-Nitroso-moxonidine Impurity 3",
+      "cas": "",
+      "agency": "EMA",
+      "old": "553",
+      "new": null
+    },
+    {
+      "type": "removed",
+      "compound": "2-(N-nitrosomethylamino)-N-[6-(trifluoromethoxy)-1,3-benzothiazol-2-yl]acetamide",
+      "cas": "",
+      "agency": "EMA",
+      "old": "100",
+      "new": null
+    },
+    {
+      "type": "removed",
+      "compound": "4-nitroso-methyl piperazine-1-carboxylate",
+      "cas": "",
+      "agency": "EMA",
+      "old": "400",
+      "new": null
+    },
+    {
+      "type": "removed",
+      "compound": "N-(2-hydroxy-2-phenylethyl)-N-(4-nitrophenethyl)nitrous amide",
+      "cas": "",
+      "agency": "EMA",
+      "old": "400",
+      "new": null
+    },
+    {
+      "type": "removed",
+      "compound": "N-(4-aminophenethyl)-N-(2-hydroxy-2-phenylethyl)nitrous amide",
+      "cas": "",
+      "agency": "EMA",
+      "old": "400",
+      "new": null
+    },
+    {
+      "type": "removed",
+      "compound": "N-deshydroxyethyl-N-nitroso dasatinib",
+      "cas": "",
+      "agency": "EMA",
+      "old": "400",
+      "new": null
+    },
+    {
+      "type": "removed",
+      "compound": "N-methyl-N-nitrosoanthranilate",
+      "cas": "",
+      "agency": "EMA",
+      "old": "100",
+      "new": null
+    },
+    {
+      "type": "removed",
+      "compound": "N-nitroso-clonidine-2",
+      "cas": "",
+      "agency": "EMA",
+      "old": "553",
+      "new": null
+    },
+    {
+      "type": "removed",
+      "compound": "N-nitroso-desbutyldronedarone",
+      "cas": "",
+      "agency": "EMA",
+      "old": "1500",
+      "new": null
+    },
+    {
+      "type": "removed",
+      "compound": "N-nitroso-tizanidine Impurity 3",
+      "cas": "",
+      "agency": "EMA",
+      "old": "553",
+      "new": null
+    },
+    {
+      "type": "removed",
+      "compound": "Nitroso impurity C'' [N-(2,6-dimethylphenyl)-2-(4-nitrosopiperazin-1-yl)acetamide]",
+      "cas": "",
+      "agency": "EMA",
+      "old": "400",
+      "new": null
+    }
+  ]
 }

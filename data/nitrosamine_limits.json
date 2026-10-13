@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-13T04:20:47+00:00",
+  "generated_at": "2026-10-13T08:19:42+00:00",
   "disclaimer": "本数据库用于研发和法规检索辅助。AI为每日可接受摄入量，ppm必须按最大日剂量换算；申报和放行前应打开监管机构原始文件核验。",
   "source_status": {
     "EMA": {
-      "version": "EMA/42261/2025/Rev. 13; N-nitrosamines: 244 rows; Other N-nitroso-structures: 17 rows",
-      "updated": "2026-06-01",
+      "version": "EMA/CHMP/219920/2026/Rev. 14; N-nitrosamines: 256 rows; Other N-nitroso-structures: 16 rows",
+      "updated": "2026-10-01",
       "url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
       "mode": "both Appendix 1 worksheets"
     },
@@ -25,11 +25,11 @@
       "version": "Established acceptable intake list; page updated 2026-01-29",
       "updated": "2026-01-29",
       "url": "https://www.tga.gov.au/safety/safety-monitoring-and-information/nitrosamine-impurities-medicines/established-acceptable-intake-nitrosamines-medicines",
-      "mode": "previous data retained; refresh failed: RuntimeError: TGA page unavailable: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=35); CSV unavailable: No recent TGA CSV URL was found; https://www.tga.gov.au/sites/default/files/2026-10/Established_acceptable_intake_for_nitrosamines.csv: ReadTimeout: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=20); https://www.tga.gov.au/sites/default/files/2026-09/Established_acceptable_intake_for_nitrosamines.csv: ReadTimeout: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=20); https://www.tga.gov.au/sites/default/files/2026-08/Established_acceptable_intake_for_nitrosamines.csv: ReadTimeout: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=20); https://www.tga.gov.au/sites/default/files/2026-07/Established_acceptable_intake_for_nitrosamines.csv: ReadTimeout: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=14.742263464999994); https://www.tga.gov.au/sites/default/files/2026-06/Established_acceptable_intake_for_nitrosamines.csv: ReadTimeout: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=7.291102441999996); https://www.tga.gov.au/sites/default/files/2026-05/Established_acceptable_intake_for_nitrosamines.csv: ReadTimeout: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=3.6199944934999877); https://www.tga.gov.au/sites/default/files/2026-04/Established_acceptable_intake_for_nitrosamines.csv: ReadTimeout: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=1.7772794569999917); https://www.tga.gov.au/sites/default/files/2026-03/Established_acceptable_intake_for_nitrosamines.csv: ReadTimeout: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=0.8656240244999935); CSV search time budget exhausted"
+      "mode": "previous data retained; refresh failed: RuntimeError: TGA page unavailable: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=35); CSV unavailable: No recent TGA CSV URL was found; https://www.tga.gov.au/sites/default/files/2026-10/Established_acceptable_intake_for_nitrosamines.csv: ReadTimeout: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=20); https://www.tga.gov.au/sites/default/files/2026-09/Established_acceptable_intake_for_nitrosamines.csv: ReadTimeout: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=20); https://www.tga.gov.au/sites/default/files/2026-08/Established_acceptable_intake_for_nitrosamines.csv: ReadTimeout: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=20); https://www.tga.gov.au/sites/default/files/2026-07/Established_acceptable_intake_for_nitrosamines.csv: ReadTimeout: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=14.754793506499993); https://www.tga.gov.au/sites/default/files/2026-06/Established_acceptable_intake_for_nitrosamines.csv: ReadTimeout: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=7.339152727999988); https://www.tga.gov.au/sites/default/files/2026-05/Established_acceptable_intake_for_nitrosamines.csv: ReadTimeout: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=3.653046074499997); https://www.tga.gov.au/sites/default/files/2026-04/Established_acceptable_intake_for_nitrosamines.csv: ReadTimeout: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=1.7887977969999866); https://www.tga.gov.au/sites/default/files/2026-03/Established_acceptable_intake_for_nitrosamines.csv: ReadTimeout: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=0.8805140384999959); CSV search time budget exhausted"
     }
   },
   "refresh_errors": {
-    "TGA": "RuntimeError: TGA page unavailable: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=35); CSV unavailable: No recent TGA CSV URL was found; https://www.tga.gov.au/sites/default/files/2026-10/Established_acceptable_intake_for_nitrosamines.csv: ReadTimeout: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=20); https://www.tga.gov.au/sites/default/files/2026-09/Established_acceptable_intake_for_nitrosamines.csv: ReadTimeout: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=20); https://www.tga.gov.au/sites/default/files/2026-08/Established_acceptable_intake_for_nitrosamines.csv: ReadTimeout: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=20); https://www.tga.gov.au/sites/default/files/2026-07/Established_acceptable_intake_for_nitrosamines.csv: ReadTimeout: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=14.742263464999994); https://www.tga.gov.au/sites/default/files/2026-06/Established_acceptable_intake_for_nitrosamines.csv: ReadTimeout: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=7.291102441999996); https://www.tga.gov.au/sites/default/files/2026-05/Established_acceptable_intake_for_nitrosamines.csv: ReadTimeout: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=3.6199944934999877); https://www.tga.gov.au/sites/default/files/2026-04/Established_acceptable_intake_for_nitrosamines.csv: ReadTimeout: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=1.7772794569999917); https://www.tga.gov.au/sites/default/files/2026-03/Established_acceptable_intake_for_nitrosamines.csv: ReadTimeout: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=0.8656240244999935); CSV search time budget exhausted"
+    "TGA": "RuntimeError: TGA page unavailable: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=35); CSV unavailable: No recent TGA CSV URL was found; https://www.tga.gov.au/sites/default/files/2026-10/Established_acceptable_intake_for_nitrosamines.csv: ReadTimeout: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=20); https://www.tga.gov.au/sites/default/files/2026-09/Established_acceptable_intake_for_nitrosamines.csv: ReadTimeout: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=20); https://www.tga.gov.au/sites/default/files/2026-08/Established_acceptable_intake_for_nitrosamines.csv: ReadTimeout: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=20); https://www.tga.gov.au/sites/default/files/2026-07/Established_acceptable_intake_for_nitrosamines.csv: ReadTimeout: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=14.754793506499993); https://www.tga.gov.au/sites/default/files/2026-06/Established_acceptable_intake_for_nitrosamines.csv: ReadTimeout: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=7.339152727999988); https://www.tga.gov.au/sites/default/files/2026-05/Established_acceptable_intake_for_nitrosamines.csv: ReadTimeout: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=3.653046074499997); https://www.tga.gov.au/sites/default/files/2026-04/Established_acceptable_intake_for_nitrosamines.csv: ReadTimeout: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=1.7887977969999866); https://www.tga.gov.au/sites/default/files/2026-03/Established_acceptable_intake_for_nitrosamines.csv: ReadTimeout: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=0.8805140384999959); CSV search time budget exhausted"
   },
   "records": [
     {
@@ -308,29 +308,18 @@
       "special_limits": []
     },
     {
-      "id": "cas-2989508-28-1",
+      "id": "cas-2221987-86-4",
       "name": "1-(2,3-dichlorophenyl)-4-nitrosopiperazine",
-      "cas": "2989508-28-1",
+      "cas": "2221987-86-4",
       "aliases": [
         "3-dichlorophenyl"
       ],
       "related_substances": [
         "Aripiprazole"
       ],
-      "smiles": "C1=CC=C(C(=C1N2CCN(CC2)N=O)Cl)Cl",
-      "iupac": "1-(2,3-dichlorophenyl)-4-nitrosopiperazine",
+      "smiles": "",
+      "iupac": "",
       "regulators": {
-        "EMA": {
-          "ai_ng_day": 400.0,
-          "ai_display": "400",
-          "cpca_category": "3",
-          "basis": "",
-          "publication_date": "2024-01-15",
-          "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
-          "status": "numeric",
-          "source_table": "EMA Appendix 1 - N-nitrosamines"
-        },
         "Health Canada": {
           "ai_ng_day": 400.0,
           "ai_display": "400",
@@ -477,7 +466,7 @@
         "Mitapivat",
         "mitapivat"
       ],
-      "smiles": "O=NN1CCN(CC1)CC1CC1",
+      "smiles": "C1CC1CN2CCN(CC2)N=O",
       "iupac": "1-(cyclopropylmethyl)-4-nitrosopiperazine",
       "regulators": {
         "EMA": {
@@ -487,7 +476,7 @@
           "basis": "",
           "publication_date": "2023-07-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -523,7 +512,7 @@
           "basis": "",
           "publication_date": "2024-07-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -553,7 +542,7 @@
           "basis": "",
           "publication_date": "2023-07-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -600,6 +589,42 @@
       ]
     },
     {
+      "id": "cas-2819242-71-0",
+      "name": "1-Nitroso-3-piperidinamine",
+      "cas": "2819242-71-0",
+      "aliases": [],
+      "related_substances": [
+        "Alogliptin"
+      ],
+      "smiles": "C1CC(CN(C1)N=O)N",
+      "iupac": "1-nitrosopiperidin-3-amine",
+      "regulators": {
+        "EMA": {
+          "ai_ng_day": 400.0,
+          "ai_display": "400",
+          "cpca_category": "3",
+          "basis": "",
+          "publication_date": "2023-10-01",
+          "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
+          "status": "numeric",
+          "source_table": "EMA Appendix 1 - N-nitrosamines"
+        },
+        "Health Canada": {
+          "ai_ng_day": 400.0,
+          "ai_display": "400",
+          "cpca_category": "3",
+          "basis": "",
+          "publication_date": "2023-10-20",
+          "source_url": "https://www.canada.ca/content/dam/hc-sc/documents/services/drugs-health-products/compliance-enforcement/information-health-product/drugs/nitrosamine-impurities/established-acceptable-intake-limits/appendix-1.xlsx",
+          "source_version": "Health Canada Appendix 1; version 2026-03-11",
+          "status": "numeric",
+          "source_table": "Health Canada Appendix 1"
+        }
+      },
+      "special_limits": []
+    },
+    {
       "id": "name-1nitrosomoxonidine",
       "name": "1-Nitroso-moxonidine",
       "cas": "",
@@ -617,7 +642,7 @@
           "basis": "Limit derived using structure-activity-relationship (SAR)/read-across approach using the TD50 of MNNG as point of departure.",
           "publication_date": "2024-12-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - Other N-nitroso-structures"
         }
@@ -625,15 +650,15 @@
       "special_limits": []
     },
     {
-      "id": "name-1nitrosomoxonidineimpurity3",
-      "name": "1-Nitroso-moxonidine Impurity 3",
+      "id": "name-1nitrosomoxonidineimpurity7",
+      "name": "1-Nitroso-moxonidine Impurity 7",
       "cas": "",
       "aliases": [],
       "related_substances": [
         "Moxonidine"
       ],
-      "smiles": "O=NN1CCN=C1NC2=C(OC)N=C(C)N=C2Cl",
-      "iupac": "4-Chloro-6-methoxy-2-methyl-N-(1-nitroso-4,5-dihydro-1H-imidazol-2-yl)pyrimidin-5-amine",
+      "smiles": "CC1=NC(=C(C(N1C2=NCCN2N=O)Cl)N)OC",
+      "iupac": "4-chloro-6-methoxy-2-methyl-3-(1-nitroso-4,5-dihydroimidazol-2-yl)-4H-pyrimidin-5-amine",
       "regulators": {
         "EMA": {
           "ai_ng_day": 553.0,
@@ -642,7 +667,7 @@
           "basis": "Limit derived using structure-activity-relationship (SAR)/read-across approach using the TD50 of MNNG as point of departure.",
           "publication_date": "2024-12-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - Other N-nitroso-structures"
         }
@@ -657,8 +682,8 @@
       "related_substances": [
         "Moxifloxacin"
       ],
-      "smiles": "C12N(CCCC1CNC2)N=O",
-      "iupac": "(4aS,7aS)-1-Nitrosooctahydro-1H-pyrrolo[3,4-b]pyridine",
+      "smiles": "C1CC2CNCC2N(C1)N=O",
+      "iupac": "1-nitroso-2,3,4,4a,5,6,7,7a-octahydropyrrolo[3,4-b]pyridine",
       "regulators": {
         "EMA": {
           "ai_ng_day": 1500.0,
@@ -667,7 +692,7 @@
           "basis": "",
           "publication_date": "2023-07-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -684,7 +709,7 @@
       "related_substances": [
         "Cyanocobalamine"
       ],
-      "smiles": "C1(OC(CN1N=O)C)(C)C",
+      "smiles": "CC1CN(C(O1)(C)C)N=O",
       "iupac": "2,2,5-trimethyl-3-nitroso-1,3-oxazolidine",
       "regulators": {
         "EMA": {
@@ -694,7 +719,7 @@
           "basis": "",
           "publication_date": "2024-02-15",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -709,7 +734,7 @@
       "related_substances": [
         "Opipramol"
       ],
-      "smiles": "C1N(CCN(C1)N=O)CCO",
+      "smiles": "C1CN(CCN1CCO)N=O",
       "iupac": "2-(4-nitrosopiperazin-1-yl)ethanol",
       "regulators": {
         "EMA": {
@@ -719,34 +744,7 @@
           "basis": "",
           "publication_date": "2024-05-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
-          "status": "numeric",
-          "source_table": "EMA Appendix 1 - N-nitrosamines"
-        }
-      },
-      "special_limits": []
-    },
-    {
-      "id": "name-2nnitrosomethylaminon6trifluoromethoxy13benzothiazol2ylacetamide",
-      "name": "2-(N-nitrosomethylamino)-N-[6-(trifluoromethoxy)-1,3-benzothiazol-2-yl]acetamide",
-      "cas": "",
-      "aliases": [
-        "NNT"
-      ],
-      "related_substances": [
-        "Troriluzole"
-      ],
-      "smiles": "C1=CC(=CC2=C1N=C(S2)NC(CN(N=O)C)=O)OC(F)(F)F",
-      "iupac": "2-(N-nitrosomethylamino)-N-[6-(trifluoromethoxy)-1,3-benzothiazol-2-yl]acetamide",
-      "regulators": {
-        "EMA": {
-          "ai_ng_day": 100.0,
-          "ai_display": "100",
-          "cpca_category": "2",
-          "basis": "",
-          "publication_date": "2025-02-01",
-          "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -795,10 +793,10 @@
           "ai_ng_day": 1700.0,
           "ai_display": "1700",
           "cpca_category": "",
-          "basis": "Limit derived using structure-activity-relationship (SAR)/read-across approach using the TD50 of NPYR as point of departure.",
+          "basis": "Limit derived using structure-activity- relationship (SAR)/read-across approach using the TD50 of NPYR as point of departure.",
           "publication_date": "2023-07-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -818,29 +816,15 @@
     },
     {
       "id": "name-3ethylnitrosoaminomethylbenzenesulfonate",
-      "name": "3-((ethyl(nitroso)amino)methyl) benzenesulfonate",
+      "name": "3-((ethyl(nitroso)amino)methyl)benzenesulfonate",
       "cas": "",
       "aliases": [
-        "N-M8",
         "nitroso"
       ],
-      "related_substances": [
-        "Brilliant blue FCF"
-      ],
-      "smiles": "O=NN(CC1=CC(=CC=C1)S(=O)(=O)[O-])CC",
-      "iupac": "3-[(N-ethylanilino) methyl]benzenesulfonate",
+      "related_substances": [],
+      "smiles": "",
+      "iupac": "",
       "regulators": {
-        "EMA": {
-          "ai_ng_day": 18.0,
-          "ai_display": "18",
-          "cpca_category": "1",
-          "basis": "",
-          "publication_date": "2024-05-01",
-          "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
-          "status": "numeric",
-          "source_table": "EMA Appendix 1 - N-nitrosamines"
-        },
         "Health Canada": {
           "ai_ng_day": 18.0,
           "ai_display": "18",
@@ -857,30 +841,18 @@
     },
     {
       "id": "name-3dimethylaminopropyl2benzylnitrosoaminobenzoate",
-      "name": "3-(dimethylamino)propyl 2-[benzyl(nitroso)amino]benzoate",
+      "name": "3-(dimethylamino)propyl 2-(benzyl(nitroso)amino)benzoate",
       "cas": "",
       "aliases": [
-        "3DPN",
         "dimethylamino",
         "nitroso"
       ],
       "related_substances": [
         "Benzydamine"
       ],
-      "smiles": "CN(C)CCCOC(=O)C1=CC=CC=C1NCC2=CC=CC=C2",
-      "iupac": "3-(dimethylamino)propyl 2-[benzyl(nitroso)amino]benzoate",
+      "smiles": "",
+      "iupac": "",
       "regulators": {
-        "EMA": {
-          "ai_ng_day": 1500.0,
-          "ai_display": "1500",
-          "cpca_category": "",
-          "basis": "Limit based on negative bacterial reverse mutation test",
-          "publication_date": "2024-07-01",
-          "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
-          "status": "numeric",
-          "source_table": "EMA Appendix 1 - N-nitrosamines"
-        },
         "Health Canada": {
           "ai_ng_day": 1500.0,
           "ai_display": "1500***",
@@ -896,37 +868,26 @@
       "special_limits": []
     },
     {
-      "id": "cas-2819242-71-0",
-      "name": "3-amino-N-nitrosopiperidine",
-      "cas": "2819242-71-0",
+      "id": "name-3ethylnitrosoaminomethylbenzenesulfonicacid",
+      "name": "3-[[ethyl(nitroso)amino]methyl] benzenesulfonic acid",
+      "cas": "",
       "aliases": [],
       "related_substances": [
-        "Alogliptin"
+        "Brilliant blue FCF"
       ],
-      "smiles": "C1CC(CN(C1)N=O)N",
-      "iupac": "1-nitrosopiperidin-3-amine",
+      "smiles": "CCN(CC1=CC(=CC=C1)S(=O)(=O)O)N=O",
+      "iupac": "3-[[ethyl(nitroso)amino]methyl] benzenesulfonic acid",
       "regulators": {
         "EMA": {
-          "ai_ng_day": 400.0,
-          "ai_display": "400",
-          "cpca_category": "3",
+          "ai_ng_day": 18.0,
+          "ai_display": "18",
+          "cpca_category": "1",
           "basis": "",
-          "publication_date": "2023-10-01",
+          "publication_date": "2024-05-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
-        },
-        "Health Canada": {
-          "ai_ng_day": 400.0,
-          "ai_display": "400",
-          "cpca_category": "3",
-          "basis": "",
-          "publication_date": "2023-10-20",
-          "source_url": "https://www.canada.ca/content/dam/hc-sc/documents/services/drugs-health-products/compliance-enforcement/information-health-product/drugs/nitrosamine-impurities/established-acceptable-intake-limits/appendix-1.xlsx",
-          "source_version": "Health Canada Appendix 1; version 2026-03-11",
-          "status": "numeric",
-          "source_table": "Health Canada Appendix 1"
         }
       },
       "special_limits": []
@@ -949,10 +910,10 @@
           "ai_ng_day": 100.0,
           "ai_display": "100",
           "cpca_category": "",
-          "basis": "Limit based on the most sensitive TD50 derived from the most robust TD50 dataset from carcinogenic potency database (CPDB) or Lhasa Carcinogenicity Database (LCD).",
+          "basis": "Limit based on the most sensitive TD50 derived from the most robust TD50 dataset from the Lhasa Carcinogenicity Database (LCDB).",
           "publication_date": "2023-07-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -971,57 +932,18 @@
       "special_limits": []
     },
     {
-      "id": "name-4nitrosomethylpiperazine1carboxylate",
-      "name": "4-nitroso-methyl piperazine-1-carboxylate",
-      "cas": "",
-      "aliases": [
-        "N-nitroso-PMEC"
-      ],
-      "related_substances": [
-        "Omecamtiv mecarbil"
-      ],
-      "smiles": "N1(CCN(CC1)C(=O)OC)N=O",
-      "iupac": "4-nitroso-methyl piperazine-1-carboxylate",
-      "regulators": {
-        "EMA": {
-          "ai_ng_day": 400.0,
-          "ai_display": "400",
-          "cpca_category": "3",
-          "basis": "",
-          "publication_date": "2024-05-01",
-          "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
-          "status": "numeric",
-          "source_table": "EMA Appendix 1 - N-nitrosamines"
-        }
-      },
-      "special_limits": []
-    },
-    {
       "id": "name-5chloro4methyl22s2methyl1nitrosopyrrolidin2yl1hbenzimidazole",
       "name": "5-chloro-4-methyl-2-[(2S)-2-methyl-1-nitrosopyrrolidin-2-yl]-1H-benzimidazole",
       "cas": "",
       "aliases": [
-        "2S",
-        "IDOR-1135-8758"
+        "2S"
       ],
       "related_substances": [
         "Daridorexant"
       ],
-      "smiles": "N1([C@@](CCC1)(C=2NC=3C(N=2)=C(C(=CC=3)Cl)C)C)N=O",
-      "iupac": "5-chloro-4-methyl-2-[(2S)-2-methyl-1-nitrosopyrrolidin-2-yl]-1H-benzimidazole",
+      "smiles": "",
+      "iupac": "",
       "regulators": {
-        "EMA": {
-          "ai_ng_day": 1500.0,
-          "ai_display": "1500",
-          "cpca_category": "5",
-          "basis": "",
-          "publication_date": "2023-11-15",
-          "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
-          "status": "numeric",
-          "source_table": "EMA Appendix 1 - N-nitrosamines"
-        },
         "Health Canada": {
           "ai_ng_day": 1500.0,
           "ai_display": "1500",
@@ -1032,6 +954,31 @@
           "source_version": "Health Canada Appendix 1; version 2026-03-11",
           "status": "numeric",
           "source_table": "Health Canada Appendix 1"
+        }
+      },
+      "special_limits": []
+    },
+    {
+      "id": "name-67dichloro4nitroso1345tetrahydro2hbenzoe14diazepin2one",
+      "name": "6,7-dichloro-4-nitroso-1,3,4,5-tetrahydro-2H-benzo[e][1,4] diazepin-2-one",
+      "cas": "",
+      "aliases": [],
+      "related_substances": [
+        "Anagrelide"
+      ],
+      "smiles": "O=C2CN(N=O)Cc1c(Cl)c(Cl)ccc1N2",
+      "iupac": "6,7-dichloro-4-nitroso-1,3,4,5-tetrahydro-2H-benzo[e][1,4] diazepin-2-one",
+      "regulators": {
+        "EMA": {
+          "ai_ng_day": 100.0,
+          "ai_display": "100",
+          "cpca_category": "2",
+          "basis": "",
+          "publication_date": "01 October 2026 (new)",
+          "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
+          "status": "numeric",
+          "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
       },
       "special_limits": []
@@ -1054,7 +1001,7 @@
           "basis": "",
           "publication_date": "2026-03-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -1087,8 +1034,83 @@
       "special_limits": []
     },
     {
+      "id": "cas-2989508-28-1",
+      "name": "Aripiprazole Nitroso Impurity",
+      "cas": "2989508-28-1",
+      "aliases": [],
+      "related_substances": [
+        "Aripiprazole"
+      ],
+      "smiles": "C1CN(CCN1C2=C(C(=CC=C2)Cl)Cl)N=O",
+      "iupac": "1-(2,3-dichlorophenyl)-4-nitrosopiperazine",
+      "regulators": {
+        "EMA": {
+          "ai_ng_day": 400.0,
+          "ai_display": "400",
+          "cpca_category": "3",
+          "basis": "",
+          "publication_date": "2024-01-15",
+          "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
+          "status": "numeric",
+          "source_table": "EMA Appendix 1 - N-nitrosamines"
+        }
+      },
+      "special_limits": []
+    },
+    {
+      "id": "name-ethyln23dichloro6nitrobenzylnnitrosoglycinate",
+      "name": "Ethyl N-(2,3-dichloro-6-nitrobenzyl)-N-nitrosoglycinate",
+      "cas": "",
+      "aliases": [],
+      "related_substances": [
+        "Anagrelide"
+      ],
+      "smiles": "ClC1=CC=C([N+]([O-])=O)C(CN(N=O)CC(OCC)=O)=C1Cl",
+      "iupac": "Ethyl N-(2,3-dichloro-6-nitrobenzyl)-N-nitrosoglycinate",
+      "regulators": {
+        "EMA": {
+          "ai_ng_day": 100.0,
+          "ai_display": "100",
+          "cpca_category": "2",
+          "basis": "",
+          "publication_date": "01 October 2026 (new)",
+          "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
+          "status": "numeric",
+          "source_table": "EMA Appendix 1 - N-nitrosamines"
+        }
+      },
+      "special_limits": []
+    },
+    {
+      "id": "name-ethyln6amino23dichlorobenzylnnitrosoglycinate",
+      "name": "Ethyl N-(6-amino-2,3-dichlorobenzyl)-N-nitrosoglycinate",
+      "cas": "",
+      "aliases": [],
+      "related_substances": [
+        "Anagrelide"
+      ],
+      "smiles": "NC1=CC=C(Cl)C(Cl)=C1CN(N=O)CC(OCC)=O",
+      "iupac": "Ethyl N-(6-amino-2,3-dichlorobenzyl)-N-nitrosoglycinate",
+      "regulators": {
+        "EMA": {
+          "ai_ng_day": 100.0,
+          "ai_display": "100",
+          "cpca_category": "2",
+          "basis": "",
+          "publication_date": "01 October 2026 (new)",
+          "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
+          "status": "numeric",
+          "source_table": "EMA Appendix 1 - N-nitrosamines"
+        }
+      },
+      "special_limits": []
+    },
+    {
       "id": "cas-85440-79-5",
-      "name": "Indapamide Impurity A",
+      "name": "Indapamide EP impurity A",
       "cas": "85440-79-5",
       "aliases": [
         "2RS"
@@ -1096,7 +1118,7 @@
       "related_substances": [
         "Indapamide"
       ],
-      "smiles": "CC2CC1=CC=CC=C1N2N=O",
+      "smiles": "CC1CC2=CC=CC=C2N1N=O",
       "iupac": "2-methyl-1-nitroso-2,3-dihydroindole",
       "regulators": {
         "EMA": {
@@ -1106,7 +1128,7 @@
           "basis": "",
           "publication_date": "2023-11-15",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -1120,6 +1142,85 @@
           "source_version": "Health Canada Appendix 1; version 2026-03-11",
           "status": "numeric",
           "source_table": "Health Canada Appendix 1"
+        }
+      },
+      "special_limits": []
+    },
+    {
+      "id": "cas-68061-82-5",
+      "name": "Methyl 2-(methylnitrosoamino) benzoate",
+      "cas": "68061-82-5",
+      "aliases": [
+        "NO-MMA"
+      ],
+      "related_substances": [],
+      "smiles": "CN(C1=CC=CC=C1C(=O)OC)N=O",
+      "iupac": "methyl 2-[methyl(nitroso)amino]benzoate",
+      "regulators": {
+        "EMA": {
+          "ai_ng_day": 100.0,
+          "ai_display": "100",
+          "cpca_category": "2",
+          "basis": "",
+          "publication_date": "2025-12-01",
+          "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
+          "status": "numeric",
+          "source_table": "EMA Appendix 1 - N-nitrosamines"
+        }
+      },
+      "special_limits": []
+    },
+    {
+      "id": "name-methyl4nitrosopiperazine1carboxylate",
+      "name": "methyl 4-nitrosopiperazine-1-carboxylate",
+      "cas": "",
+      "aliases": [
+        "N-nitroso-PMEC"
+      ],
+      "related_substances": [
+        "Omecamtiv mecarbil"
+      ],
+      "smiles": "COC(=O)N1CCN(CC1)N=O",
+      "iupac": "methyl 4-nitrosopiperazine-1-carboxylate",
+      "regulators": {
+        "EMA": {
+          "ai_ng_day": 400.0,
+          "ai_display": "400",
+          "cpca_category": "3",
+          "basis": "",
+          "publication_date": "2024-05-01",
+          "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
+          "status": "numeric",
+          "source_table": "EMA Appendix 1 - N-nitrosamines"
+        }
+      },
+      "special_limits": []
+    },
+    {
+      "id": "name-mirabegronnitrosoimpurity12",
+      "name": "Mirabegron Nitroso Impurity 12",
+      "cas": "",
+      "aliases": [
+        "MBL-2-NO"
+      ],
+      "related_substances": [
+        "Mirabegron"
+      ],
+      "smiles": "C1=CC=C(C=C1)C(CN(CCC2=CC=C(C=C2)[N+](=O)[O-])N=O)O",
+      "iupac": "N-(2-hydroxy-2-phenylethyl)-N-[2-(4-nitrophenyl)ethyl]nitrous amide",
+      "regulators": {
+        "EMA": {
+          "ai_ng_day": 400.0,
+          "ai_display": "400",
+          "cpca_category": "3",
+          "basis": "",
+          "publication_date": "2024-05-01",
+          "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
+          "status": "numeric",
+          "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
       },
       "special_limits": []
@@ -1143,7 +1244,7 @@
           "basis": "",
           "publication_date": "2026-03-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -1196,6 +1297,31 @@
           "source_version": "Health Canada Appendix 1; version 2026-03-11",
           "status": "numeric",
           "source_table": "Health Canada Appendix 1"
+        }
+      },
+      "special_limits": []
+    },
+    {
+      "id": "name-nndinitrosodesmethylsumatriptan",
+      "name": "N,N-dinitroso-desmethyl-sumatriptan",
+      "cas": "",
+      "aliases": [],
+      "related_substances": [
+        "Sumatriptan"
+      ],
+      "smiles": "CNS(=O)(=O)CC1=CC2=C(C=C1)N(C=C2CCN(C)N=O)N=O",
+      "iupac": "N-methyl-1-(3-(2-(methyl(nitroso)amino)ethyl)-1-nitroso-1H-indol-5-yl)methanesulfonamide",
+      "regulators": {
+        "EMA": {
+          "ai_ng_day": 18.0,
+          "ai_display": "18",
+          "cpca_category": "1",
+          "basis": "",
+          "publication_date": "01 October 2026 (new)",
+          "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
+          "status": "numeric",
+          "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
       },
       "special_limits": []
@@ -1283,33 +1409,6 @@
       "special_limits": []
     },
     {
-      "id": "name-n2hydroxy2phenylethyln4nitrophenethylnitrousamide",
-      "name": "N-(2-hydroxy-2-phenylethyl)-N-(4-nitrophenethyl)nitrous amide",
-      "cas": "",
-      "aliases": [
-        "MBL-2-NO"
-      ],
-      "related_substances": [
-        "Mirabegron"
-      ],
-      "smiles": "C1=CC=C(C=C1)[C@H](CN(CCC2=CC=C(C=C2)[N+]([O-])=O)N=O)O",
-      "iupac": "(R)-N-(2-hydroxy-2-phenylethyl)-N-(4-nitrophenethyl)nitrous amide",
-      "regulators": {
-        "EMA": {
-          "ai_ng_day": 400.0,
-          "ai_display": "400",
-          "cpca_category": "3",
-          "basis": "",
-          "publication_date": "2024-05-01",
-          "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
-          "status": "numeric",
-          "source_table": "EMA Appendix 1 - N-nitrosamines"
-        }
-      },
-      "special_limits": []
-    },
-    {
       "id": "name-n46diamino212fluorobenzyl1hpyrazolo34bpyridin3ylpyrimidin5ylnmethylnitrousamide",
       "name": "N-(4,6-diamino-2-(1-(2-fluorobenzyl)-1H-pyrazolo[3,4-b]pyridin-3-yl)pyrimidin-5-yl)-N-methylnitrous amide",
       "cas": "",
@@ -1337,33 +1436,6 @@
       "special_limits": []
     },
     {
-      "id": "name-n4aminophenethyln2hydroxy2phenylethylnitrousamide",
-      "name": "N-(4-aminophenethyl)-N-(2-hydroxy-2-phenylethyl)nitrous amide",
-      "cas": "",
-      "aliases": [
-        "MBL-3-NO"
-      ],
-      "related_substances": [
-        "Mirabegron"
-      ],
-      "smiles": "C1=CC=C(C=C1)[C@H](CN(CCC2=CC=C(C=C2)N)N=O)O",
-      "iupac": "(R)-N-(4-aminophenethyl)-N-(2-hydroxy-2-phenylethyl)nitrous amide",
-      "regulators": {
-        "EMA": {
-          "ai_ng_day": 400.0,
-          "ai_display": "400",
-          "cpca_category": "3",
-          "basis": "",
-          "publication_date": "2024-05-01",
-          "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
-          "status": "numeric",
-          "source_table": "EMA Appendix 1 - N-nitrosamines"
-        }
-      },
-      "special_limits": []
-    },
-    {
       "id": "name-n2e66dimethyl2hepten4yn1ylnnitrosomethanamine",
       "name": "N-[(2E)-6,6-dimethyl-2-hepten-4-yn-1-yl]-N-nitrosomethanamine",
       "cas": "",
@@ -1386,31 +1458,6 @@
           "source_version": "Health Canada Appendix 1; version 2026-03-11",
           "status": "numeric",
           "source_table": "Health Canada Appendix 1"
-        }
-      },
-      "special_limits": []
-    },
-    {
-      "id": "name-ndeshydroxyethylnnitrosodasatinib",
-      "name": "N-deshydroxyethyl-N-nitroso dasatinib",
-      "cas": "",
-      "aliases": [],
-      "related_substances": [
-        "Dasatinib"
-      ],
-      "smiles": "O=C(NC1=C(C=CC=C1Cl)C)C2=CN=C(S2)NC4=NC(C)=NC(N3CCN(N=O)CC3)=C4",
-      "iupac": "N-(2-chloro-6-methylphenyl)-2-((2-methyl-6-(4-nitrosopiperazin-1-yl)pyrimidin-4-yl)amino)thiazole-5-carboxamide",
-      "regulators": {
-        "EMA": {
-          "ai_ng_day": 400.0,
-          "ai_display": "400",
-          "cpca_category": "3",
-          "basis": "",
-          "publication_date": "2025-02-01",
-          "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
-          "status": "numeric",
-          "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
       },
       "special_limits": []
@@ -1444,70 +1491,6 @@
       "special_limits": []
     },
     {
-      "id": "name-nmethylnnitrosoanthranilate",
-      "name": "N-methyl-N-nitrosoanthranilate",
-      "cas": "",
-      "aliases": [
-        "NO-MMA"
-      ],
-      "related_substances": [
-        "Methyl N-methylanthranilate"
-      ],
-      "smiles": "O=C(OC)C1=CC=CC=C1N(C)N=O",
-      "iupac": "methyl 2-(methyl(nitroso)amino)benzoate",
-      "regulators": {
-        "EMA": {
-          "ai_ng_day": 100.0,
-          "ai_display": "100",
-          "cpca_category": "2",
-          "basis": "",
-          "publication_date": "2025-12-01",
-          "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
-          "status": "numeric",
-          "source_table": "EMA Appendix 1 - N-nitrosamines"
-        }
-      },
-      "special_limits": []
-    },
-    {
-      "id": "cas-13256-11-6",
-      "name": "N-methyl-N-nitrosophenethylamine",
-      "cas": "13256-11-6",
-      "aliases": [
-        "N-亚硝基-N-甲基苯乙胺",
-        "NMPEA"
-      ],
-      "related_substances": [],
-      "smiles": "CN(CCC1=CC=CC=C1)N=O",
-      "iupac": "N-methyl-N-(2-phenylethyl)nitrous amide",
-      "regulators": {
-        "EMA": {
-          "ai_ng_day": 8.0,
-          "ai_display": "8",
-          "cpca_category": "",
-          "basis": "Limit based on the most sensitive TD50 derived from the most robust TD50 dataset from carcinogenic potency database (CPDB) or Lhasa Carcinogenicity Database (LCD). Low molecular weight nitrosamines with sufficiently robust toxicological data to serve as points of departure for derivation of other AIs by SAR and read-across. Not all of these impurities have been found in medicines. Others have been found in 1 or more medicines, not necessarily related to the structure of the active substance or its related impurities.",
-          "publication_date": "2022-05-01",
-          "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
-          "status": "numeric",
-          "source_table": "EMA Appendix 1 - N-nitrosamines"
-        },
-        "Health Canada": {
-          "ai_ng_day": 8.0,
-          "ai_display": "8",
-          "cpca_category": "",
-          "basis": "",
-          "publication_date": "2022-05-27",
-          "source_url": "https://www.canada.ca/content/dam/hc-sc/documents/services/drugs-health-products/compliance-enforcement/information-health-product/drugs/nitrosamine-impurities/established-acceptable-intake-limits/appendix-1.xlsx",
-          "source_version": "Health Canada Appendix 1; version 2026-03-11",
-          "status": "numeric",
-          "source_table": "Health Canada Appendix 1"
-        }
-      },
-      "special_limits": []
-    },
-    {
       "id": "cas-70-25-7",
       "name": "N-methyl-N’-nitro-N-nitrosoguanidine",
       "cas": "70-25-7",
@@ -1525,7 +1508,7 @@
           "basis": "Limit based on the most sensitive TD50 derived from the most robust TD50 dataset from carcinogenic potency database (CPDB) or Lhasa Carcinogenicity Database (LCDB version 2023.1). N-nitroso-guanidine with sufficiently robust toxicological data to serve as points of departure for derivation of other AIs by SAR and read-across.",
           "publication_date": "2024-12-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - Other N-nitroso-structures"
         }
@@ -1533,15 +1516,42 @@
       "special_limits": []
     },
     {
+      "id": "name-nnitrosobenzydamineepimpuritya",
+      "name": "N-Nitroso Benzydamine EP Impurity A",
+      "cas": "",
+      "aliases": [
+        "3DPN"
+      ],
+      "related_substances": [
+        "Benzydamine"
+      ],
+      "smiles": "CN(C)CCCOC(=O)C1=CC=CC=C1NCC2=CC=CC=C2",
+      "iupac": "3-(dimethylamino)propyl 2-[benzyl(nitroso)amino]benzoate",
+      "regulators": {
+        "EMA": {
+          "ai_ng_day": 1500.0,
+          "ai_display": "1500",
+          "cpca_category": "",
+          "basis": "Limit based on negative bacterial reverse mutation test",
+          "publication_date": "2024-07-01",
+          "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
+          "status": "numeric",
+          "source_table": "EMA Appendix 1 - N-nitrosamines"
+        }
+      },
+      "special_limits": []
+    },
+    {
       "id": "name-nnitrosoderivativeofrotigotineimpurityb",
-      "name": "N-nitroso derivative of rotigotine impurity B",
+      "name": "N-Nitroso derivative of rotigotine impurity B",
       "cas": "",
       "aliases": [],
       "related_substances": [
         "Rotigotine"
       ],
-      "smiles": "C1=CC(=C2C(=C1)C[C@@H](CC2)N(CCC)N=O)O",
-      "iupac": "N-[(2R)-5-hydroxy-1,2,3,4-tetrahydronaphthalen-2-yl]-N-propylnitrous amide",
+      "smiles": "C1=CC(=C2C(=C1)CC(CC2)N(CCC)N=O)O",
+      "iupac": "N-(5-hydroxy-1,2,3,4-tetrahydronaphthalen-2-yl)-N-propylnitrous amide",
       "regulators": {
         "EMA": {
           "ai_ng_day": 400.0,
@@ -1550,7 +1560,7 @@
           "basis": "",
           "publication_date": "2023-10-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -1565,8 +1575,8 @@
       "related_substances": [
         "Rotigotine"
       ],
-      "smiles": "C1CC=3C(C[C@H]1N(CCC=2SC=CC=2)N=O)=CC=CC=3O",
-      "iupac": "N-[(2S)-5-hydroxy-1,2,3,4-tetrahydronaphthalen-2-yl]-N-(2-thiophen-2-ylethyl)nitrous amide",
+      "smiles": "C1CC=3C(CC1N(CCC=2SC=CC=2)N=O)=CC=CC=3O",
+      "iupac": "N-[5-hydroxy-1,2,3,4-tetrahydronaphthalen-2-yl]-N-(2-thiophen-2-ylethyl)nitrous amide",
       "regulators": {
         "EMA": {
           "ai_ng_day": 1500.0,
@@ -1575,7 +1585,32 @@
           "basis": "",
           "publication_date": "2023-10-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
+          "status": "numeric",
+          "source_table": "EMA Appendix 1 - N-nitrosamines"
+        }
+      },
+      "special_limits": []
+    },
+    {
+      "id": "name-nnitrosoranolazineusprelatedcompoundc",
+      "name": "N-Nitroso Ranolazine USP Related Compound C",
+      "cas": "",
+      "aliases": [],
+      "related_substances": [
+        "Ranolazine"
+      ],
+      "smiles": "CC1=C(C(=CC=C1)C)NC(=O)CN2CCN(CC2)N=O",
+      "iupac": "N-(2,6-dimethylphenyl)-2-(4-nitrosopiperazin-1-yl)acetamide",
+      "regulators": {
+        "EMA": {
+          "ai_ng_day": 400.0,
+          "ai_display": "400",
+          "cpca_category": "3",
+          "basis": "",
+          "publication_date": "2023-07-01",
+          "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -1597,10 +1632,10 @@
           "ai_ng_day": 37.0,
           "ai_display": "37",
           "cpca_category": "",
-          "basis": "Limit based on the most sensitive TD50 derived from the most robust TD50 dataset from carcinogenic potency database (CPDB) or Lhasa Carcinogenicity Database (LCD). Low molecular weight nitrosamines with sufficiently robust toxicological data to serve as points of departure for derivation of other AIs by SAR and read-across. Not all of these impurities have been found in medicines. Others have been found in 1 or more medicines, not necessarily related to the structure of the active substance or its related impurities.",
+          "basis": "Limit based on the most sensitive TD50 derived from the most robust TD50 dataset from the Lhasa Carcinogenicity Database (LCDB).",
           "publication_date": "2022-05-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -1620,7 +1655,7 @@
     },
     {
       "id": "name-nnitroso24thiazoleamine",
-      "name": "N-nitroso-2,4-thiazole amine",
+      "name": "N-nitroso-2,4-thiazoleamine",
       "cas": "",
       "aliases": [
         "NNTA"
@@ -1629,7 +1664,7 @@
         "Ritonavir",
         "Ritonavir/ Cobicistat"
       ],
-      "smiles": "S1C=C(N=C1C(C)C)CN(N=O)C",
+      "smiles": "CC(C)C1=NC(=CS1)CN(C)N=O",
       "iupac": "N-((2-isopropylthiazol-4-yl)methyl)-N-methylnitrous amide",
       "regulators": {
         "EMA": {
@@ -1639,7 +1674,7 @@
           "basis": "CPCA derived AI as substance tested positive in in vivo mutagenicity study",
           "publication_date": "2024-09-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -1675,7 +1710,7 @@
           "basis": "",
           "publication_date": "2023-07-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -1700,7 +1735,7 @@
           "basis": "",
           "publication_date": "2025-12-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -1715,17 +1750,17 @@
       "related_substances": [
         "Abacavir"
       ],
-      "smiles": "C1CC1N(C2=NC(=NC3=C2N=CN3[C@@H]/4C[C@@H](\\C=C/4)CO)N)N=O",
-      "iupac": "N-[2-amino-9-[(1R,4S)-4-(hydroxymethyl)cyclopent-2-en-1-yl]purin-6-yl]-N-cyclopropylnitrous amide",
+      "smiles": "C1CC1N(C2=NC(=NC3=C2N=CN3C/4CC(\\C=C/4)CO)N)N=O",
+      "iupac": "N-[2-amino-9-[4-(hydroxymethyl)cyclopent-2-en-1-yl]purin-6-yl]-N-cyclopropylnitrous amide",
       "regulators": {
         "EMA": {
           "ai_ng_day": 1500.0,
           "ai_display": "1500",
           "cpca_category": "5",
           "basis": "",
-          "publication_date": "01 June 2026 (new)",
+          "publication_date": "2026-06-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -1761,7 +1796,7 @@
           "basis": "",
           "publication_date": "2025-05-15",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -1808,7 +1843,7 @@
           "basis": "",
           "publication_date": "2024-09-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -1858,7 +1893,7 @@
           "basis": "",
           "publication_date": "2026-03-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -1928,9 +1963,9 @@
           "ai_display": "1500",
           "cpca_category": "",
           "basis": "Limit based on negative bacterial reverse mutation test",
-          "publication_date": "01 June 2026 (new)",
+          "publication_date": "2026-06-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -1955,7 +1990,7 @@
           "basis": "Limit based on negative bacterial reverse mutation test",
           "publication_date": "2023-07-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -2032,7 +2067,7 @@
           "basis": "",
           "publication_date": "2024-12-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -2049,8 +2084,8 @@
       "related_substances": [
         "Nicotine"
       ],
-      "smiles": "C1C=CCN([C@@H]1C2=CN=CC=C2)N=O",
-      "iupac": "3-[(2S)-1-nitroso-3,6-dihydro-2H-pyridin-2-yl]pyridine",
+      "smiles": "O=NN1CC=CCC1C=2C=NC=CC2",
+      "iupac": "3-[1-nitroso-3,6-dihydro-2H-pyridin-2-yl] pyridine",
       "regulators": {
         "EMA": {
           "ai_ng_day": 1500.0,
@@ -2059,7 +2094,7 @@
           "basis": "",
           "publication_date": "2024-12-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -2084,7 +2119,7 @@
           "basis": "",
           "publication_date": "2024-02-15",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -2181,7 +2216,7 @@
           "basis": "",
           "publication_date": "2024-05-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -2232,7 +2267,7 @@
           "basis": "",
           "publication_date": "2023-07-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -2279,7 +2314,7 @@
           "basis": "CPCA derived AI as substance tested positive in in vivo mutagenicity study",
           "publication_date": "2023-07-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -2326,7 +2361,7 @@
           "basis": "Limit derived using structure-activity-relationship (SAR)/read-across approach using the TD50 of NNK as point of departure as substance tested positive in in vivo mutagenicity study",
           "publication_date": "2023-07-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -2423,7 +2458,7 @@
           "basis": "",
           "publication_date": "2024-01-15",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -2448,7 +2483,7 @@
           "basis": "Substance tested negative in in vivo mutagenicity study. Can be controlled according to ICH Q3A/B.",
           "publication_date": "2023-07-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "nmi",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -2509,7 +2544,7 @@
           "basis": "",
           "publication_date": "2023-07-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -2584,7 +2619,7 @@
           "basis": "",
           "publication_date": "2025-05-15",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -2645,7 +2680,7 @@
           "basis": "Limit based on negative bacterial reverse mutation test",
           "publication_date": "2025-08-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -2692,7 +2727,7 @@
           "basis": "CPCA derived AI as substance tested positive in in vivo mutagenicity study",
           "publication_date": "2023-07-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -2728,7 +2763,7 @@
           "basis": "",
           "publication_date": "2024-01-15",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -2800,7 +2835,7 @@
           "basis": "",
           "publication_date": "2024-07-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -2815,8 +2850,8 @@
       "related_substances": [
         "D-biotin"
       ],
-      "smiles": "OC(CCCC[C@H]1[C@](N2)([H])[C@](N(N=O)C2=O)([H])CS1)=O",
-      "iupac": "5-((3aS,4S,6aR)-1-nitroso-2-oxohexahydro-1H-thieno[3,4-d]imidazol-4-yl)pentanoic acid",
+      "smiles": "C1[C@H]2[C@@H]([C@@H](S1)CCCCC(=O)O)NC(=O)N2N=O",
+      "iupac": "5-[(3aR,6S,6aS)-3-nitroso-2-oxo-3a,4,6,6a-tetrahydro-1H-thieno[3,4-d]imidazol-6-yl]pentanoic acid",
       "regulators": {
         "EMA": {
           "ai_ng_day": 1500.0,
@@ -2825,7 +2860,7 @@
           "basis": "Limit based on negative bacterial reverse mutation test.",
           "publication_date": "2024-12-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - Other N-nitroso-structures"
         }
@@ -2852,7 +2887,7 @@
           "basis": "",
           "publication_date": "2023-07-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -2899,7 +2934,7 @@
           "basis": "Limit based on negative bacterial reverse mutation test",
           "publication_date": "2026-03-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -2949,7 +2984,7 @@
           "basis": "",
           "publication_date": "2025-05-15",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -2998,7 +3033,7 @@
           "basis": "Limit based on negative bacterial reverse mutation test",
           "publication_date": "2023-07-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -3045,7 +3080,7 @@
           "basis": "Substance tested negative in in vivo mutagenicity study. Can be controlled according to ICH Q3A/B.",
           "publication_date": "2023-07-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "nmi",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -3092,7 +3127,7 @@
           "basis": "",
           "publication_date": "2024-09-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -3131,7 +3166,7 @@
           "basis": "Substance tested negative in in vivo mutagenicity study. Can be controlled according to ICH Q3A/B.",
           "publication_date": "2023-11-15",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "nmi",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -3217,7 +3252,7 @@
           "basis": "",
           "publication_date": "2025-05-15",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -3264,7 +3299,7 @@
           "basis": "",
           "publication_date": "2024-07-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -3311,7 +3346,7 @@
           "basis": "",
           "publication_date": "2023-11-15",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -3361,7 +3396,7 @@
           "basis": "",
           "publication_date": "2023-07-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -3397,7 +3432,7 @@
           "basis": "Limit derived using structure-activity-relationship (SAR)/read-across approach using the TD50 of MNNG as point of departure.",
           "publication_date": "2024-12-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - Other N-nitroso-structures"
         }
@@ -3422,7 +3457,7 @@
           "basis": "",
           "publication_date": "2023-12-15",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -3470,7 +3505,7 @@
           "basis": "Substance tested negative in in vivo mutagenicity study. Can be controlled according to ICH Q3A/B.",
           "publication_date": "2023-07-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "nmi",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -3559,32 +3594,7 @@
           "basis": "Limit derived using structure-activity-relationship (SAR)/read-across approach using the TD50 of MNNG as point of departure.",
           "publication_date": "2024-12-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
-          "status": "numeric",
-          "source_table": "EMA Appendix 1 - Other N-nitroso-structures"
-        }
-      },
-      "special_limits": []
-    },
-    {
-      "id": "name-nnitrosoclonidine2",
-      "name": "N-nitroso-clonidine-2",
-      "cas": "",
-      "aliases": [],
-      "related_substances": [
-        "Clonidine"
-      ],
-      "smiles": "ClC1=CC=CC(Cl)=C1N(N=O)C2=NCCN2",
-      "iupac": "N-(2,6-dichlorophenyl)-N-(4,5-dihydro-1H-imidazol-2-yl)nitrous amide",
-      "regulators": {
-        "EMA": {
-          "ai_ng_day": 553.0,
-          "ai_display": "553",
-          "cpca_category": "",
-          "basis": "Limit derived using structure-activity-relationship (SAR)/read-across approach using the TD50 of MNNG as point of departure.",
-          "publication_date": "2024-12-01",
-          "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - Other N-nitroso-structures"
         }
@@ -3609,7 +3619,7 @@
           "basis": "",
           "publication_date": "2024-02-15",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -3656,7 +3666,7 @@
           "basis": "",
           "publication_date": "2024-02-15",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -3942,7 +3952,7 @@
           "basis": "",
           "publication_date": "2025-12-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -3957,8 +3967,8 @@
         "NND"
       ],
       "related_substances": [
-        "Dabigatran etexilate",
-        "Dabigatran Etexilate"
+        "Dabigatran Etexilate",
+        "Dabigatran etexilate"
       ],
       "smiles": "C1=C3C(=CC=C1C(N(C2=NC=CC=C2)CCC(OCC)=O)=O)N(C(=N3)CN(N=O)C=4C=CC(=CC=4)C(=N)NC(=O)OCCCCCC)C",
       "iupac": "Ethyl3-(2-(((4-(N-((hexyloxy)carbonyl)carbamimidoyl)phenyl)(nitroso)amino)methyl)-1-methyl-N-(pyridin-2-yl)-1H-benzo[d]imidazole-5-carboxamido)propanoate",
@@ -3970,7 +3980,7 @@
           "basis": "Limit based on negative bacterial reverse mutation test",
           "publication_date": "2023-07-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -4016,10 +4026,10 @@
           "ai_ng_day": 1500.0,
           "ai_display": "1500",
           "cpca_category": "",
-          "basis": "Limit derived using structure-activity-relationship (SAR)/read-across and weight of evidence approaches using N-nitroso-dabigatran etexilate as a surrogate.",
+          "basis": "Limit derived using structure-activity-relationship (SAR)/read-across and weight of evidence approach using N-nitroso-dabigatran etexilate as a surrogate.",
           "publication_date": "2026-03-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -4069,7 +4079,7 @@
           "basis": "",
           "publication_date": "2025-02-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -4188,6 +4198,33 @@
       "special_limits": []
     },
     {
+      "id": "name-nnitrosodaridorexantamineimpurity",
+      "name": "N-nitroso-daridorexant amine impurity",
+      "cas": "",
+      "aliases": [
+        "IDOR-1135-8758"
+      ],
+      "related_substances": [
+        "Daridorexant"
+      ],
+      "smiles": "N1(C(CCC1)(C=2NC=3C(N=2)=C(C(=CC=3)Cl)C)C)N=O",
+      "iupac": "5-chloro-4-methyl-2-(2-methyl-1-nitrosopyrrolidin-2-yl)-1H-benzo[d]imidazole",
+      "regulators": {
+        "EMA": {
+          "ai_ng_day": 1500.0,
+          "ai_display": "1500",
+          "cpca_category": "5",
+          "basis": "",
+          "publication_date": "2023-11-15",
+          "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
+          "status": "numeric",
+          "source_table": "EMA Appendix 1 - N-nitrosamines"
+        }
+      },
+      "special_limits": []
+    },
+    {
       "id": "name-nnitrosodasatinib",
       "name": "N-nitroso-dasatinib",
       "cas": "",
@@ -4205,7 +4242,7 @@
           "basis": "",
           "publication_date": "2025-02-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -4213,8 +4250,33 @@
       "special_limits": []
     },
     {
-      "id": "name-nnitrosodesbutyldronedarone",
-      "name": "N-nitroso-desbutyldronedarone",
+      "id": "name-nnitrosodemethylroxithromycin",
+      "name": "N-nitroso-demethyl-roxithromycin",
+      "cas": "",
+      "aliases": [],
+      "related_substances": [
+        "Roxithromycin"
+      ],
+      "smiles": "O=NN([C@@H]3[C@@H](O)[C@H](O[C@H]1[C@](C)(O)C[C@@H](C)/C([C@@H]([C@H]([C@@]([C@H](OC([C@@H]([C@H]([C@@H]1C)O[C@H]2C[C@@](C)(OC)[C@@H](O)[C@H](C)O2)C)=O)CC)(C)O)O)C)=N\\OCOCCOC)O[C@H](C)C3)C",
+      "iupac": "N-((2S,3R,4S,6R)-2-(((3R,4S,5S,6R,7R,9R,11S,12R,13S,14R,E)-14-ethyl-7,12,13-trihydroxy-4-(((2R,4R,5S,6S)-5-hydroxy-4-methoxy-4,6-dimethyltetrahydro-2H-pyran-2-yl)oxy)-10-(((2-methoxyethoxy)methoxy)imino)-3,5,7,9,11,13-hexamethyl-2-oxooxacyclotetradecan-6-yl)oxy)-3-hydroxy-6-methyltetrahydro-2H-pyran-4-yl)-N-methylnitrous amide",
+      "regulators": {
+        "EMA": {
+          "ai_ng_day": null,
+          "ai_display": "NMI",
+          "cpca_category": "",
+          "basis": "Limit derived using structure-activity-relationship, physicochemical features and weight of evidence approach for N-nitroso-demethyl- roxithromycin based on N-nitroso-desmethyl-azithromycin. Can be controlled according to ICH Q3A/B.",
+          "publication_date": "01 October 2026 (new)",
+          "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
+          "status": "nmi",
+          "source_table": "EMA Appendix 1 - N-nitrosamines"
+        }
+      },
+      "special_limits": []
+    },
+    {
+      "id": "name-nnitrosodesbutyldronedaronb97b139e",
+      "name": "N-nitroso-desbutyldronedaron+B97:B139e",
       "cas": "",
       "aliases": [],
       "related_substances": [
@@ -4230,7 +4292,7 @@
           "basis": "Limit based on negative bacterial reverse mutation test",
           "publication_date": "2026-03-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -4255,7 +4317,7 @@
           "basis": "Limit based on negative bacterial reverse mutation test",
           "publication_date": "2025-12-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -4264,7 +4326,7 @@
     },
     {
       "id": "name-nnitrosodesethyllidocaine",
-      "name": "N-nitroso-desethyllidocaine",
+      "name": "N-nitroso-desethyl lidocaine",
       "cas": "",
       "aliases": [],
       "related_substances": [
@@ -4280,7 +4342,7 @@
           "basis": "",
           "publication_date": "2023-11-15",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -4300,7 +4362,7 @@
     },
     {
       "id": "name-nnitrosodesformylriociguat",
-      "name": "N-Nitroso-desformyl-riociguat",
+      "name": "N-nitroso-desformyl-riociguat",
       "cas": "",
       "aliases": [],
       "related_substances": [
@@ -4316,7 +4378,7 @@
           "basis": "",
           "publication_date": "2024-07-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -4366,7 +4428,7 @@
           "basis": "",
           "publication_date": "2023-07-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -4492,7 +4554,7 @@
           "basis": "",
           "publication_date": "2023-11-15",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -4528,7 +4590,7 @@
           "basis": "Substance tested negative in in vivo mutagenicity study. Can be controlled according to ICH Q3A/B.",
           "publication_date": "2023-07-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "nmi",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -4614,7 +4676,7 @@
           "basis": "",
           "publication_date": "2025-02-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -4700,7 +4762,7 @@
           "basis": "",
           "publication_date": "2023-07-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -4725,7 +4787,7 @@
           "basis": "",
           "publication_date": "2024-12-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -4800,7 +4862,7 @@
           "basis": "",
           "publication_date": "2026-03-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -4861,7 +4923,7 @@
           "basis": "Limit derived using structure-activity-relationship (SAR)/read-across approach using the TD50 of NNK as point of departure.",
           "publication_date": "2023-12-15",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -4883,10 +4945,10 @@
           "ai_ng_day": null,
           "ai_display": "NMI",
           "cpca_category": "",
-          "basis": "Limit derived using structure-activity-relationship (SAR)/read-across and weight of evidence approaches using N-nitroso-desmethyl-azithromycin as a surrogate. Can be controlled according to ICH Q3A/B.",
+          "basis": "Limit derived using structure-activity-relationship (SAR)/read-across and weight of evidence approach using N-nitroso-desmethyl-azithromycin as a surrogate. Can be controlled according to ICH Q3A/B.",
           "publication_date": "2024-07-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "nmi",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -5194,10 +5256,10 @@
           "ai_ng_day": 100.0,
           "ai_display": "100",
           "cpca_category": "",
-          "basis": "Limit derived using structure-activity-relationship (SAR)/read-across approach using the TD50 of NNK as point of departure.",
-          "publication_date": "2026-03-01",
+          "basis": "Limit derived using structure-activity-relationship (SAR)/read-across approach using the TD50 of NNK as point of departure as substance tested positive in in vivo mutagenicity study",
+          "publication_date": "01 March 2026 (note updated)",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -5235,7 +5297,7 @@
           "basis": "",
           "publication_date": "2024-09-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -5308,9 +5370,9 @@
           "ai_display": "400",
           "cpca_category": "3",
           "basis": "",
-          "publication_date": "01 June 2026 (new)",
+          "publication_date": "2026-06-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -5346,7 +5408,7 @@
           "basis": "Limit derived using structure-activity-relationship (SAR)/read-across approach using the TD50 of NNK as point of departure.",
           "publication_date": "2025-08-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -5382,7 +5444,7 @@
           "basis": "",
           "publication_date": "2024-05-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -5407,7 +5469,7 @@
           "basis": "",
           "publication_date": "2024-12-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -5447,9 +5509,20 @@
       "related_substances": [
         "Erythromycin"
       ],
-      "smiles": "",
-      "iupac": "",
+      "smiles": "CC[C@@H]1[C@@]([C@@H]([C@H](C(=O)[C@@H](C[C@@]([C@@H]([C@H]([C@@H]([C@H](C(=O)O1)C)O[C@H]2C[C@@]([C@H]([C@@H](O2)C)O)(C)OC)C)O[C@H]3[C@@H]([C@H](C[C@H](O3)C)N(C)N=O)O)(C)O)C)C)O)(C)O",
+      "iupac": "N-[(2S,3R,4S,6R)-2-[[(3R,4S,5S,6R,7R,9R,11R,12R,13S,14R)-14-ethyl-7,12,13-trihydroxy-4-[(2R,4R,5S,6S)-5-hydroxy-4-methoxy-4,6-dimethyloxan-2-yl]oxy-3,5,7,9,11,13-hexamethyl-2,10-dioxo-oxacyclotetradec-6-yl]oxy]-3-hydroxy-6-methyloxan-4-yl]-N-methylnitrous amide",
       "regulators": {
+        "EMA": {
+          "ai_ng_day": null,
+          "ai_display": "NMI",
+          "cpca_category": "",
+          "basis": "Limit derived using structure-activity-relationship, physicochemical features and weight of evidence approach for N-nitroso-desmethyl-erythromycin using N-nitroso-desmethyl-azithromycin as a surrogate. Can be controlled according to ICH Q3A/B.",
+          "publication_date": "01 October 2026 (new)",
+          "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
+          "status": "nmi",
+          "source_table": "EMA Appendix 1 - N-nitrosamines"
+        },
         "FDA": {
           "ai_ng_day": 1500.0,
           "ai_display": "1500 ng/day",
@@ -5532,7 +5605,7 @@
           "basis": "",
           "publication_date": "2024-12-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -5582,7 +5655,7 @@
           "basis": "",
           "publication_date": "2025-02-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -5607,7 +5680,7 @@
           "basis": "",
           "publication_date": "2025-02-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -5622,9 +5695,20 @@
       "related_substances": [
         "Maralixibat"
       ],
-      "smiles": "",
-      "iupac": "",
+      "smiles": "CCCCC6([C@@H]([C@H](C=1C=CC(=CC=1)OCC=2C=CC(=CC=2)C[N+]34CCN(CC3)CC4)C5=CC(N(N=O)C)=CC=C5S(C6)(=O)=O)O)CCCC",
+      "iupac": "1-(4-((4-((4R,5R)-3,3-Dibutyl-4-hydroxy-7-(methyl(nitroso)amino)-1,1-dioxido-2,3,4,5-tetrahydrobenzo[b]thiepin-5-yl)phenoxy)methyl)benzyl)-1,4-diazabicyclo[2.2.2]octan-1-ium",
       "regulators": {
+        "EMA": {
+          "ai_ng_day": 1500.0,
+          "ai_display": "1500",
+          "cpca_category": "",
+          "basis": "Limit based on negative bacterial reverse mutation test",
+          "publication_date": "01 October 2026 (new)",
+          "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
+          "status": "numeric",
+          "source_table": "EMA Appendix 1 - N-nitrosamines"
+        },
         "FDA": {
           "ai_ng_day": 100.0,
           "ai_display": "100 ng/day",
@@ -5707,7 +5791,7 @@
           "basis": "",
           "publication_date": "2025-12-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -5818,7 +5902,7 @@
           "basis": "",
           "publication_date": "2023-12-15",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -6166,9 +6250,9 @@
           "ai_display": "400",
           "cpca_category": "3",
           "basis": "",
-          "publication_date": "01 June 2026 (new)",
+          "publication_date": "2026-06-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -6193,7 +6277,7 @@
           "basis": "",
           "publication_date": "2024-09-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -6229,7 +6313,7 @@
           "basis": "",
           "publication_date": "2024-12-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -6290,7 +6374,7 @@
           "basis": "",
           "publication_date": "2024-01-15",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -6365,7 +6449,7 @@
           "basis": "",
           "publication_date": "2024-01-15",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -6401,7 +6485,7 @@
           "basis": "",
           "publication_date": "2024-02-15",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -6427,8 +6511,8 @@
       "related_substances": [
         "Tapentadol"
       ],
-      "smiles": "CC[C@@H](C1=CC(=CC=C1)O)[C@@H](C)CN(C)N=O",
-      "iupac": "N-[(2R,3R)-3-(3-hydroxyphenyl)-2-methylpentyl]-N-methylnitrous amide",
+      "smiles": "CCC(C1=CC(=CC=C1)O)C(C)CN(C)N=O",
+      "iupac": "N-[3-(3-hydroxyphenyl)-2-methylpentyl]-N-methylnitrous amide",
       "regulators": {
         "EMA": {
           "ai_ng_day": 18.0,
@@ -6437,7 +6521,7 @@
           "basis": "",
           "publication_date": "2025-12-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -6501,7 +6585,7 @@
           "basis": "",
           "publication_date": "2024-01-15",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -6651,7 +6735,7 @@
           "basis": "",
           "publication_date": "2024-07-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -6687,7 +6771,7 @@
           "basis": "",
           "publication_date": "2023-07-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -6762,7 +6846,7 @@
           "basis": "",
           "publication_date": "2023-07-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -6790,7 +6874,7 @@
           "basis": "",
           "publication_date": "2026-03-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -6851,7 +6935,7 @@
           "basis": "",
           "publication_date": "2024-12-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -6898,7 +6982,7 @@
           "basis": "",
           "publication_date": "2025-05-15",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -6926,7 +7010,7 @@
           "basis": "Substance tested negative in in vivo mutagenicity study. Can be controlled according to ICH Q3A/B.",
           "publication_date": "2024-07-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "nmi",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -6962,7 +7046,7 @@
           "basis": "",
           "publication_date": "2023-11-15",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -7016,7 +7100,7 @@
           "basis": "Limit derived using structure-activity-relationship (SAR)/read-across approach using the TD50 of NDEA as point of departure.",
           "publication_date": "2020-06-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -7073,7 +7157,7 @@
           "basis": "",
           "publication_date": "2026-03-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -7098,7 +7182,7 @@
           "basis": "Limit derived using structure-activity-relationship (SAR)/read-across approach using the TD50 of NDPh as point of departure.",
           "publication_date": "2023-07-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -7170,7 +7254,7 @@
           "basis": "Low molecular weight nitrosamines with sufficiently robust toxicological data. Not all of these impurities have been found in medicines. Others have been found in 1 or more medicines, not necessarily related to the structure of the active substance or its related impurities. Limit based on the most sensitive TD50 derived from the most robust TD50 dataset from carcinogenic potency database (CPDB) or Lhasa Carcinogenicity Database (LCD).",
           "publication_date": "2022-12-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -7212,7 +7296,7 @@
           "basis": "Low molecular weight nitrosamines with sufficiently robust toxicological data to serve as points of departure for derivation of other AIs by SAR and read-across. Not all of these impurities have been found in medicines. Others have been found in 1 or more medicines, not necessarily related to the structure of the active substance or its related impurities. Limit based on the harmonic mean TD50 database included on the carcinogenic potency database (CPDB).",
           "publication_date": "2020-06-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -7269,7 +7353,7 @@
           "basis": "",
           "publication_date": "2024-02-15",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -7298,7 +7382,7 @@
           "basis": "",
           "publication_date": "2020-06-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -7350,7 +7434,7 @@
           "basis": "Low molecular weight nitrosamines with sufficiently robust toxicological data to serve as points of departure for derivation of other AIs by SAR and read-across. Not all of these impurities have been found in medicines. Others have been found in 1 or more medicines, not necessarily related to the structure of the active substance or its related impurities. Limit based on the harmonic mean TD50 database included on the carcinogenic potency database (CPDB).",
           "publication_date": "2020-06-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -7407,7 +7491,7 @@
           "basis": "Nitrosamines with sufficiently robust toxicological data to serve as points of departure for derivation of other AIs by SAR and read-across. Not all of these impurities have been found in medicines. Others have been found in 1 or more medicines, not necessarily related to the structure of the active substance or its related impurities. Limit based on the most sensitive TD50 derived from the most robust TD50 dataset from carcinogenic potency database (CPDB) applying the lower boundary of the 99% CI for the TD50 estimate (TD50L01).",
           "publication_date": "2022-12-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -7471,7 +7555,7 @@
           "basis": "Limit derived using structure-activity-relationship (SAR)/read-across approach using the TD50 of NDEA as point of departure.",
           "publication_date": "2021-10-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -7515,6 +7599,31 @@
       "special_limits": []
     },
     {
+      "id": "name-nnitrosodonepezilimpuritya",
+      "name": "N-nitroso-donepezil impurity A",
+      "cas": "",
+      "aliases": [],
+      "related_substances": [
+        "Donepezil"
+      ],
+      "smiles": "COC1=C(C=C2C(=C1)CC(C2=O)CC3CCN(CC3)N=O)OC",
+      "iupac": "5,6-dimethoxy-2-[(1-nitrosopiperidin-4-yl)methyl]-2,3-dihydro-1H-inden-1-one",
+      "regulators": {
+        "EMA": {
+          "ai_ng_day": 400.0,
+          "ai_display": "400",
+          "cpca_category": "3",
+          "basis": "",
+          "publication_date": "01 October 2026 (new)",
+          "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
+          "status": "numeric",
+          "source_table": "EMA Appendix 1 - N-nitrosamines"
+        }
+      },
+      "special_limits": []
+    },
+    {
       "id": "name-nnitrosodoravirinedimer",
       "name": "N-nitroso-doravirine dimer",
       "cas": "",
@@ -7534,7 +7643,7 @@
           "basis": "Limit based on negative bacterial reverse mutation test",
           "publication_date": "2025-08-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -7571,7 +7680,7 @@
           "basis": "Limit based on negative bacterial reverse mutation test",
           "publication_date": "2024-01-15",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -7653,7 +7762,7 @@
           "basis": "Limit derived using structure-activity-relationship (SAR)/read-across approach using the TD50 of NNK as point of departure as substance tested positive in in vivo mutagenicity study",
           "publication_date": "2022-12-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -7751,7 +7860,7 @@
       "related_substances": [
         "Eletriptan"
       ],
-      "smiles": "O=S(C1=CC=CC=C1)(CCC2=CC(C(C[C@@H]3CCCN3C)=CN4N=O)=C4C=C2)=O",
+      "smiles": "O=S(C1=CC=CC=C1)(CCC4=CC=3C(CC2CCCN2C)=CN(N=O)C=3C=C4)=O",
       "iupac": "(S)-3-((1-methylpyrrolidin-2-yl)methyl)-1-nitroso-5-(2-(phenylsulfonyl)ethyl)-1H-indole",
       "regulators": {
         "EMA": {
@@ -7761,7 +7870,7 @@
           "basis": "Limit derived using structure-activity-relationship, physicochemical features and weight of evidence for N-nitroso-indoles based on C- nitro and C-nitroso-aromatic compounds.",
           "publication_date": "2024-12-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - Other N-nitroso-structures"
         }
@@ -7786,7 +7895,7 @@
           "basis": "",
           "publication_date": "2023-07-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -7830,6 +7939,31 @@
           "ai_ng_day": 1500.0,
           "ai_display": "1500 ng/day",
           "cpca_category": "5",
+          "basis": "FDA CPCA",
+          "publication_date": "",
+          "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/cder-nitrosamine-impurity-acceptable-intake-limits",
+          "source_version": "FDA Table 1 (current page)",
+          "status": "numeric",
+          "source_table": "FDA Table 1"
+        }
+      },
+      "special_limits": []
+    },
+    {
+      "id": "name-nnitrosoephedrine",
+      "name": "N-nitroso-ephedrine",
+      "cas": "",
+      "aliases": [],
+      "related_substances": [
+        "Ephedrine"
+      ],
+      "smiles": "",
+      "iupac": "",
+      "regulators": {
+        "FDA": {
+          "ai_ng_day": 1500.0,
+          "ai_display": "1500 ng/day",
+          "cpca_category": "4",
           "basis": "FDA CPCA",
           "publication_date": "",
           "source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/cder-nitrosamine-impurity-acceptable-intake-limits",
@@ -7908,7 +8042,7 @@
           "basis": "",
           "publication_date": "2023-11-15",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -7980,7 +8114,7 @@
           "basis": "",
           "publication_date": "2023-11-15",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -8005,7 +8139,7 @@
           "basis": "",
           "publication_date": "2020-06-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -8127,7 +8261,7 @@
           "basis": "",
           "publication_date": "2024-05-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -8213,7 +8347,7 @@
           "basis": "",
           "publication_date": "2024-02-15",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -8311,7 +8445,7 @@
           "basis": "Limit derived using structure-activity-relationship (SAR)/read-across approach using the TD50 of NNK as point of departure as substance tested positive in in vivo mutagenicity study",
           "publication_date": "2022-12-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -8403,7 +8537,7 @@
           "basis": "Substance tested negative in in vivo mutagenicity study. Can be controlled according to ICH Q3A/B.",
           "publication_date": "2024-05-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "nmi",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -8600,7 +8734,7 @@
           "basis": "",
           "publication_date": "2025-05-15",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -8647,7 +8781,7 @@
           "basis": "Limit based on negative bacterial reverse mutation test",
           "publication_date": "2024-05-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -8719,7 +8853,7 @@
           "basis": "Substance tested negative in in vivo mutagenicity study. Can be controlled according to ICH Q3A/B.",
           "publication_date": "2023-07-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "nmi",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -8791,7 +8925,7 @@
           "basis": "",
           "publication_date": "2025-08-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -8816,7 +8950,7 @@
           "basis": "",
           "publication_date": "2025-08-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -8824,9 +8958,9 @@
       "special_limits": []
     },
     {
-      "id": "cas-2005-04-1",
+      "id": "name-nnitrosohydroxyzineimpuritya",
       "name": "N-nitroso-hydroxyzine Impurity A",
-      "cas": "2005-04-1",
+      "cas": "",
       "aliases": [],
       "related_substances": [
         "Hydroxyzine"
@@ -8841,7 +8975,7 @@
           "basis": "",
           "publication_date": "2025-08-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -8866,7 +9000,7 @@
           "basis": "",
           "publication_date": "2023-12-15",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -8902,7 +9036,7 @@
           "basis": "",
           "publication_date": "2023-11-15",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -8927,7 +9061,7 @@
           "basis": "Limit derived using structure-activity-relationship (SAR)/read-across approach using the TD50 of NDPh as point of departure.",
           "publication_date": "2024-09-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -9052,7 +9186,7 @@
           "basis": "",
           "publication_date": "2024-12-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -9099,7 +9233,7 @@
           "basis": "CPCA derived AI as substance tested positive in in vivo mutagenicity study. LTL cannot be applied and the AI will be capped at 1500ng",
           "publication_date": "2023-07-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -9146,7 +9280,7 @@
           "basis": "Limit based on negative bacterial reverse mutation test",
           "publication_date": "2023-07-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -9187,13 +9321,13 @@
       "iupac": "[(4S)-2,2-dimethyl-1,3-dioxolan-4-yl]methyl 3-[4-[(2S)-2-hydroxy-3-[2-(morpholine-4-carbonylamino)ethyl-nitrosoamino]propoxy]phenyl]propanoate",
       "regulators": {
         "EMA": {
-          "ai_ng_day": 400.0,
-          "ai_display": "400",
-          "cpca_category": "3",
-          "basis": "",
-          "publication_date": "2023-07-01",
+          "ai_ng_day": 1500.0,
+          "ai_display": "1500",
+          "cpca_category": "",
+          "basis": "Limit based on negative bacterial reverse mutation test",
+          "publication_date": "01 July 2023 (update of AI and notes)",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -9231,7 +9365,7 @@
           "basis": "",
           "publication_date": "2023-11-15",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -9392,7 +9526,7 @@
           "basis": "",
           "publication_date": "2023-07-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -9528,7 +9662,7 @@
           "basis": "Limit derived using structure-activity-relationship, physicochemical features and weight of evidence approach for N-nitroso-lisinopril based on N-nitroso-quinapril and N-nitroso-quinaprilat. Can be controlled according to ICH Q3A/B.",
           "publication_date": "2023-07-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "nmi",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -9575,7 +9709,7 @@
           "basis": "",
           "publication_date": "2024-09-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -9625,7 +9759,7 @@
           "basis": "",
           "publication_date": "2024-02-15",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -9700,7 +9834,7 @@
           "basis": "Limit derived using structure-activity-relationship (SAR)/read-across approach using the TD50 of NDPh as point of departure.",
           "publication_date": "2022-12-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -9762,7 +9896,7 @@
           "basis": "CPCA derived AI as substance tested positive in in vivo mutagenicity study",
           "publication_date": "2024-02-15",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -9799,8 +9933,8 @@
       "related_substances": [
         "Melatonin"
       ],
-      "smiles": "CC(NCCC1=CN(N=O)C2=C1C=C(OC)C=C2)=O",
-      "iupac": "N-(2-(5-methoxy-1-nitroso-1H-indol-3-yl)ethyl)acetamide",
+      "smiles": "CC(=O)NCCC1=CN(C2=C1C=C(C=C2)OC)N=O",
+      "iupac": "N-[2-(5-methoxy-1-nitrosoindol-3-yl)ethyl]acetamide",
       "regulators": {
         "EMA": {
           "ai_ng_day": 1500.0,
@@ -9809,7 +9943,7 @@
           "basis": "Limit derived using structure-activity-relationship, physicochemical features and weight of evidence for N-nitroso-indoles based on C- nitro and C-nitroso-aromatic compounds.",
           "publication_date": "2024-12-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - Other N-nitroso-structures"
         }
@@ -9834,7 +9968,7 @@
           "basis": "",
           "publication_date": "2024-02-15",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -9879,9 +10013,9 @@
           "ai_display": "1500",
           "cpca_category": "4",
           "basis": "",
-          "publication_date": "01 June 2026 (new)",
+          "publication_date": "2026-06-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -9933,7 +10067,7 @@
           "basis": "",
           "publication_date": "2025-08-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -9960,7 +10094,7 @@
           "basis": "",
           "publication_date": "2025-08-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -9987,7 +10121,7 @@
           "basis": "Limit derived using structure-activity-relationship (SAR)/read-across approach using the TD50 of NDEA as point of departure.",
           "publication_date": "2026-03-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -10014,7 +10148,7 @@
           "basis": "Limit derived using structure-activity-relationship (SAR)/read-across approach using the TD50 of N-nitrosopiperidine as point of departure.",
           "publication_date": "2022-05-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -10111,7 +10245,7 @@
           "basis": "",
           "publication_date": "2023-07-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -10183,7 +10317,7 @@
           "basis": "CPCA derived AI as substance tested positive in in vivo mutagenicity study",
           "publication_date": "2023-07-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -10213,6 +10347,33 @@
       "special_limits": []
     },
     {
+      "id": "name-nnitrosomirabegronepimpurityb",
+      "name": "N-nitroso-mirabegron EP Impurity B",
+      "cas": "",
+      "aliases": [
+        "MBL-3-NO"
+      ],
+      "related_substances": [
+        "Mirabegron"
+      ],
+      "smiles": "C1=CC=C(C=C1)C(CN(CCC2=CC=C(C=C2)N)N=O)O",
+      "iupac": "N-(4-aminophenethyl)-N-(2-hydroxy-2-phenylethyl)nitrous amide",
+      "regulators": {
+        "EMA": {
+          "ai_ng_day": 400.0,
+          "ai_display": "400",
+          "cpca_category": "3",
+          "basis": "",
+          "publication_date": "2024-05-01",
+          "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
+          "status": "numeric",
+          "source_table": "EMA Appendix 1 - N-nitrosamines"
+        }
+      },
+      "special_limits": []
+    },
+    {
       "id": "name-nnitrosomirdametinib",
       "name": "N-nitroso-mirdametinib",
       "cas": "",
@@ -10230,7 +10391,7 @@
           "basis": "Limit derived using structure-activity-relationship (SAR)/read-across approach using the TD50 of NDPh as point of departure",
           "publication_date": "2025-08-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -10255,7 +10416,7 @@
           "basis": "",
           "publication_date": "2024-01-15",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -10356,7 +10517,7 @@
           "basis": "Limit based on the most sensitive TD50 derived from the most robust TD50 dataset from carcinogenic potency database (CPDB) or Lhasa Carcinogenicity Database (LCD). Low molecular weight nitrosamines with sufficiently robust toxicological data to serve as points of departure for derivation of other AIs by SAR and read-across. Not all of these impurities have been found in medicines. Others have been found in 1 or more medicines, not necessarily related to the structure of the active substance or its related impurities.",
           "publication_date": "2021-06-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -10390,9 +10551,9 @@
           "ai_display": "1500",
           "cpca_category": "4",
           "basis": "CPCA derived AI as substance showed inconclusive results in in vivo mutagenicity study",
-          "publication_date": "01 July 2023 (update)",
+          "publication_date": "2023-07-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -10464,9 +10625,9 @@
           "ai_display": "100",
           "cpca_category": "",
           "basis": "Limit derived using structure-activity-relationship, physicochemical features and weight of evidence approach using the TD50 of NNK as point of departure",
-          "publication_date": "01 June 2026 (new)",
+          "publication_date": "2026-06-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -10489,9 +10650,9 @@
           "ai_display": "未建立数值AI",
           "cpca_category": "",
           "basis": "Active substance itself is clastogenic. Can be controlled according to ICH Q3A/B.",
-          "publication_date": "01 March 2026 (update)",
+          "publication_date": "2026-03-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "other",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -10531,9 +10692,20 @@
       "related_substances": [
         "Dasatinib"
       ],
-      "smiles": "",
-      "iupac": "",
+      "smiles": "CC1=C(C(=CC=C1)Cl)NC(=O)C2=CN=C(S2)NC3=CC(=NC(=N3)C)N4CCN(CC4)N=O",
+      "iupac": "N-(2-chloro-6-methylphenyl)-2-[[2-methyl-6-(4-nitrosopiperazin-1-yl)pyrimidin-4-yl]amino]-1,3-thiazole-5-carboxamide",
       "regulators": {
+        "EMA": {
+          "ai_ng_day": 400.0,
+          "ai_display": "400",
+          "cpca_category": "3",
+          "basis": "",
+          "publication_date": "2025-02-01",
+          "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
+          "status": "numeric",
+          "source_table": "EMA Appendix 1 - N-nitrosamines"
+        },
         "Health Canada": {
           "ai_ng_day": 400.0,
           "ai_display": "400",
@@ -10666,7 +10838,7 @@
           "basis": "",
           "publication_date": "2020-05-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -10728,7 +10900,7 @@
           "basis": "Limit derived using structure-activity-relationship (SAR)/read-across approach using the TD50 of NNK as point of departure.",
           "publication_date": "2024-07-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -10891,7 +11063,7 @@
           "basis": "",
           "publication_date": "2025-02-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -11243,7 +11415,7 @@
           "basis": "",
           "publication_date": "2024-05-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -11279,7 +11451,7 @@
           "basis": "",
           "publication_date": "2023-07-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -11339,6 +11511,43 @@
       "special_limits": []
     },
     {
+      "id": "cas-13256-11-6",
+      "name": "N-nitroso-N-methyl-2-phenylethylamine",
+      "cas": "13256-11-6",
+      "aliases": [
+        "N-亚硝基-N-甲基苯乙胺",
+        "NMPEA"
+      ],
+      "related_substances": [],
+      "smiles": "CN(CCC1=CC=CC=C1)N=O",
+      "iupac": "N-methyl-N-(2-phenylethyl)nitrous amide",
+      "regulators": {
+        "EMA": {
+          "ai_ng_day": 8.0,
+          "ai_display": "8",
+          "cpca_category": "",
+          "basis": "Limit based on the most sensitive TD50 derived from the most robust TD50 dataset from the Lhasa Carcinogenicity Database (LCDB).",
+          "publication_date": "2022-05-01",
+          "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
+          "status": "numeric",
+          "source_table": "EMA Appendix 1 - N-nitrosamines"
+        },
+        "Health Canada": {
+          "ai_ng_day": 8.0,
+          "ai_display": "8",
+          "cpca_category": "",
+          "basis": "",
+          "publication_date": "2022-05-27",
+          "source_url": "https://www.canada.ca/content/dam/hc-sc/documents/services/drugs-health-products/compliance-enforcement/information-health-product/drugs/nitrosamine-impurities/established-acceptable-intake-limits/appendix-1.xlsx",
+          "source_version": "Health Canada Appendix 1; version 2026-03-11",
+          "status": "numeric",
+          "source_table": "Health Canada Appendix 1"
+        }
+      },
+      "special_limits": []
+    },
+    {
       "id": "cas-61445-55-4",
       "name": "N-nitroso-N-methyl-4-aminobutyric acid",
       "cas": "61445-55-4",
@@ -11359,7 +11568,7 @@
           "basis": "",
           "publication_date": "2020-06-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -11389,6 +11598,31 @@
       "special_limits": []
     },
     {
+      "id": "cas-937-40-6",
+      "name": "N-nitroso-N-methyl-benzylamine",
+      "cas": "937-40-6",
+      "aliases": [
+        "NMBzA"
+      ],
+      "related_substances": [],
+      "smiles": "CN(CC1=CC=CC=C1)N=O",
+      "iupac": "N-benzyl-N-methylnitrous amide",
+      "regulators": {
+        "EMA": {
+          "ai_ng_day": 18.0,
+          "ai_display": "18",
+          "cpca_category": "1",
+          "basis": "",
+          "publication_date": "01 October 2026 (new)",
+          "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
+          "status": "numeric",
+          "source_table": "EMA Appendix 1 - N-nitrosamines"
+        }
+      },
+      "special_limits": []
+    },
+    {
       "id": "name-nnitrosonmethylvalaciclovir",
       "name": "N-nitroso-N-methyl-valaciclovir",
       "cas": "",
@@ -11406,7 +11640,7 @@
           "basis": "Limit based on negative bacterial reverse mutation test",
           "publication_date": "2023-07-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -11457,7 +11691,7 @@
           "basis": "",
           "publication_date": "2020-08-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -11518,7 +11752,7 @@
           "basis": "Limit derived using structure-activity-relationship, physicochemical features and weight of evidence for N-nitroso-indoles based on C- nitro and C-nitroso-aromatic compounds.",
           "publication_date": "2024-12-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - Other N-nitroso-structures"
         }
@@ -11545,7 +11779,7 @@
           "basis": "Substance tested negative in in vivo mutagenicity study. Can be controlled according to ICH Q3A/B.",
           "publication_date": "2023-07-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "nmi",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -11667,7 +11901,7 @@
           "basis": "",
           "publication_date": "2024-12-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -11742,7 +11976,7 @@
           "basis": "Limit based on negative bacterial reverse mutation test",
           "publication_date": "2025-08-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -11767,7 +12001,7 @@
           "basis": "",
           "publication_date": "2025-08-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -11867,7 +12101,7 @@
           "basis": "",
           "publication_date": "2024-12-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -11917,7 +12151,7 @@
           "basis": "Limit derived using structure-activity-relationship (SAR)/read-across approach using the negative in vivo mutagenicity study of n-nitroso-ciprofloxacin as point of departure. Can be controlled according to ICH Q3A/B.",
           "publication_date": "2025-02-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "nmi",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -11953,7 +12187,7 @@
           "basis": "Limit derived using structure-activity-relationship (SAR)/read-across approach using the TD50 of NNK as point of departure as substance is considered a human carcinogen by the International Agency for Research on Cancer",
           "publication_date": "2024-12-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -11983,7 +12217,7 @@
           "basis": "CPCA derived AI as substance tested positive in in vivo mutagenicity study",
           "publication_date": "2022-05-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -12233,7 +12467,7 @@
           "basis": "",
           "publication_date": "2023-07-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -12310,7 +12544,7 @@
           "basis": "",
           "publication_date": "2023-07-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -12360,7 +12594,7 @@
           "basis": "Limit based on negative bacterial reverse mutation test",
           "publication_date": "2022-12-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -12396,7 +12630,7 @@
           "basis": "Limit derived using structure-activity-relationship (SAR)/read-across approach using the negative in vivo mutagenicity study of n-nitroso-ramipril as point of departure. Can be controlled according to ICH Q3A/B.",
           "publication_date": "2023-07-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "nmi",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -12426,6 +12660,60 @@
       "special_limits": []
     },
     {
+      "id": "name-nnitrosophenoxybenzaminehclimpuritya",
+      "name": "N-nitroso-phenoxybenzamine HCl impurity A",
+      "cas": "",
+      "aliases": [
+        "NDB-A"
+      ],
+      "related_substances": [
+        "Phenoxybenzamine HCl"
+      ],
+      "smiles": "C1=CC=CC(=C1)OCC(N(CCO)N=O)C",
+      "iupac": "N-(2-Hydroxyethyl)-N-(1-phenoxypropan-2-yl)nitrous amide",
+      "regulators": {
+        "EMA": {
+          "ai_ng_day": 1500.0,
+          "ai_display": "1500",
+          "cpca_category": "4",
+          "basis": "",
+          "publication_date": "01 October 2026 (new)",
+          "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
+          "status": "numeric",
+          "source_table": "EMA Appendix 1 - N-nitrosamines"
+        }
+      },
+      "special_limits": []
+    },
+    {
+      "id": "name-nnitrosophenoxybenzaminehclimpurityb",
+      "name": "N-nitroso-phenoxybenzamine HCl impurity B",
+      "cas": "",
+      "aliases": [
+        "NDB-B"
+      ],
+      "related_substances": [
+        "Phenoxybenzamine HCl"
+      ],
+      "smiles": "C1=CC=CC(=C1)OCC(N(CC=2C=CC=CC=2)N=O)C",
+      "iupac": "N-Benzyl-N-(1-phenoxypropan-2-yl)nitrous amide",
+      "regulators": {
+        "EMA": {
+          "ai_ng_day": 400.0,
+          "ai_display": "400",
+          "cpca_category": "3",
+          "basis": "",
+          "publication_date": "01 October 2026 (new)",
+          "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
+          "status": "numeric",
+          "source_table": "EMA Appendix 1 - N-nitrosamines"
+        }
+      },
+      "special_limits": []
+    },
+    {
       "id": "cas-78658-64-7",
       "name": "N-nitroso-phenylephrine",
       "cas": "78658-64-7",
@@ -12443,7 +12731,7 @@
           "basis": "",
           "publication_date": "2023-07-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -12517,7 +12805,7 @@
           "basis": "",
           "publication_date": "2023-07-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -12567,7 +12855,7 @@
           "basis": "Limit based on the most sensitive TD50 derived from the most robust TD50 dataset from carcinogenic potency database (CPDB) or Lhasa Carcinogenicity Database (LCD). Low molecular weight nitrosamines with sufficiently robust toxicological data to serve as points of departure for derivation of other AIs by SAR and read-across. Not all of these impurities have been found in medicines. Others have been found in 1 or more medicines, not necessarily related to the structure of the active substance or its related impurities.",
           "publication_date": "2022-05-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -12753,7 +13041,7 @@
           "basis": "",
           "publication_date": "2024-05-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -12778,7 +13066,7 @@
           "basis": "",
           "publication_date": "2023-07-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -12825,7 +13113,7 @@
           "basis": "",
           "publication_date": "2023-07-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -12898,9 +13186,9 @@
           "ai_display": "1500",
           "cpca_category": "4",
           "basis": "",
-          "publication_date": "01 June 2026 (new)",
+          "publication_date": "2026-06-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -12948,9 +13236,9 @@
           "ai_display": "1500",
           "cpca_category": "4",
           "basis": "",
-          "publication_date": "01 June 2026 (new)",
+          "publication_date": "2026-06-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -12975,7 +13263,7 @@
           "basis": "",
           "publication_date": "2024-09-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -13036,7 +13324,7 @@
           "basis": "",
           "publication_date": "2025-08-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -13061,7 +13349,7 @@
           "basis": "",
           "publication_date": "2023-07-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -13162,27 +13450,13 @@
       "id": "cas-1850-88-0",
       "name": "N-nitroso-pseudoephedrine",
       "cas": "1850-88-0",
-      "aliases": [
-        "N-nitrosoephedrine"
-      ],
+      "aliases": [],
       "related_substances": [
-        "Ephedrine",
         "Pseudoephedrine"
       ],
-      "smiles": "CC(C(C1=CC=CC=C1)O)N(C)N=O",
-      "iupac": "N-(1-hydroxy-1-phenylpropan-2-yl)-N-methylnitrous amide",
+      "smiles": "",
+      "iupac": "",
       "regulators": {
-        "EMA": {
-          "ai_ng_day": 1500.0,
-          "ai_display": "1500",
-          "cpca_category": "",
-          "basis": "Limit based on negative bacterial reverse mutation test",
-          "publication_date": "2023-07-01",
-          "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
-          "status": "numeric",
-          "source_table": "EMA Appendix 1 - N-nitrosamines"
-        },
         "Health Canada": {
           "ai_ng_day": 1500.0,
           "ai_display": "1500***",
@@ -13209,6 +13483,31 @@
       "special_limits": []
     },
     {
+      "id": "name-nnitrosopseudoephedrinennitrosoephedrine",
+      "name": "N-nitroso-pseudoephedrine/ N-nitrosoephedrine",
+      "cas": "",
+      "aliases": [],
+      "related_substances": [
+        "Pseudoephedrine"
+      ],
+      "smiles": "CC(C(C1=CC=CC=C1)O)N(C)N=O",
+      "iupac": "N-(1-hydroxy-1-phenylpropan-2-yl)-N-methylnitrous amide",
+      "regulators": {
+        "EMA": {
+          "ai_ng_day": 1500.0,
+          "ai_display": "1500",
+          "cpca_category": "4",
+          "basis": "",
+          "publication_date": "2023-07-01",
+          "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
+          "status": "numeric",
+          "source_table": "EMA Appendix 1 - N-nitrosamines"
+        }
+      },
+      "special_limits": []
+    },
+    {
       "id": "cas-930-55-2",
       "name": "N-nitroso-pyrrolidine",
       "cas": "930-55-2",
@@ -13227,7 +13526,7 @@
           "basis": "Limit based on the most sensitive TD50 derived from the most robust TD50 dataset from carcinogenic potency database (CPDB) or Lhasa Carcinogenicity Database (LCD). Low molecular weight nitrosamines with sufficiently robust toxicological data to serve as points of departure for derivation of other AIs by SAR and read-across. Not all of these impurities have been found in medicines. Others have been found in 1 or more medicines, not necessarily related to the structure of the active substance or its related impurities.",
           "publication_date": "2022-12-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -13264,7 +13563,7 @@
           "basis": "Limit based on negative bacterial reverse mutation test",
           "publication_date": "2023-12-15",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -13300,7 +13599,7 @@
           "basis": "Substance tested negative in in vivo mutagenicity study. Can be controlled according to ICH Q3A/B.",
           "publication_date": "2023-07-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "nmi",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -13372,7 +13671,7 @@
           "basis": "Substance tested negative in in vivo mutagenicity study. Can be controlled according to ICH Q3A/B.",
           "publication_date": "2023-07-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "nmi",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -13469,7 +13768,7 @@
           "basis": "",
           "publication_date": "2024-01-15",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -13494,7 +13793,7 @@
           "basis": "",
           "publication_date": "2023-07-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -13541,7 +13840,7 @@
           "basis": "Limit derived using structure-activity-relationship (SAR)/read-across approach using the TD50 of NMOR as point of departure, as substance tested positive in in vivo mutagenicity study.",
           "publication_date": "2023-07-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -13564,9 +13863,9 @@
           "ai_display": "400",
           "cpca_category": "3",
           "basis": "",
-          "publication_date": "01 June 2026 (new)",
+          "publication_date": "2026-06-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -13613,7 +13912,7 @@
           "basis": "Limit derived using structure-activity-relationship, physicochemical features and weight of evidence approach using the TD50 of NNK as point of departure",
           "publication_date": "2026-03-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -13638,7 +13937,7 @@
           "basis": "CPCA derived AI as substance tested positive in in vivo mutagenicity study",
           "publication_date": "2024-01-15",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -13813,7 +14112,7 @@
           "basis": "",
           "publication_date": "2024-02-15",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -13849,7 +14148,7 @@
           "basis": "",
           "publication_date": "2024-01-15",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -13874,7 +14173,7 @@
           "basis": "",
           "publication_date": "2024-01-15",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -13889,8 +14188,8 @@
       "related_substances": [
         "Rizatriptan"
       ],
-      "smiles": "C1=NC=NN1CC2=CC3=C(C=C2)N(C=C3CCN(C)C)N=O",
-      "iupac": "2-(5-((1H-1,2,4-Triazol-1-yl)methyl)-1-nitroso-1H-indol-3-yl)-N,N-dimethylethan-1-amine",
+      "smiles": "CN(C)CCC1=CN(C2=C1C=C(C=C2)CN3C=NC=N3)N=O",
+      "iupac": "N,N-dimethyl-2-[1-nitroso-5-(1,2,4-triazol-1-ylmethyl)indol-3-yl]ethanamine",
       "regulators": {
         "EMA": {
           "ai_ng_day": 1500.0,
@@ -13899,7 +14198,7 @@
           "basis": "Limit derived using structure-activity-relationship, physicochemical features and weight of evidence for N-nitroso-indoles based on C- nitro and C-nitroso-aromatic compounds.",
           "publication_date": "2024-12-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - Other N-nitroso-structures"
         }
@@ -13949,7 +14248,7 @@
           "basis": "",
           "publication_date": "2025-05-15",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -13996,7 +14295,7 @@
           "basis": "",
           "publication_date": "2023-07-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -14109,7 +14408,7 @@
           "basis": "",
           "publication_date": "2025-02-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -14134,7 +14433,7 @@
           "basis": "Limit derived using structure-activity-relationship (SAR)/read-across approach using the TD50 of NDPh as point of departure.",
           "publication_date": "2025-12-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -14159,7 +14458,7 @@
           "basis": "CPCA derived AI as substance tested positive in in vivo mutagenicity study",
           "publication_date": "2023-07-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -14223,7 +14522,7 @@
           "basis": "",
           "publication_date": "2024-02-15",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -14270,7 +14569,7 @@
           "basis": "",
           "publication_date": "2023-07-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -14332,8 +14631,8 @@
       "related_substances": [
         "Sumatriptan"
       ],
-      "smiles": "O=S(CC1=CC2=C(N(N=O)C=C2CCN(C)C)C=C1)(NC)=O",
-      "iupac": "1-(3-(2-(Dimethylamino)ethyl)-1-nitroso-1H-indol-5-yl)-N-methylmethanesulfonamide",
+      "smiles": "CNS(=O)(=O)CC1=CC2=C(C=C1)N(C=C2CCN(C)C)N=O",
+      "iupac": "1-[3-[2-(dimethylamino)ethyl]-1-nitrosoindol-5-yl]-N-methylmethanesulfonamide",
       "regulators": {
         "EMA": {
           "ai_ng_day": 1500.0,
@@ -14342,7 +14641,7 @@
           "basis": "Limit derived using structure-activity-relationship, physicochemical features and weight of evidence for N-nitroso-indoles based on C- nitro and C-nitroso-aromatic compounds.",
           "publication_date": "2024-12-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - Other N-nitroso-structures"
         }
@@ -14357,8 +14656,8 @@
       "related_substances": [
         "Tadalafil"
       ],
-      "smiles": "CN1CC(=O)N2[C@@H](C1=O)CC3=C([C@H]2C4=CC5=C(C=C4)OCO5)N(C6=CC=CC=C36)N=O",
-      "iupac": "(2R,8R)-2-(1,3-benzodioxol-5-yl)-6-methyl-17-nitroso-3,6,17-triazatetracyclo[8.7.0.03,8.011,16]heptadeca-1(10),11,13,15-tetraene-4,7-dione",
+      "smiles": "CN1CC(=O)N2C(C1=O)CC5=C(C2C3=CC4=C(C=C3)OCO4)N(C6=CC=CC=C56)N=O",
+      "iupac": "(2,8)-2-(1,3-benzodioxol-5-yl)-6-methyl-17-nitroso-3,6,17-triazatetracyclo[8.7.0.03,8.011,16]heptadeca-1(10),11,13,15-tetraene-4,7-dione",
       "regulators": {
         "EMA": {
           "ai_ng_day": 1500.0,
@@ -14367,7 +14666,7 @@
           "basis": "Limit derived using structure-activity-relationship, physicochemical features and weight of evidence for N-nitroso-indoles based on C- nitro and C-nitroso-aromatic compounds.",
           "publication_date": "2024-12-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - Other N-nitroso-structures"
         }
@@ -14417,7 +14716,7 @@
           "basis": "",
           "publication_date": "2023-07-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -14589,7 +14888,7 @@
           "basis": "",
           "publication_date": "2024-02-15",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -14614,7 +14913,7 @@
           "basis": "",
           "publication_date": "2024-02-15",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -14640,7 +14939,7 @@
           "basis": "",
           "publication_date": "2024-01-15",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -14668,7 +14967,7 @@
           "basis": "",
           "publication_date": "2024-01-15",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -14729,7 +15028,7 @@
           "basis": "",
           "publication_date": "2023-11-15",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -14776,7 +15075,7 @@
           "basis": "",
           "publication_date": "2023-11-15",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -14812,7 +15111,7 @@
           "basis": "Substance tested negative in in vivo mutagenicity study. Can be controlled according to ICH Q3A/B.",
           "publication_date": "2024-07-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "nmi",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -14899,8 +15198,8 @@
       "related_substances": [
         "Tizanidine"
       ],
-      "smiles": "C1C/N=C(\\N1)N(C2=C(C=CC3=NSN=C23)Cl)N=O",
-      "iupac": "N-(5-chlorobenzo[c][1,2,5] thiadiazol-4-yl)-N-(4,5-dihydro-1H-imidazol-2-yl)nitrous amide",
+      "smiles": "C1CN=C(N1)N(C2=C(C=CC3=NSN=C32)Cl)N=O",
+      "iupac": "N-(5-chloro-2,1,3-benzothiadiazol-4-yl)-N-(4,5-dihydro-1H-imidazol-2-yl)nitrous amide",
       "regulators": {
         "EMA": {
           "ai_ng_day": 553.0,
@@ -14909,7 +15208,7 @@
           "basis": "Limit derived using structure-activity-relationship (SAR)/read-across approach using the TD50 of MNNG as point of departure.",
           "publication_date": "2024-12-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - Other N-nitroso-structures"
         }
@@ -14917,26 +15216,26 @@
       "special_limits": []
     },
     {
-      "id": "name-nnitrosotizanidineimpurity3",
-      "name": "N-nitroso-tizanidine Impurity 3",
+      "id": "name-nnitrosotorasemide",
+      "name": "N-nitroso-torasemide",
       "cas": "",
       "aliases": [],
       "related_substances": [
-        "Tizanidine"
+        "Torasemide"
       ],
-      "smiles": "ClC2=C(C=1C(=NSN=1)C=C2)N(C=3N(C=CN=3)N=O)[H]",
-      "iupac": "5-chloro-N-(1-nitroso-4,5-dihydro-1H-imidazol-2-yl)benzo[c][1,2,5]thiadiazol-4-amine",
+      "smiles": "O=[S](NC(NC(C)C)=O)(C1=CN=CC=C1N(N=O)C2=CC(C)=CC=C2)=O",
+      "iupac": "N-(Isopropylcarbamoyl)-4-(nitroso(m-tolyl)amino)pyridine-3-sulfonamide",
       "regulators": {
         "EMA": {
-          "ai_ng_day": 553.0,
-          "ai_display": "553",
-          "cpca_category": "",
-          "basis": "Limit derived using structure-activity-relationship (SAR)/read-across approach using the TD50 of MNNG as point of departure.",
-          "publication_date": "2024-12-01",
+          "ai_ng_day": 1500.0,
+          "ai_display": "1500",
+          "cpca_category": "5",
+          "basis": "",
+          "publication_date": "01 October 2026 (new)",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
-          "source_table": "EMA Appendix 1 - Other N-nitroso-structures"
+          "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
       },
       "special_limits": []
@@ -14984,7 +15283,7 @@
           "basis": "",
           "publication_date": "2024-07-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -15009,6 +15308,31 @@
           "source_version": "FDA Table 1 (current page)",
           "status": "numeric",
           "source_table": "FDA Table 1"
+        }
+      },
+      "special_limits": []
+    },
+    {
+      "id": "name-nnitrosotranexamicaciddimer",
+      "name": "N-nitroso-tranexamic-acid dimer",
+      "cas": "",
+      "aliases": [],
+      "related_substances": [
+        "Tranexamic acid"
+      ],
+      "smiles": "OC(=O)C2CCC(CN(CC1CCC(CC1)C(=O)O)N=O)CC2",
+      "iupac": "(trans,trans)-4,4'-((Nitrosoazanediyl)bis (methylene))bis(cyclohexane-1-carboxylic acid)",
+      "regulators": {
+        "EMA": {
+          "ai_ng_day": 1500.0,
+          "ai_display": "1500",
+          "cpca_category": "4",
+          "basis": "",
+          "publication_date": "01 October 2026 (new)",
+          "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
+          "status": "numeric",
+          "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
       },
       "special_limits": []
@@ -15056,7 +15380,7 @@
           "basis": "",
           "publication_date": "2024-05-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -15081,9 +15405,9 @@
           "ai_display": "13000",
           "cpca_category": "",
           "basis": "Limit based on the BMDL10 for the most sensitive tissue and gender from a robust rat carcinogenicity study conducted with NTMZ. Nitrosamine with sufficiently robust toxicological data to serve as point of departure for derivation of other AIs by SAR and read-across.",
-          "publication_date": "01/07/2023 (update)",
+          "publication_date": "2023-07-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -15099,7 +15423,7 @@
         "Tryptophol"
       ],
       "smiles": "C1=CC=C2C(=C1)C(=CN2N=O)CCO",
-      "iupac": "2-(1-nitrosoindol-3-yl)ethanol",
+      "iupac": "2-(1-nitro+B36C36:I36+C36:H36+C36+C36:I36",
       "regulators": {
         "EMA": {
           "ai_ng_day": 1500.0,
@@ -15108,7 +15432,7 @@
           "basis": "Limit derived using structure-activity-relationship, physicochemical features and weight of evidence for N-nitroso-indoles based on C- nitro and C-nitroso-aromatic compounds.",
           "publication_date": "2024-12-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - Other N-nitroso-structures"
         }
@@ -15133,7 +15457,7 @@
           "basis": "",
           "publication_date": "2024-01-15",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -15158,7 +15482,7 @@
           "basis": "",
           "publication_date": "2024-09-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -15183,7 +15507,7 @@
           "basis": "Limit derived using structure-activity-relationship, physicochemical features and weight of evidence approach for N-nitroso-vancomycin based on N-nitroso-desmethyl-azithromycin and N-nitroso-desmethyl-clarithromycin as surrogates. Can be controlled according to ICH Q3A/B",
           "publication_date": "2025-02-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "nmi",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -15232,7 +15556,7 @@
           "basis": "CPCA was derived using a correction to account for the 5-carbon chain length feature",
           "publication_date": "2024-09-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -15270,7 +15594,7 @@
           "basis": "",
           "publication_date": "2021-09-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -15317,7 +15641,7 @@
           "basis": "",
           "publication_date": "2025-08-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -15342,7 +15666,7 @@
           "basis": "",
           "publication_date": "2025-08-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -15367,7 +15691,7 @@
           "basis": "",
           "publication_date": "2024-05-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -15428,7 +15752,7 @@
           "basis": "",
           "publication_date": "2023-07-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -15453,7 +15777,7 @@
           "basis": "",
           "publication_date": "2024-09-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -15528,7 +15852,7 @@
           "basis": "",
           "publication_date": "2023-07-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -15558,6 +15882,31 @@
       "special_limits": []
     },
     {
+      "id": "name-nnitrosoxylometazoline",
+      "name": "N-nitroso-xylometazoline",
+      "cas": "",
+      "aliases": [],
+      "related_substances": [
+        "Xylometazoline"
+      ],
+      "smiles": "N/1(CC\\N=C/1CC2=C(C)C=C(C(C)(C)C)C=C2C)N=O",
+      "iupac": "2-(4-(tert-butyl)-2,6-dimethylbenzyl)-1-nitroso-4,5-dihydro-1H-imidazole",
+      "regulators": {
+        "EMA": {
+          "ai_ng_day": 18.0,
+          "ai_display": "18",
+          "cpca_category": "",
+          "basis": "In the absence of a suitable surrogate or specific carcinogenicity data for amidine-containing molecules the limit of 18 ng/day is based on the substance specific TTC as that dataset included “other nitroso” structures.",
+          "publication_date": "01 October 2026 (new)",
+          "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
+          "status": "numeric",
+          "source_table": "EMA Appendix 1 - Other N-nitroso-structures"
+        }
+      },
+      "special_limits": []
+    },
+    {
       "id": "name-nnitrosozolmitriptan",
       "name": "N-nitroso-zolmitriptan",
       "cas": "",
@@ -15575,34 +15924,9 @@
           "basis": "Limit derived using structure-activity-relationship, physicochemical features and weight of evidence for N-nitroso-indoles based on C- nitro and C-nitroso-aromatic compounds.",
           "publication_date": "2024-12-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - Other N-nitroso-structures"
-        }
-      },
-      "special_limits": []
-    },
-    {
-      "id": "name-nitrosoimpuritycn26dimethylphenyl24nitrosopiperazin1ylacetamide",
-      "name": "Nitroso impurity C'' [N-(2,6-dimethylphenyl)-2-(4-nitrosopiperazin-1-yl)acetamide]",
-      "cas": "",
-      "aliases": [],
-      "related_substances": [
-        "Ranolazine"
-      ],
-      "smiles": "C1=CC=C(C(=C1C)NC(CN2CCN(CC2)N=O)=O)C",
-      "iupac": "N-(2,6-dimethylphenyl)-2-(4-nitrosopiperazin-1-yl)acetamide",
-      "regulators": {
-        "EMA": {
-          "ai_ng_day": 400.0,
-          "ai_display": "400",
-          "cpca_category": "3",
-          "basis": "",
-          "publication_date": "2023-07-01",
-          "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
-          "status": "numeric",
-          "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
       },
       "special_limits": []
@@ -15628,7 +15952,7 @@
           "basis": "CPCA derived AI as substance tested positive in in vivo mutagenicity study",
           "publication_date": "2022-05-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -15667,7 +15991,7 @@
           "basis": "",
           "publication_date": "2024-05-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         },
@@ -15703,7 +16027,7 @@
           "basis": "",
           "publication_date": "2024-05-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
@@ -15730,7 +16054,7 @@
           "basis": "",
           "publication_date": "2024-05-01",
           "source_url": "https://www.ema.europa.eu/en/documents/other/appendix-1-acceptable-intakes-established-n-nitrosamines_en.xlsx",
-          "source_version": "EMA/42261/2025/Rev. 13",
+          "source_version": "EMA/CHMP/219920/2026/Rev. 14",
           "status": "numeric",
           "source_table": "EMA Appendix 1 - N-nitrosamines"
         }
