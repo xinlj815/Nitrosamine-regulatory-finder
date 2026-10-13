@@ -30,6 +30,7 @@ from dataclasses import dataclass
 from io import StringIO
 from pathlib import Path
 from typing import Any, Iterable
+from urllib.parse import urljoin, urlparse
 
 import pandas as pd
 import requests
@@ -50,14 +51,12 @@ TGA_CSV_FILENAME = "Established_acceptable_intake_for_nitrosamines.csv"
 REQUEST_TIMEOUT = (20, 180)
 TRANSIENT_HTTP_STATUS = {429, 500, 502, 503, 504}
 
-# TGA intermittently stalls for GitHub-hosted runners.  Keep these limits
-# deliberately short: two CSV attempts plus one HTML fallback finish in about
-# one minute when the route is unavailable, after which the last good TGA data
-# is retained by --allow-partial.
-TGA_CSV_ATTEMPTS = 2
-TGA_CSV_TIMEOUT = (8, 20)
-TGA_HTML_ATTEMPTS = 1
-TGA_HTML_TIMEOUT = (8, 25)
+# TGA intermittently stalls for GitHub-hosted runners. Fetch the published
+# links first, then bound the entire fallback CSV search rather than aborting
+# it when the first guessed monthly address times out.
+TGA_HTML_ATTEMPTS = 2
+TGA_HTML_TIMEOUT = (8, 35)
+TGA_CSV_SEARCH_SECONDS = 90
 
 AGENCIES = ("EMA", "Health Canada", "FDA", "TGA")
 SESSION = requests.Session()
@@ -776,19 +775,64 @@ def tga_csv_candidates(months: int = 18) -> list[str]:
     return urls
 
 
-def parse_tga(registry: Registry) -> dict[str, str]:
-    """Parse TGA AI data, preferring its small official CSV download.
+def tga_table(frame: pd.DataFrame) -> bool:
+    return any("nitrosamine" in normalize(c) for c in frame.columns) and any(
+        "ailimit" in normalize(c) for c in frame.columns
+    )
 
-    TGA's HTML page is large and intermittently times out from GitHub-hosted
-    runners.  The official CSV contains the same table and is much more stable;
-    the HTML parser remains as a fallback for future URL changes.
-    """
+
+def tga_csv_links(html: str) -> list[str]:
+    """Use published download links, including renamed/monthly CSV files."""
+    links = []
+    for anchor in BeautifulSoup(html, "lxml").select("a[href]"):
+        url = urljoin(TGA_URL, anchor["href"])
+        parsed = urlparse(url)
+        label = normalize(anchor.get_text(" ", strip=True) + " " + parsed.path)
+        if (parsed.scheme == "https" and parsed.hostname == "www.tga.gov.au"
+                and parsed.path.lower().endswith(".csv") and "nitrosamine" in label):
+            if url not in links:
+                links.append(url)
+    return links
+
+
+def validate_tga_frame(frame: pd.DataFrame) -> None:
+    if not tga_table(frame):
+        raise ValueError("TGA table headers not recognised")
+    name_col = find_column(frame, "Nitrosamine")
+    names = [clean(value) for value in frame[name_col]]
+    count = sum(bool(name) and name.lower() != "nan" and "default class specific" not in name.lower() for name in names)
+    if count < 50:
+        raise ValueError(f"Only {count} TGA rows parsed; refusing a likely incomplete refresh")
+
+
+def parse_tga(registry: Registry) -> dict[str, str]:
+    """Discover the current CSV on TGA's page, with HTML/monthly fallbacks."""
     offline_csv = os.getenv("TGA_CSV_PATH", "").strip()
     offline_html = os.getenv("TGA_HTML_PATH", "").strip()
     frame: pd.DataFrame | None = None
     mode = "official CSV"
     page_updated = ""
     csv_error: Exception | None = None
+    html_text = ""
+    html_error: Exception | None = None
+    download_url = ""
+
+    # The page is the authority for the current download location. Guessing a
+    # future/monthly URL first can hit a stalled route before the real CSV.
+    if offline_html:
+        html_text = Path(offline_html).read_text(encoding="utf-8")
+    elif not offline_csv and not os.getenv("TGA_CSV_URL"):
+        try:
+            html_text = get_with_retry(
+                TGA_URL, attempts=TGA_HTML_ATTEMPTS, timeout=TGA_HTML_TIMEOUT,
+            ).text
+        except requests.RequestException as exc:
+            html_error = exc
+
+    if html_text:
+        soup = BeautifulSoup(html_text, "lxml")
+        match = re.search(r"Last updated\s+(\d{1,2}\s+\w+\s+\d{4})", soup.get_text(" ", strip=True), flags=re.I)
+        page_updated = iso_date(match.group(1)) if match else ""
 
     try:
         if offline_csv:
@@ -796,34 +840,42 @@ def parse_tga(registry: Registry) -> dict[str, str]:
         else:
             csv_response: requests.Response | None = None
             candidate_errors: list[str] = []
-            for candidate in tga_csv_candidates():
+            candidates = tga_csv_links(html_text) if html_text else []
+            # Offline HTML must not unexpectedly make requests. With an HTML
+            # table available, use it rather than probing guessed URLs.
+            if not candidates and not html_text:
+                candidates = tga_csv_candidates()
+            deadline = time.monotonic() + TGA_CSV_SEARCH_SECONDS
+            for candidate in ([] if offline_html else candidates):
+                remaining = deadline - time.monotonic()
+                if remaining <= 1:
+                    candidate_errors.append("CSV search time budget exhausted")
+                    break
                 try:
                     csv_response = get_with_retry(
                         candidate,
-                        attempts=TGA_CSV_ATTEMPTS,
-                        timeout=TGA_CSV_TIMEOUT,
+                        attempts=1,
+                        timeout=(min(8, remaining / 2), min(20, remaining / 2)),
                     )
+                    # A successful HTTP response may be an HTML error page.
+                    csv_text = csv_response.content.decode("utf-8-sig")
+                    candidate_frame = flatten_columns(pd.read_csv(StringIO(csv_text), dtype=str, keep_default_na=False))
+                    validate_tga_frame(candidate_frame)
+                    frame = candidate_frame
+                    download_url = candidate
                     break
-                except requests.HTTPError as exc:
-                    if getattr(exc.response, "status_code", None) == 404:
-                        candidate_errors.append(f"{candidate}: 404")
-                        continue
-                    raise
-            if csv_response is None:
+                except (requests.RequestException, ValueError, UnicodeError) as exc:
+                    candidate_errors.append(f"{candidate}: {type(exc).__name__}: {exc}")
+                    csv_response = None
+                    continue
+            if frame is None:
                 raise FileNotFoundError(
                     "No recent TGA CSV URL was found; " + "; ".join(candidate_errors)
                 )
-            try:
-                csv_text = csv_response.content.decode("utf-8-sig")
-            except UnicodeDecodeError:
-                csv_text = csv_response.text.lstrip("\ufeff")
-        frame = flatten_columns(
-            pd.read_csv(StringIO(csv_text), dtype=str, keep_default_na=False)
-        )
-        if not any("nitrosamine" in normalize(c) for c in frame.columns) or not any(
-            "ailimit" in normalize(c) for c in frame.columns
-        ):
-            raise ValueError("TGA CSV headers not recognised")
+        if offline_csv:
+            frame = flatten_columns(pd.read_csv(StringIO(csv_text), dtype=str, keep_default_na=False))
+        assert frame is not None
+        validate_tga_frame(frame)
     except Exception as exc:
         csv_error = exc
         print(
@@ -832,9 +884,9 @@ def parse_tga(registry: Registry) -> dict[str, str]:
             file=sys.stderr,
         )
         mode = "HTML fallback"
-        if offline_html:
-            html_text = Path(offline_html).read_text(encoding="utf-8")
-        else:
+        if not html_text and html_error:
+            raise RuntimeError(f"TGA page unavailable: {html_error}; CSV unavailable: {csv_error}") from html_error
+        if not html_text:
             html_text = get_with_retry(
                 TGA_URL,
                 attempts=TGA_HTML_ATTEMPTS,
@@ -845,8 +897,7 @@ def parse_tga(registry: Registry) -> dict[str, str]:
             (
                 x
                 for x in frames
-                if any("nitrosamine" in normalize(c) for c in x.columns)
-                and any("ailimit" in normalize(c) for c in x.columns)
+                if tga_table(x)
             ),
             None,
         )
@@ -860,6 +911,9 @@ def parse_tga(registry: Registry) -> dict[str, str]:
         page_updated = iso_date(match.group(1)) if match else ""
 
     assert frame is not None
+    # Validate before touching the shared registry so a rejected partial table
+    # cannot contaminate the previous-data fallback.
+    validate_tga_frame(frame)
     name_col = find_column(frame, "Nitrosamine")
     ai_col = find_column(frame, "AI limit")
     source_col = next((c for c in frame.columns if normalize(c).startswith("source")), "")
@@ -899,13 +953,16 @@ def parse_tga(registry: Registry) -> dict[str, str]:
 
     if parsed < 50:
         raise ValueError(f"Only {parsed} TGA rows parsed; refusing a likely incomplete refresh")
-    updated = page_updated or max(row_dates, default=dt.date.today().isoformat())
-    return source_status(
+    updated = page_updated or max(row_dates, default="")
+    status = source_status(
         f"TGA established AI table via {mode}; {parsed} rows",
         updated,
         TGA_URL,
         mode=mode,
     )
+    if download_url:
+        status["download_url"] = download_url
+    return status
 
 
 def add_manual_regulatory_references(registry: Registry) -> None:

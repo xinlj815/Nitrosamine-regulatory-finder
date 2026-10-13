@@ -54,3 +54,26 @@ V3:
 1. 支持常见NDSRI相关药物的中/英文通用名查询
 2. 修改表格格式
 
+## 本地开发与验证
+
+使用 Python 3.12，安装 `requirements.txt` 后执行：
+
+```sh
+python -m unittest discover -s tests -v
+python scripts/validate_data.py
+python -m http.server 8000
+```
+
+网页无需前端构建。TGA 状态卡片会区分刷新成功与保留旧数据，失败详情可展开查看；数据日期来自官方页面或表格，不使用运行日期冒充更新日期。
+
+TGA 更新优先从官方页面发现当前 CSV 下载链接，CSV 不可用时复用页面表格。页面不可访问时，按新到旧尝试月度 CSV 地址；单个地址超时、404 或返回异常内容不会中断后续搜索，CSV 搜索总预算为 90 秒。所有来源失败时，`--allow-partial` 保留上一次成功的数据。
+
+手动刷新命令如下，会修改 `data/nitrosamine_limits.json` 与 `data/changes.json`：
+
+```sh
+python scripts/update_data.py --allow-partial --no-notify
+python scripts/validate_data.py
+```
+
+`--no-notify` 禁止发送钉钉消息。排查时可通过 `TGA_CSV_PATH`、`TGA_HTML_PATH` 指定本地官方文件，或通过 `TGA_CSV_URL` 指定官方 CSV 下载地址。刷新进程返回成功并不保证所有来源成功；应同时检查 `refresh_errors` 和 TGA 状态。
+

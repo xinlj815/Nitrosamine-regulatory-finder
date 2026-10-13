@@ -37,6 +37,9 @@ jobs:
       - name: Install updater dependencies
         run: pip install -r requirements.txt
 
+      - name: Test TGA refresh fallbacks
+        run: python -m unittest discover -s tests -v
+
       - name: Refresh official regulator data
         env:
           DINGTALK_RELAY_URL: ${{ secrets.DINGTALK_RELAY_URL }}

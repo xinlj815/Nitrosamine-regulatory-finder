@@ -984,26 +984,43 @@ function renderSources() {
   Object.entries(state.data.source_status).forEach(([agency, item]) => {
     const div = document.createElement("div");
     div.className = "source-item";
+    const errorText = state.data.refresh_errors?.[agency];
+    const retained = Boolean(errorText) || /previous data retained/i.test(item.mode || "");
+    if (retained) div.classList.add("source-item-stale");
+    const header = document.createElement("div");
+    header.className = "source-heading";
     const h3 = document.createElement("h3");
     h3.textContent = agency;
+    const badge = document.createElement("span");
+    badge.className = `source-badge ${retained ? "is-stale" : "is-current"}`;
+    badge.textContent = retained ? "保留旧数据" : "刷新成功";
+    header.append(h3, badge);
     const p1 = document.createElement("p");
     p1.textContent = item.version;
     const p2 = document.createElement("p");
-    p2.textContent = `数据日期：${item.updated}；范围：${item.mode}`;
-    const errorText = state.data.refresh_errors?.[agency];
-    if (errorText) {
+    p2.className = "source-date";
+    p2.textContent = `数据日期 · ${item.updated || "来源未提供"}`;
+    div.append(header, p2, p1);
+    if (retained) {
       const warning = document.createElement("p");
       warning.className = "source-warning";
       warning.textContent = "本次刷新失败，页面保留上一次成功数据。";
-      div.append(h3, p1, p2, warning);
-    } else {
-      div.append(h3, p1, p2);
+      div.append(warning);
+      const details = document.createElement("details");
+      details.className = "source-error";
+      const summary = document.createElement("summary");
+      summary.textContent = "查看刷新失败详情";
+      const reason = document.createElement("p");
+      reason.textContent = errorText || item.mode;
+      details.append(summary, reason);
+      div.append(details);
     }
     const link = document.createElement("a");
     link.href = item.url;
     link.target = "_blank";
     link.rel = "noreferrer";
-    link.textContent = "打开官方来源";
+    link.className = "source-official-link";
+    link.textContent = "打开官方来源 ↗";
     div.appendChild(link);
     grid.appendChild(div);
   });
@@ -1036,7 +1053,9 @@ if (copyButton) copyButton.addEventListener("click", copyResults);
 el("csvButton").addEventListener("click", exportCsv);
 el("showSources").addEventListener("click", () => {
   el("sourceDetails").classList.toggle("hidden");
-  el("showSources").textContent = el("sourceDetails").classList.contains("hidden") ? "查看数据源状态" : "收起数据源状态";
+  const expanded = !el("sourceDetails").classList.contains("hidden");
+  el("showSources").textContent = expanded ? "收起数据源状态" : "查看数据源状态";
+  el("showSources").setAttribute("aria-expanded", String(expanded));
 });
 document.querySelectorAll(".query-chip").forEach(button => {
   button.addEventListener("click", () => {

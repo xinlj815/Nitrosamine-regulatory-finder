@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="按CAS号、名称或缩写查询FDA、EMA、Health Canada、TGA的亚硝胺可接受摄入量，并按最大日剂量换算ppm。">
   <title>亚硝胺杂质限度查询</title>
-  <link rel="stylesheet" href="./styles.css?v=20260805-cn3">
+  <link rel="stylesheet" href="./styles.css?v=20261013">
 </head>
 <body>
   <header class="hero">
@@ -45,7 +45,8 @@
     </section>
 
     <section class="status-panel" aria-label="数据源状态">
-      <button id="showSources" class="text-button" type="button">查看数据源状态</button>
+      <span class="status-caption">四大监管机构 · 官方来源可追溯</span>
+      <button id="showSources" class="text-button" type="button" aria-expanded="false" aria-controls="sourceDetails">查看数据源状态</button>
     </section>
 
     <section id="sourceDetails" class="source-details hidden" aria-live="polite"></section>
@@ -111,6 +112,6 @@
     </article>
   </template>
 
-  <script src="./app.js?v=20260805-cn3" defer></script>
+  <script src="./app.js?v=20261013" defer></script>
 </body>
 </html>
