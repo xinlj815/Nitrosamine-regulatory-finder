@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-25T06:40:54+00:00",
+  "generated_at": "2026-10-26T06:51:27+00:00",
   "disclaimer": "本数据库用于研发和法规检索辅助。AI为每日可接受摄入量，ppm必须按最大日剂量换算；申报和放行前应打开监管机构原始文件核验。",
   "source_status": {
     "EMA": {
@@ -25,11 +25,11 @@
       "version": "Established acceptable intake list; page updated 2026-01-29",
       "updated": "2026-01-29",
       "url": "https://www.tga.gov.au/safety/safety-monitoring-and-information/nitrosamine-impurities-medicines/established-acceptable-intake-nitrosamines-medicines",
-      "mode": "previous data retained; refresh failed: RuntimeError: TGA page unavailable: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=35); CSV unavailable: No recent TGA CSV URL was found; https://www.tga.gov.au/sites/default/files/2026-10/Established_acceptable_intake_for_nitrosamines.csv: ReadTimeout: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=20); https://www.tga.gov.au/sites/default/files/2026-09/Established_acceptable_intake_for_nitrosamines.csv: ReadTimeout: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=20); https://www.tga.gov.au/sites/default/files/2026-08/Established_acceptable_intake_for_nitrosamines.csv: ReadTimeout: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=20); https://www.tga.gov.au/sites/default/files/2026-07/Established_acceptable_intake_for_nitrosamines.csv: ReadTimeout: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=14.598943567000006); https://www.tga.gov.au/sites/default/files/2026-06/Established_acceptable_intake_for_nitrosamines.csv: ReadTimeout: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=7.1040337715000135); https://www.tga.gov.au/sites/default/files/2026-05/Established_acceptable_intake_for_nitrosamines.csv: ReadTimeout: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=3.5173629160000104); https://www.tga.gov.au/sites/default/files/2026-04/Established_acceptable_intake_for_nitrosamines.csv: ReadTimeout: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=1.6115801970000092); https://www.tga.gov.au/sites/default/files/2026-03/Established_acceptable_intake_for_nitrosamines.csv: ReadTimeout: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=0.7809608145000055); CSV search time budget exhausted"
+      "mode": "previous data retained; refresh failed: RuntimeError: TGA page unavailable: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=35); CSV unavailable: No recent TGA CSV URL was found; https://www.tga.gov.au/sites/default/files/2026-10/Established_acceptable_intake_for_nitrosamines.csv: ReadTimeout: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=20); https://www.tga.gov.au/sites/default/files/2026-09/Established_acceptable_intake_for_nitrosamines.csv: ReadTimeout: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=20); https://www.tga.gov.au/sites/default/files/2026-08/Established_acceptable_intake_for_nitrosamines.csv: ReadTimeout: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=20); https://www.tga.gov.au/sites/default/files/2026-07/Established_acceptable_intake_for_nitrosamines.csv: ReadTimeout: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=14.851071409); https://www.tga.gov.au/sites/default/files/2026-06/Established_acceptable_intake_for_nitrosamines.csv: ReadTimeout: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=7.3751682259999995); https://www.tga.gov.au/sites/default/files/2026-05/Established_acceptable_intake_for_nitrosamines.csv: ReadTimeout: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=3.6681146079999962); https://www.tga.gov.au/sites/default/files/2026-04/Established_acceptable_intake_for_nitrosamines.csv: ReadTimeout: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=1.6913986944999948); https://www.tga.gov.au/sites/default/files/2026-03/Established_acceptable_intake_for_nitrosamines.csv: ReadTimeout: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=0.8288455549999867); CSV search time budget exhausted"
     }
   },
   "refresh_errors": {
-    "TGA": "RuntimeError: TGA page unavailable: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=35); CSV unavailable: No recent TGA CSV URL was found; https://www.tga.gov.au/sites/default/files/2026-10/Established_acceptable_intake_for_nitrosamines.csv: ReadTimeout: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=20); https://www.tga.gov.au/sites/default/files/2026-09/Established_acceptable_intake_for_nitrosamines.csv: ReadTimeout: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=20); https://www.tga.gov.au/sites/default/files/2026-08/Established_acceptable_intake_for_nitrosamines.csv: ReadTimeout: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=20); https://www.tga.gov.au/sites/default/files/2026-07/Established_acceptable_intake_for_nitrosamines.csv: ReadTimeout: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=14.598943567000006); https://www.tga.gov.au/sites/default/files/2026-06/Established_acceptable_intake_for_nitrosamines.csv: ReadTimeout: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=7.1040337715000135); https://www.tga.gov.au/sites/default/files/2026-05/Established_acceptable_intake_for_nitrosamines.csv: ReadTimeout: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=3.5173629160000104); https://www.tga.gov.au/sites/default/files/2026-04/Established_acceptable_intake_for_nitrosamines.csv: ReadTimeout: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=1.6115801970000092); https://www.tga.gov.au/sites/default/files/2026-03/Established_acceptable_intake_for_nitrosamines.csv: ReadTimeout: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=0.7809608145000055); CSV search time budget exhausted"
+    "TGA": "RuntimeError: TGA page unavailable: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=35); CSV unavailable: No recent TGA CSV URL was found; https://www.tga.gov.au/sites/default/files/2026-10/Established_acceptable_intake_for_nitrosamines.csv: ReadTimeout: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=20); https://www.tga.gov.au/sites/default/files/2026-09/Established_acceptable_intake_for_nitrosamines.csv: ReadTimeout: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=20); https://www.tga.gov.au/sites/default/files/2026-08/Established_acceptable_intake_for_nitrosamines.csv: ReadTimeout: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=20); https://www.tga.gov.au/sites/default/files/2026-07/Established_acceptable_intake_for_nitrosamines.csv: ReadTimeout: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=14.851071409); https://www.tga.gov.au/sites/default/files/2026-06/Established_acceptable_intake_for_nitrosamines.csv: ReadTimeout: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=7.3751682259999995); https://www.tga.gov.au/sites/default/files/2026-05/Established_acceptable_intake_for_nitrosamines.csv: ReadTimeout: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=3.6681146079999962); https://www.tga.gov.au/sites/default/files/2026-04/Established_acceptable_intake_for_nitrosamines.csv: ReadTimeout: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=1.6913986944999948); https://www.tga.gov.au/sites/default/files/2026-03/Established_acceptable_intake_for_nitrosamines.csv: ReadTimeout: HTTPSConnectionPool(host='www.tga.gov.au', port=443): Read timed out. (read timeout=0.8288455549999867); CSV search time budget exhausted"
   },
   "records": [
     {
@@ -463,8 +463,8 @@
       "cas": "57184-25-5",
       "aliases": [],
       "related_substances": [
-        "Mitapivat",
-        "mitapivat"
+        "mitapivat",
+        "Mitapivat"
       ],
       "smiles": "C1CC1CN2CCN(CC2)N=O",
       "iupac": "1-(cyclopropylmethyl)-4-nitrosopiperazine",
@@ -3967,8 +3967,8 @@
         "NND"
       ],
       "related_substances": [
-        "Dabigatran Etexilate",
-        "Dabigatran etexilate"
+        "Dabigatran etexilate",
+        "Dabigatran Etexilate"
       ],
       "smiles": "C1=C3C(=CC=C1C(N(C2=NC=CC=C2)CCC(OCC)=O)=O)N(C(=N3)CN(N=O)C=4C=CC(=CC=4)C(=N)NC(=O)OCCCCCC)C",
       "iupac": "Ethyl3-(2-(((4-(N-((hexyloxy)carbonyl)carbamimidoyl)phenyl)(nitroso)amino)methyl)-1-methyl-N-(pyridin-2-yl)-1H-benzo[d]imidazole-5-carboxamido)propanoate",
@@ -6861,8 +6861,8 @@
         "NDUPA"
       ],
       "related_substances": [
-        "Ulipristal Acetate",
-        "Ulipristal acetate"
+        "Ulipristal acetate",
+        "Ulipristal Acetate"
       ],
       "smiles": "CC(=O)[C@]1(CC[C@@H]2[C@@]1(C[C@@H](C3=C4CCC(=O)C=C4CC[C@@H]23)C5=CC=C(C=C5)N(C)N=O)C)OC(=O)C",
       "iupac": "[(8S,11R,13S,14S,17R)-17-acetyl-13-methyl-11-[4-[methyl(nitroso)amino]phenyl]-3-oxo-1,2,6,7,8,11,12,14,15,16-decahydrocyclopenta[a]phenanthren-17-yl] acetate",
